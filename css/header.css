@@ -1,4 +1,9 @@
 img{
     width: 111px;
     height: 138px;
+    margin-left: 48px;
+    margin-top: 14px;
+}
+body{
+    background: #fff;   
 }
