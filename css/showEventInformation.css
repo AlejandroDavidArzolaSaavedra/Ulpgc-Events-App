@@ -3,7 +3,7 @@ html{
 }
 @font-face {
     font-family: 'Heebo';
-    src: url(Heebo/Heebo-VariableFont_wght.ttf);
+    src: url(../fonts/Heebo/Heebo-VariableFont_wght.ttf);
 }
 #title_header{
     position: relative ;
