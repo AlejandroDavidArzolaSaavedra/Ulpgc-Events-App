@@ -1,9 +1,41 @@
+header{
+    background: #fff;
+}
 img{
     width: 111px;
     height: 138px;
     margin-left: 48px;
     margin-top: 14px;
 }
+i{
+    color: rgba(255, 153, 0, 0.87);
+}
 body{
-    background: #fff;   
+    background: #777;   
+}
+
+#calendar{
+    position: absolute;
+    width: 61px;
+    height: 75px;
+    left: 325px;
+    top: 46px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 55px;
+}
+
+#comment{
+    position: absolute;
+    width: 61px;
+    height: 75px;
+    left: 441px;
+    top: 46px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 55px;
 }
