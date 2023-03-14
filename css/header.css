@@ -39,3 +39,15 @@ body{
     font-size: 55px;
     line-height: 55px;
 }
+
+#search{
+    position: absolute;
+    width: 61px;
+    height: 75px;
+    left: 840px;
+    top: 46px;
+
+    font-style: normal;
+    font-size: 55px;
+    line-height: 55px;
+}
