@@ -4,8 +4,6 @@ header{
 img{
     width: 111px;
     height: 138px;
-    margin-left: 48px;
-    margin-top: 14px;
 }
 i{
     color: rgba(255, 153, 0, 0.87);
@@ -14,12 +12,14 @@ body{
     background: #777;   
 }
 
+.head, .logo_header, .utilidades_header, .buscar, .usuario{
+    background: #fff;
+    display: inline-block;
+}
+
 #calendar{
-    position: absolute;
     width: 61px;
     height: 75px;
-    left: 325px;
-    top: 46px;
 
     font-style: normal;
     font-weight: 400;
@@ -28,11 +28,8 @@ body{
 }
 
 #comment{
-    position: absolute;
     width: 61px;
     height: 75px;
-    left: 441px;
-    top: 46px;
 
     font-style: normal;
     font-weight: 400;
@@ -41,11 +38,8 @@ body{
 }
 
 #search{
-    position: absolute;
     width: 61px;
     height: 75px;
-    left: 840px;
-    top: 46px;
 
     font-style: normal;
     font-size: 55px;
@@ -53,25 +47,18 @@ body{
 }
 
 #user{
-    position: absolute;
     width: 92px;
     height: 88px;
-    left: 1321px;
-    top: 14px;
 
     font-style: normal;
-    font-weight: 400;
     font-size: 90px;
     line-height: 103px;
     text-align: center;
 }
 
 #buscar{
-    position: absolute;
     width: 374px;
     height: 51px;
-    left: 901px;
-    top: 46px;
 
     background: #d9d9d9;
     border: 1px solid #000;
