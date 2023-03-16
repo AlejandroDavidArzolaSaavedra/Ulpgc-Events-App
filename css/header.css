@@ -65,3 +65,16 @@ body{
     line-height: 103px;
     text-align: center;
 }
+
+#buscar{
+    position: absolute;
+    width: 374px;
+    height: 51px;
+    left: 901px;
+    top: 46px;
+
+    background: #d9d9d9;
+    border: 1px solid #000;
+
+    font-size: 1.5rem;
+}
