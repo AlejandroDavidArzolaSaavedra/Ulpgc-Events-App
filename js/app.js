@@ -14,3 +14,31 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+/**********************************************************/
+/**********TODO: FIX THE PROBLEMS**************************/
+/**********************************************************/
+/**********************************************************/
+
+/* Parte de la autenticacion*/
+import {login,logout} from "./auth";
+/* El parametro del button login depende de lo que le metamos como id*/
+const buttonLogin = document.querySelector("#button-login");
+const buttonLogout = document.querySelector("#button-logout")
+
+
+let currentUser;
+
+firebase.auth().onAuthStateChanged( user => {
+    if(user) {
+        currentUser = user;
+        console.log("User logged", currentUser.displayName)
+    }else{
+        console.log("User not logged")
+    }
+});
+
+buttonLogin.addEventListener("click",async (e) => {
+    try {
+        currentUser = await login();
+    }catch(error){}});
