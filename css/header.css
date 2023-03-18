@@ -12,54 +12,57 @@ body{
     background: #777;   
 }
 
-.head, .logo_header, .utilidades_header, .buscar, .usuario{
+.head, .logo_header, .utilidades_header, .buscar, .usuario, .derecha, .izquierda{
     background: #fff;
     display: inline-block;
 }
 
-#calendar{
-    width: 61px;
-    height: 75px;
+.head{
+    display: flex;
+}
 
+.derecha{
+    float: right ;
+    margin: 2rem;
+}
+
+.utilidades_header{
+    padding: 40px;
+}
+
+.usuario{
+    margin-left: 2rem;
+}
+
+#calendar{
+    padding: 20px;
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
-    line-height: 55px;
 }
 
 #comment{
-    width: 61px;
-    height: 75px;
-
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
-    line-height: 55px;
 }
 
 #search{
-    width: 61px;
-    height: 75px;
-
     font-style: normal;
+    font-weight: 400px;
     font-size: 55px;
-    line-height: 55px;
 }
 
 #user{
-    width: 92px;
-    height: 88px;
-
     font-style: normal;
     font-size: 90px;
-    line-height: 103px;
-    text-align: center;
 }
 
 #buscar{
     width: 374px;
     height: 51px;
 
+    margin-left: 20px;
     background: #d9d9d9;
     border: 1px solid #000;
 
