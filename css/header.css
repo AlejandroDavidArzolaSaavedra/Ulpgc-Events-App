@@ -11,9 +11,10 @@ i{
 body{
     background: #777;   
 }
-
+.btn_edit{
+    text-decoration: none;
+}
 .head, .logo_header, .utilidades_header, .buscar, .usuario, .derecha, .izquierda{
-    background: #fff;
     display: inline-block;
 }
 
@@ -34,8 +35,7 @@ body{
     margin-left: 2rem;
 }
 
-#calendar{
-    padding: 20px;
+#calendar{ 
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
