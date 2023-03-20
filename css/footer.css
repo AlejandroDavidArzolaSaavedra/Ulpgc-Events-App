@@ -1,10 +1,10 @@
-body{
+.FooterTotal{
+    
     background: #282d2e;
 }
-p{
+.FooterContent{
+    
     font: 20px bold;
-    font-family: 'Zen Antique';
-    text-decoration: underline;
 }
 
 .Links{
@@ -13,6 +13,7 @@ p{
     position: absolute;
     top: 50px;
 }
+
 .fa-calendar{
     font: 20px;
 }
@@ -33,7 +34,7 @@ p{
 }
 .fa-tiktok{
     font: 20px;
-    color: #FFFF;
+    color: #851111;
 }
 .fa-figma{
     font: 20px;
@@ -56,42 +57,43 @@ p{
 .fa-envelope{
     font: 20px;
 }
-.Planificar {
+.PlanificarFooter {
     position: absolute;
     width: 239px;
     height: 26px;
     left: 61px;
-    top: 28px; 
+  
 }  
-.SobreNosotros {
+.SobreNosotrosFooter {
     position: absolute;
     width: 192px;
     height: 26px;
     left: 416px;
-    top: 32px;
+    
 }
-.Desarrollo{
+.DesarrolloFooter{
     position: absolute;
     width: 192px;
     height: 26px;
     left: 884px;
-    top: 27px;
+    
 }  
-.Contacto {
+.ContactoFooter {
     position: absolute;
     width: 270px;
     height: 26px;
     left: 1170px;
-    top: 25px; 
+    
 }
-img{
+.imgFooter{
     position: absolute;
     width: 175px;
     height: 175px;
     left: 645px;
-    top: 21px;
+    
 }
 .content::after {
+    
     content: "";
     clear: both;
     display: table;
