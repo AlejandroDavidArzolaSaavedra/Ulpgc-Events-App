@@ -35,19 +35,19 @@ body{
 #calendar{ 
     font-style: normal;
     font-weight: 400;
-    font-size: 55px;
+    font-size: 23px;
 }
 
 #comment{
     font-style: normal;
     font-weight: 400;
-    font-size: 55px;
+    font-size: 23px;
 }
 
 #search{
     font-style: normal;
     font-weight: 400px;
-    font-size: 55px;
+    font-size: 23px;
 }
 
 .form-group{
@@ -56,7 +56,7 @@ body{
 
 #user{
     font-style: normal;
-    font-size: 90px;
+    font-size: 45px;
 }
 
 #buscar{
@@ -71,6 +71,6 @@ body{
 }
 
 .logo_header{
-    width: 14rem;
-    min-width: 14rem;
+    width: calc(50px + 3vw);
+    min-width: calc(50px + 3vw);
 }
