@@ -5,27 +5,29 @@ html{
     font-family: 'Heebo';
     src: url(../fonts/Heebo/Heebo-VariableFont_wght.ttf);
 }
-#title_header{
-    position: relative ;
-    width: 90%;
-    margin-left: 5%;
 
-
-    font-family: 'Heebo';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 81px;
-    text-align: center;
-    
-    color: #000000;
-    
-}
 
 img{
     max-width: 90%;
     width: 90%;
     margin-left: 5%;
+}
+p{
+    position: relative;
+
+    width: 40%;
+    margin-left: 7.5%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    font-family: 'Heebo';
+    font-style: light;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+
+    color: #000000;
+
 }
 .lil_header{
     position: relative;
@@ -46,23 +48,8 @@ img{
 
 }
 
-p{
-    position: relative;
 
-    width: 40%;
-    margin-left: 7.5%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 
-    font-family: 'Heebo';
-    font-style: light;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 32px;
-
-    color: #000000;
-
-}
 .feather-10{
     width: 10px;
     height: 10px;
@@ -74,7 +61,64 @@ p{
 }
 
 .feather-48{
-    width: 42px;
-    height: 42px;
+    width: calc(1.5rem + 1.5vw);
+    height: calc(1.5rem + 1.5vw);
+    display: inline-block;
+    
     color: #005fff
+}
+
+#title_header{
+    position: relative ;
+    width: 90%;
+    margin-left: 5%;
+
+    min-width: 2rem;
+    max-height: 50rem;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 5rem;
+    text-align: center;
+    
+    color: #000000;
+    
+}
+
+.icons-paragraph{
+    display: grid;
+    
+    text-align: center;
+    grid-template-rows: [row-start row-1-start] 1fr [row-1-end row-2-start] 1fr [row-2-end row-end];;
+    grid-template-columns: repeat(4,1fr);
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'Heebo';
+    font-size: 1.8em;
+}
+.text_w_icons{
+    display:inline-block;
+    font-size: medium;
+    font-family:  'Heebo';
+}
+.title_icon_text{
+    margin: 0;
+     display: inline-block;
+    align-items:  center;
+    justify-content: center;
+    vertical-align: middle;
+    font-family: 'Heebo';
+    font-weight: 400;
+    font-size: calc(0.8rem + 1vw);
+    padding-bottom: 24px;
+    
+   
+}
+.text_u_icons{
+    text-align: center;
+    padding-left: 1rem;
+    font-size: calc(0.3rem + 1vw);
+
 }

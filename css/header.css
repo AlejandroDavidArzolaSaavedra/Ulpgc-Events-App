@@ -1,67 +1,76 @@
 header{
     background: #fff;
 }
-img{
-    width: 111px;
-    height: 138px;
-}
+
 i{
     color: rgba(255, 153, 0, 0.87);
 }
 body{
     background: #777;   
 }
-
-.head, .logo_header, .utilidades_header, .buscar, .usuario{
-    background: #fff;
+.btn_edit{
+    text-decoration: none;
+}
+.head, .logo_header, .utilidades_header, .buscar, .usuario, .derecha, .izquierda{
     display: inline-block;
 }
 
-#calendar{
-    width: 61px;
-    height: 75px;
+.head{
+    display: flex;
+}
 
+.derecha{
+    float: right ;
+    margin: 2rem;
+}
+
+.utilidades_header{
+    padding: 2.5rem;
+}
+
+.usuario{
+    margin-left: 2rem;
+}
+
+#calendar{ 
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
-    line-height: 55px;
 }
 
 #comment{
-    width: 61px;
-    height: 75px;
-
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
-    line-height: 55px;
 }
 
 #search{
-    width: 61px;
-    height: 75px;
-
     font-style: normal;
+    font-weight: 400px;
     font-size: 55px;
-    line-height: 55px;
+}
+
+.form-group{
+    padding-top: 1rem;
 }
 
 #user{
-    width: 92px;
-    height: 88px;
-
     font-style: normal;
     font-size: 90px;
-    line-height: 103px;
-    text-align: center;
 }
 
 #buscar{
     width: 374px;
     height: 51px;
 
+    margin-left: 20px;
     background: #d9d9d9;
     border: 1px solid #000;
 
     font-size: 1.5rem;
+}
+
+.logo_header{
+    width: 14rem;
+    min-width: 14rem;
 }

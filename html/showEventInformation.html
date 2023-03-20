@@ -5,31 +5,69 @@
         <title>title</title>
         <link rel= "stylesheet" href="../css/showEventInformation.css" type="text/css">
         <script src="https://unpkg.com/feather-icons"></script>
+
+        <!--Dependencias-->
+        <script src="../js/header.js"></script>
+        <link rel="stylesheet" href="../../css/header.css">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!---->
     </head>
     <body>
+        <!--Header Dinamico -->        
+        <div id="header"></div>
+        <!---->
+        
         <div class="title">
             <h1 id="title_header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dolorem atque? Ad repellendus officiis esse ab earum</h1>
-            <img src="spirit-blossom-evelynn.jpg.jpg"></img>
+            <img src="../images/spirit-blossom-evelynn.jpg" alt="Imagen del evento"></img>
         </div>
         <div class="paragraph">
-            <div class="lil_header">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-            <p>
-                <i data-feather="calendar" class="feather-48"></i> 
-                <i data-feather="users" class="feather-48"></i>
-                <i data-feather="clock" class="feather-48"></i>
-                <i data-feather="map-pin" class="feather-48" ></i>
-            </p>
-            <script>feather.replace()</script>
+            <h2 class="lil_header">Lorem ipsum dolor sit amet consectetur, adipisicing elit.<h2>
+            <div class="icons-paragraph">
+                <div class="text_w_icons" id="calendar-info">
+                   <i data-feather="calendar" class="feather-48"></i>
+                    <p class="title_icon_text">Fecha:</p>
+                </div>
+                <div class="text_w_icons" id="hour-info">
+                    <i data-feather="clock" class="feather-48"></i>
+                    <p class="title_icon_text">Hora:</p>
+                </div>
+                <div class="text_w_icons" id="capacity-info">
+                    <i data-feather="users" class="feather-48"></i>
+                    <p class="title_icon_text">Aforo:</p>
+                </div>
+                <div class="text_w_icons" id="ubi-info">
+                    <i data-feather="map-pin" class="feather-48" ></i>
+                    <p class="title_icon_text">Lugar:</p>
+                </div>
+                <p class="text_u_icons">Lugar:</p>
+                <p class="text_u_icons">Lugar:</p>
+                <p class="text_u_icons">Lugar:</p>
+                <p class="text_u_icons">Lugar:</p>
+            </div>
+            
         </div>
-        <div class="paragraph"> 
-            <div class="lil_header">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolore harum ipsa maxime aperiam tempora quo laudantium exercitationem sapiente! Alias voluptas id cupiditate provident quasi. Aliquam cumque qui sint cupiditate.</p>
-        </div class="paragraph"> 
-            <div class="lil_header">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere tenetur sunt porro repudiandae! Beatae quae sit reiciendis quos asperiores optio similique animi architecto accusantium, dolor, assumenda, sequi et magnam reprehenderit?</p>
-        <div class="paragraph">  
-            <div class="lil_header">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure et sapiente sint accusamus iste asperiores ut atque modi earum, recusandae dolorem eos. Doloribus, commodi. Ipsum ipsa sed qui adipisci temporibus?</p>
+            <div class="paragraph"> 
+                <h3 class="lil_header">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolore harum ipsa maxime aperiam tempora quo laudantium exercitationem sapiente! Alias voluptas id cupiditate provident quasi. Aliquam cumque qui sint cupiditate.</p>
+            </div>
+            <div class="paragraph"> 
+                <h3 class="lil_header">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere tenetur sunt porro repudiandae! Beatae quae sit reiciendis quos asperiores optio similique animi architecto accusantium, dolor, assumenda, sequi et magnam reprehenderit?</p>
+            </div>
+            <div class="paragraph">  
+                <h3 class="lil_header">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure et sapiente sint accusamus iste asperiores ut atque modi earum, recusandae dolorem eos. Doloribus, commodi. Ipsum ipsa sed qui adipisci temporibus?</p>
+            </div>
         </div>
+        
+        <!-- Dependencias -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+        <script>feather.replace()</script>
+        <!---->
     </body>
 </html>
