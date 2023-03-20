@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../css/header.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <!-- Bootstrap -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <!-- nav Bar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <div class="navbar-brand logo_header">
                 <img src="../../imagenes/logo.png" alt="Logo ULPGC Events">
@@ -30,11 +19,73 @@
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" id="search" placeholder="Buscar" aria-label="Search">
                   <button class="btn btn-outline-success btn_edit" type="submit"><i id="search" class="fas fa-search"></i></button>
-                  <i id="user" class="fas fa-user usuario"></i>
+                  <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#loginModal" aria-current="page" href="#"><i id="user" class="fas fa-user usuario"></i></a>
                 </form>
               </div>
             </div>
         </nav>
-    </header>
-</body>
-</html>
+      <!-- Modals Login -->
+
+      <!-- Modal de Registrarse -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Registrate</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="signup-form">
+              <div class="form-group">
+                <input type="text" id="signup-name" class=form-control placeholder="Nombre" required>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="signup-email" class=form-control placeholder="Correo" required>
+              </div>
+              
+              <div class="form-group">
+                <input type="tel" id="signup-phone" name="phone"  class=form-control pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Numero de telefono" required>
+              </div>
+              
+              <div class="form-group">
+                <input type="password" id="signup-password" class=form-control placeholder="Contraseña" required>
+              </div>
+
+              <div class="form-group">
+                <input type="password" id="signup-repeat-password" class=form-control placeholder="Repetir contraseña" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dependencias de Firebase-->
+    <script>
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAv3QoKKOW_050RiN7aXHRzUpOwLxoqbP0",
+      authDomain: "ulpgc-events-a59f5.firebaseapp.com",
+      projectId: "ulpgc-events-a59f5",
+      storageBucket: "ulpgc-events-a59f5.appspot.com",
+      messagingSenderId: "1074689670789",
+      appId: "1:1074689670789:web:b23976f4f3a2cf61dcf3ec",
+      measurementId: "G-36W8TWRWWQ"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script src="../../js/registrarse.js"></script>
+  

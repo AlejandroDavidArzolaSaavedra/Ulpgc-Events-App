@@ -1,10 +1,7 @@
 header{
     background: #fff;
 }
-img{
-    width: 111px;
-    height: 138px;
-}
+
 i{
     color: rgba(255, 153, 0, 0.87);
 }
@@ -28,7 +25,7 @@ body{
 }
 
 .utilidades_header{
-    padding: 40px;
+    padding: 2.5rem;
 }
 
 .usuario{
@@ -53,6 +50,10 @@ body{
     font-size: 55px;
 }
 
+.form-group{
+    padding-top: 1rem;
+}
+
 #user{
     font-style: normal;
     font-size: 90px;
@@ -67,4 +68,9 @@ body{
     border: 1px solid #000;
 
     font-size: 1.5rem;
+}
+
+.logo_header{
+    width: 14rem;
+    min-width: 14rem;
 }

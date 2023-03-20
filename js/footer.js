@@ -16,8 +16,8 @@ function loadTemplate(fileName, id, callback) {
 
 
 function init() {
-    loadTemplate('./components/header.html', 'header');
-    loadTemplate('./components/header.html', 'header');
+    loadTemplate('./components/footer.html', 'header');
+    loadTemplate('./components/footer.html', 'header');
     /**loadTemplate('./sidebar_links.html', 'links',addMovies);**/
 }
 
