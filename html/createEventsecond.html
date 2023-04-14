@@ -35,7 +35,7 @@
 }
 
 function init() {
-  loadTemplate('./components/formCreateEvent.html', 'createEvent', function() {
+  loadTemplate('./components/formCreateEventSecond.html', 'createEventSecond', function() {
     const submitButton = document.getElementById('submit-button');
     submitButton.addEventListener('click', changeFields);
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', init);
 <body>
     <header id="header"></header>
 
-    <div id="createEvent"></div>
+    <div id="createEventSecond"></div>
 
     <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer>
     <!-- Dependencias -->

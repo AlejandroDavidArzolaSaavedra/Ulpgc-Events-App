@@ -7,7 +7,6 @@ function loadTemplate(fileName, id, callback) {
     }).then((text) => {
         document.getElementById(id).innerHTML = text;
         //console.log(text)
-
         if(callback){
             callback();
         }
@@ -16,8 +15,33 @@ function loadTemplate(fileName, id, callback) {
 
 
 function init() {
-    loadTemplate('./components/header.html', 'header');
-    loadTemplate('./components/header.html', 'header');
-    /**loadTemplate('./sidebar_links.html', 'links',addMovies);**/
+    loadTemplate('./components/headerUserLogged.html', 'header');
+  
 }
 
+
+function changeRegister(event){
+    event.preventDefault();
+    let name = document.getElementById("signup-name");
+    name.style.display = "none";
+    let correo = document.getElementById("signup-email");
+
+    let telefono = document.getElementById("signup-phone");
+    telefono.style.display = "none";
+    let contra = document.getElementById("signup-password");
+
+    let contrarepe = document.getElementById("signup-repeat-password");
+    contrarepe.style.display = "none";
+    if (correo.value.trim() === "" || contra.value.trim() === "" ) {
+        console.log("VACIO");
+    }else{
+        console.log("LLENO");
+    }
+}
+
+function displayDate(){
+    document.getElementById("signup-name").style.display = "block";
+    document.getElementById("signup-phone").style.display = "block";
+    document.getElementById("signup-repeat-password").style.display = "block";
+    console.log("TOCADO")
+}

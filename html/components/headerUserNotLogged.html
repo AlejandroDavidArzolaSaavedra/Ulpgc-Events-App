@@ -1,0 +1,74 @@
+      <!-- nav Bar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="navbar-brand logo_header">
+                <img id="logo" src="../../images/logo.png" alt="Logo ULPGC Events">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i id="calendar" class="fas fa-calendar utilidades_header  iconos-header"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i id="comment" class="fas fa-comment utilidades_header  iconos-header"></i></a>
+                    </li>
+                </ul>
+                </div>
+                <form class="d-flex" role="search">
+                    <div class="search-with-input">
+                      <button class="btn btn-outline-success btn_edit" type="submit" style="border: none; font-size:1.5rem;"><i id="search" class="fas fa-search iconos-header"></i></button>
+                      <input class="form-control me-2" type="search" id="search" placeholder="Buscar" aria-label="Search" style="margin-top: 1.5rem;">
+                    </div>
+                    <div>
+                      <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#loginModal" aria-current="page" href="#"><i id="user" class="fas fa-user usuario  iconos-header"></i></a>
+                      
+                </form>
+            </div>
+        </div>
+    </nav>
+  <!-- Modals Login -->
+
+  <!-- Modal de Registrarse -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrate</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="signup-form">
+          <div class="form-group">
+            <input type="text" id="signup-name" class="form-control" placeholder="Nombre" required>
+          </div>
+          <p class="warning-error"><strong> <i class="fa-solid fa-circle-exclamation warning"></i> Por favor, indique nombre</strong></p>
+          <div class="form-group">
+            <input type="text" id="signup-email" class="form-control" placeholder="Correo" required>
+          </div>
+          <p class="warning-error"><strong> <i class="fa-solid fa-circle-exclamation warning"></i> Por favor, indique correo</strong></p>
+          <div class="form-group">
+            <input type="tel" id="signup-phone" name="phone"  class=form-control pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Numero de telefono" required>
+          </div>
+          <p class="warning-error"><strong> <i class="fa-solid fa-circle-exclamation warning"></i> Por favor, indique telefono</strong></p>
+          <div class="form-group">
+            <input type="password" id="signup-password" class=form-control placeholder="Contraseña" required>
+          </div>
+          <p class="warning-error"><strong> <i class="fa-solid fa-circle-exclamation warning"></i> Por favor, indique contraseña</strong></p>
+          <div class="form-group">
+            <input type="password" id="signup-repeat-password" class=form-control placeholder="Repetir contraseña" required>
+          </div>
+          <p class="warning-error"><strong> <i class="fa-solid fa-circle-exclamation warning"></i> Por favor, indique contraseña</strong></p>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="logeate-head"><strong>Registrate</strong></button>
+        <button type="submit" class="btn btn-primary" id="logeate-header"><strong>Logeate</strong></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/registrarse.js"></script>

@@ -1,76 +1,68 @@
-header{
-    background: #fff;
-}
 
-i{
+.iconos-header, .warning{
     color: rgba(255, 153, 0, 0.87);
-}
-body{
-    background: #777;   
-}
-.btn_edit{
-    text-decoration: none;
-}
-.head, .logo_header, .utilidades_header, .buscar, .usuario, .derecha, .izquierda{
-    display: inline-block;
-}
-
-.head{
-    display: flex;
-}
-
-.derecha{
-    float: right ;
-    margin: 2rem;
 }
 
 .utilidades_header{
-    padding: 2.5rem;
+    padding: 1rem;
+}
+
+.form-group{
+    padding-bottom: 2rem;    
+}
+
+#logeate-header{
+    background:red;
+}
+#user{
+    padding-right: 5rem;
+
+}
+#search, .btn_edit{
+    height:2.5rem; 
+}
+.btn_edit{
+    display: inline-block; 
+}
+#search{
+    display: inline-block;
+    width:70%
+}
+
+
+.search-with-input{
+    padding-top: 0.5rem;
+}
+
+#calendar, #comment{
+    font-size: 2rem;
+}
+
+.warning-error{
+    color: red;    
+    width: 80%;
+    display: none;
 }
 
 .usuario{
     margin-left: 2rem;
 }
 
-#calendar{ 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 23px;
-}
-
-#comment{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 23px;
-}
-
-#search{
-    font-style: normal;
-    font-weight: 400px;
-    font-size: 23px;
-}
-
-.form-group{
-    padding-top: 1rem;
-}
-
 #user{
-    font-style: normal;
-    font-size: 45px;
-}
-
-#buscar{
-    width: 374px;
-    height: 51px;
-
-    margin-left: 20px;
-    background: #d9d9d9;
-    border: 1px solid #000;
-
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
 .logo_header{
     width: calc(50px + 3vw);
     min-width: calc(50px + 3vw);
+}
+
+.img-logo-header-ulpgc{
+    max-width: 90%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#header{
+    margin-bottom:2rem;
 }

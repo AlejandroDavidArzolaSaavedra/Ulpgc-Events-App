@@ -6,7 +6,6 @@ html{
     src: url(../fonts/Heebo/Heebo-VariableFont_wght.ttf);
 }
 
-
 img{
     max-width: 90%;
     width: 90%;
@@ -27,7 +26,6 @@ p{
     line-height: 32px;
 
     color: #000000;
-
 }
 .lil_header{
     position: relative;
@@ -44,11 +42,7 @@ p{
     line-height: 44px;
 
     color: #000000;
-
-
 }
-
-
 
 .feather-10{
     width: 10px;
@@ -122,3 +116,38 @@ p{
     font-size: calc(0.3rem + 1vw);
 
 }
+
+
+.card-text{
+    font-size: 2rem;
+}
+
+
+#button-inscription{
+    transition: background-color 0.3s ease;
+    background-color: #0069FF; 
+    color:white; 
+    border:none; 
+    border-radius: 8px; 
+    width:10rem; 
+    margin-left:10rem;
+}
+
+
+#button-inscription:hover {
+    background-color: orange; /* estilo adicional cuando el mouse está sobre el botón */
+  }
+  
+ #button-inscription:active {
+    background-color: darkblue; /* estilo adicional cuando se pulsa el botón */
+  }
+  
+
+  .image-mapa{
+    display: inline-block;
+    width: 30rem;
+    height: 22rem;
+    margin:0;
+    margin-left:1rem;
+    border: 1px gray solid;
+  }

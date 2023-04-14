@@ -1,0 +1,12 @@
+.redirect-to-show{
+    color: black;
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: #f2f2f2;
+  }
+
+.col{
+    margin-bottom: 1rem;
+}
