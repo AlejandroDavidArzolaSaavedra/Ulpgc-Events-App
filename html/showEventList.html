@@ -2,11 +2,13 @@
     <head>
         <meta charset="UTF-8" />
         <title>Informacion del evento</title>
-        <link rel= "stylesheet" href="../css/showEventInformation.css" type="text/css">
+        <link rel= "stylesheet" href="../css/showEventList.css" type="text/css">
         <script src="https://unpkg.com/feather-icons"></script>
 
         <!--Dependencias-->
         <script src = "../js/footer.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
         <script src="../js/header.js"></script>
@@ -19,6 +21,8 @@
         <!---->
         <script>
             document.addEventListener('DOMContentLoaded', init);
+        <!---->
+        
 
 function loadTemplate(fileName, id, callback) {
 
@@ -40,53 +44,80 @@ function init() {
   
 }
             </script>
+
+            
     <body>
          <header id="header"></header> 
-            <div style="margin: 4%;">
-            <table class="table table-striped table-hover table-responsive ">
-                <thead class="bg-primary text-white">
-                    <tr>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Fecha</th>
-                      <th scope="col">Tipo de Evento</th>
-                      <th scope="col">Estado</th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>XII Jornadas de Formacion de la Asamblea de Estudiantes</td>
-                      <td>13, marzo,2023</td>
-                      <td>Informativo</td>
-                      <td>En Fecha</td>
-                      <td style="text-align: center;"><button class="btn btn-primary" type="submit">
-                        <span class="btn-label"></span><i class="far fa-edit"></i>Button</button> 
-                        <button class="btn btn-danger" type="submit">
-                            <span class="btn-label"></span><i class="far fa-trash-alt"></i> Button</button>
-                    </td>
-                    </tr>
-                    <tr>
-                      <td>XII Jornadas de Formacion de la Asamblea de Estudiantes</td>
-                      <td>13, marzo,2023</td>
-                      <td>Informativo</td>
-                      <td>En Fecha</td>
-                    </tr>
-                    <tr>
-                      <td>XII Jornadas de Formacion de la Asamblea de Estudiantes</td>
-                      <td>13, marzo,2023</td>
-                      <td>Informativo</td>
-                      <td>En Fecha</td>
-                    </tr>
-                  </tbody>
-            </table>
-            </div>
             
+            <h1 id="h1h">Lista de Eventos</h1>
+            <div id="page_element">
 
-
-
-
-
-
+                    <table class="table table-striped table-hover table-responsive rounded">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Tipo de Evento</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>XII Jornadas de Formacion de la Asamblea de Estudiantes</td>
+                            <td>13, marzo,2023</td>
+                            <td>Informativo</td>
+                            <td>En Fecha</td>
+                            <td style="text-align: center;">
+                                <button class="btn btn-primary" type="submit">
+                                    <span class="btn-label"></span>
+                                    <i class="far fa-edit"></i>Edit
+                                </button> 
+                                <button class="btn btn-danger" type="submit">
+                                    <span class="btn-label"></span>
+                                    <i class="far fa-trash-alt"></i> Delete
+                                </button>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td>XII Jornadas de Formacion de la Asamblea de Estudiantes</td>
+                            <td>13, marzo,2023</td>
+                            <td>Informativo</td>
+                            <td>En Fecha</td>
+                            <td style="text-align: center;">
+                                <button class="btn btn-primary" type="submit">
+                                    <span class="btn-label"></span>
+                                    <i class="far fa-edit"></i>Edit
+                                </button> 
+                                <button class="btn btn-danger" type="submit">
+                                    <span class="btn-label"></span>
+                                    <i class="far fa-trash-alt"></i> Delete
+                                </button>
+                                </td>
+                            
+                            </tr>
+                            <tr>
+                            <td>XII Jornadas de Formacion de la Asamblea de Estudiantes</td>
+                            <td>13, marzo,2023</td>
+                            <td>Informativo</td>
+                            <td>En Fecha</td>
+                            <td style="text-align: center;">
+                                <button class="btn btn-primary" type="submit">
+                                    <span class="btn-label"></span>
+                                    <i class="far fa-edit"></i>Edit
+                                </button> 
+                                <button class="btn btn-danger" type="submit">
+                                    <span class="btn-label"></span>
+                                    <i class="far fa-trash-alt"></i> Delete
+                                </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <button class="btn btn-success" type="submit" id="excel-button">
+                Descargar Lista de Eventos Excel
+            </button>
 
         <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer> 
              <!-- Dependencias -->
