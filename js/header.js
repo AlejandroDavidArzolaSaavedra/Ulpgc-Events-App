@@ -48,5 +48,7 @@ function displayDate(){
 
 
 function cambiarValores() {
-    console.log("Eventos")
+    document.getElementById("signup-repeat-password").style.display="block";
+    document.getElementById("signup-phone").style.display="block";
+    document.getElementById("signup-name").style.display="block";
   }
