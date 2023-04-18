@@ -1,20 +1,40 @@
-.text{
-    position: absolute;
-    width: 243px;
-    height: 36px;
-    left: 190px;
-    top: 219px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 36px;
-
-    color: #000000;
+html{
+    font-size: 16px;
 }
 
-.search{
-    margin-left: 50%;
-    margin-right: 25%;
+@font-face {
+    font-family: 'Heebo';
+    src: url(../fonts/Heebo/Heebo-VariableFont_wght.ttf);
+}
+
+#h1h{
+    margin: 4%;
+}
+#user_table{
+    margin: 4%;
+    
+}
+
+#user{
+    display: inline-block;
+    width: 45%;
+    height: auto;
+}
+
+#boton{
+    display: inline-block;
+}
+
+#search_btn{
+    display: inline-block;
+    border-color: white;
+    color: black;
+}
+.btn-outline-success{
+    --bs-btn-border-color: none;
+}
+
+
+#search{
+    width: 10%;
 }

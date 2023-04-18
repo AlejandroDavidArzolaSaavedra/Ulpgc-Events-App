@@ -1,0 +1,18 @@
+html{
+    font-size: 16px;
+}
+@font-face {
+    font-family: 'Heebo';
+    src: url(../fonts/Heebo/Heebo-VariableFont_wght.ttf);
+}
+#page_element{
+    margin: 4%;
+    
+}
+#h1h{
+    margin: 4%;
+}
+#excel-button{
+    margin-left: 4%;
+    margin-top: -2%;
+}
