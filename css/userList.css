@@ -1,0 +1,20 @@
+.text{
+    position: absolute;
+    width: 243px;
+    height: 36px;
+    left: 190px;
+    top: 219px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #000000;
+}
+
+.search{
+    margin-left: 50%;
+    margin-right: 25%;
+}

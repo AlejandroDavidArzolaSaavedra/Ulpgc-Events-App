@@ -15,7 +15,7 @@ function loadTemplate(fileName, id, callback) {
 
 
 function init() {
-    loadTemplate('./components/headerUserLogged.html', 'header');
+    loadTemplate('./components/headerUserNotLogged.html', 'header');
   
 }
 
@@ -45,3 +45,8 @@ function displayDate(){
     document.getElementById("signup-repeat-password").style.display = "block";
     console.log("TOCADO")
 }
+
+
+function cambiarValores() {
+    console.log("Eventos")
+  }

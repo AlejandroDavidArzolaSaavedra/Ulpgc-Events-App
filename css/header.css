@@ -8,7 +8,7 @@
 }
 
 .form-group{
-    padding-bottom: 2rem;    
+    padding-bottom: 1rem;    
 }
 
 #logeate-header{
@@ -65,4 +65,9 @@
 
 #header{
     margin-bottom:2rem;
+}
+
+.registrarse{
+    display: none;
+    background-color: aqua;
 }
