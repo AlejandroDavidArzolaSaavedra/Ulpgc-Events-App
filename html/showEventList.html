@@ -44,6 +44,17 @@ function init() {
   
 }
             </script>
+    <script>
+    function exportCSVExcel() {
+        $('#table-event-list').table2excel({
+            exclude: ".no-export",
+            filename: "download.xls",
+            fileext: ".xls",
+            exclude_links: true,
+            exclude_inputs: true,
+            preserveColors: true
+        });
+    }</script>
 
             
     <body>
@@ -52,14 +63,14 @@ function init() {
             <h1 id="h1h">Lista de Eventos</h1>
             <div id="page_element">
 
-                    <table class="table table-striped table-hover table-responsive rounded">
+                    <table class="table table-striped table-hover table-responsive rounded" id="table-event-list">
                         <thead class="bg-primary text-white">
                             <tr>
                             <th scope="col">Nombre</th>
                             <th scope="col">Fecha</th>
                             <th scope="col">Tipo de Evento</th>
                             <th scope="col">Estado</th>
-                            <th scope="col"></th>
+                            <th scope="col" class="no-export"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -68,7 +79,7 @@ function init() {
                             <td>13, marzo,2023</td>
                             <td>Informativo</td>
                             <td>En Fecha</td>
-                            <td style="text-align: center;">
+                            <td style="text-align: center;" class="no-export">
                                 <button class="btn btn-primary" type="submit">
                                     <span class="btn-label"></span>
                                     <i class="far fa-edit"></i>Edit
@@ -84,7 +95,7 @@ function init() {
                             <td>13, marzo,2023</td>
                             <td>Informativo</td>
                             <td>En Fecha</td>
-                            <td style="text-align: center;">
+                            <td style="text-align: center;" class="no-export">
                                 <button class="btn btn-primary" type="submit">
                                     <span class="btn-label"></span>
                                     <i class="far fa-edit"></i>Edit
@@ -101,7 +112,7 @@ function init() {
                             <td>13, marzo,2023</td>
                             <td>Informativo</td>
                             <td>En Fecha</td>
-                            <td style="text-align: center;">
+                            <td style="text-align: center;" class="no-export">
                                 <button class="btn btn-primary" type="submit">
                                     <span class="btn-label"></span>
                                     <i class="far fa-edit"></i>Edit
@@ -115,7 +126,7 @@ function init() {
                         </tbody>
                     </table>
             </div>
-            <button class="btn btn-success" type="submit" id="excel-button">
+            <button class="btn btn-success" type="submit" id="excel-button" onclick="exportCSVExcel()">
                 Descargar Lista de Eventos Excel
             </button>
 
