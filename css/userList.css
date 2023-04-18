@@ -14,3 +14,27 @@ html{
     margin: 4%;
     
 }
+
+#user{
+    display: inline-block;
+    width: 45%;
+    height: auto;
+}
+
+#boton{
+    display: inline-block;
+}
+
+#search_btn{
+    display: inline-block;
+    border-color: white;
+    color: black;
+}
+.btn-outline-success{
+    --bs-btn-border-color: none;
+}
+
+
+#search{
+    width: 10%;
+}

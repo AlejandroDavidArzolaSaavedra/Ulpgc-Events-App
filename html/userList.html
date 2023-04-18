@@ -46,9 +46,19 @@ function init() {
 <body>
     <header id="header"></header>
 
-    
+    <div id="user">
+        <h1 id="h1h">Usuarios Inscritos</h1>
+    </div>
 
-    <h1 id="h1h">Usuarios Inscritos</h1>
+    <div id="boton">
+        <button class="btn btn-success" type="submit" id="excel-button" onclick="exportCSVExcel()">
+            Descargar Lista de Eventos Excel
+        </button>
+    </div>
+
+    <div id="search">
+        <button class="btn btn-outline-success btn_edit" type="submit"><i id="search_btn" class="fas fa-search"></i></button>
+    </div>
 
     <div id="user_table">
         <table class="table table-striped table-hover table-responsive rounded">
