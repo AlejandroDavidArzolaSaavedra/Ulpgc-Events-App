@@ -32,9 +32,17 @@ html{
 }
 .btn-outline-success{
     --bs-btn-border-color: none;
+    --bs-btn-hover-bg: none;
 }
 
 
-#search{
-    width: 10%;
+#search2{
+    display: inline-block;
+    border-style: solid;
+    border-width: thin;
+    width: 20%;
+}
+
+#holder{
+    border: none;
 }
