@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+    <link rel= "stylesheet" href="../css/Perfil.css" type="text/css">
+
+    <!--Dependencias de estilos -->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    
+    <!-- Toast-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+
+    <!-- Scripts de funcionalidad -->
+    <script src = "../js/header.js" type="module"></script>
+
+  <!--Dependencias-->
+  <!--<script src="../js/loadEvent.js"></script>-->
+   <!-- Bootstrap -->
+   <!---->
+
+   <style>
+
+@media only screen and (max-width: 1200px){
+    .InformacionPerfil{
+        margin-left: 5%;
+        margin-right: 15%;
+        margin-bottom: 10%;
+        float: left;
+        width: 60%;
+        height: 60%;
+        background-color: #F3F0F0;
+    }
+    .InformacionUsuario{
+        margin-left: 20%;
+    }
+    
+    .datosUsuario{
+        float: right;
+        margin-top: 5%;
+        font-size: 100%;
+        margin-right: 10%;
+        margin-left: 0%;
+    }
+    .FotoDePerfil{
+        height: 16em;
+        width: 40%;
+        float:left;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 0%;
+        border-radius: 100%;
+    }
+    .BotonesPerfil{
+        margin-left: 67%;
+        background-color: #F3F0F0;
+        position:absolute;
+    }
+    .Modificar{
+        margin-top: 35%;
+        margin-left: 5%;
+        width: 90%;
+        height: 90%;
+        margin-right: 90%;
+        background-color: blue;
+        color: white;
+        font-size: 150%;
+    }
+    .Eliminar{
+        margin-left: 5%;
+        width: 90%;
+        height: 90%;
+        margin-bottom: 36%;
+        margin-right:90%;
+        background-color: red;
+        color: white;
+        font-size: 150%;
+    }
+    }
+    @media only screen and (max-width: 700px){
+        .InformacionPerfil{
+        margin-left: 5%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        float: left;
+        width: 50%;
+        height: 50%;
+        background-color: #F3F0F0;
+    }
+    .InformacionUsuario{
+        margin-left: 10%;
+    }
+    
+    .datosUsuario{
+        margin-top: 10%;
+        font-size: auto;
+        width: calc(3rem + 2.5vw);
+        height: auto;
+        margin-right: 80%;
+        margin-left: 15%;
+    }
+    .FotoDePerfil{
+        height: 70%;
+        width: 70%;
+        float:left;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 0%;
+    }
+    .BotonesPerfil{
+        margin-left: 60%;
+        background-color: #F3F0F0;
+        position:absolute;
+    }
+    .Modificar{
+        margin-top: 94%;
+        margin-left: 20%;
+        width: auto;
+        height: auto;
+        margin-right: 15%;
+        background-color: blue;
+        color: white;
+        font-size: 100%;
+    }
+    .Eliminar{
+        margin-left: 20%;
+        width: auto;
+        height: auto;
+        margin-bottom: 93%;
+        margin-right: 20%;
+        background-color: red;
+        color: white;
+        font-size: 100%;
+    }
+    footer{
+        margin-top: 200%;
+    }
+    }
+ @media only screen and (min-width: 1400px){
+.InformacionPerfil{
+    margin-left: 10%;
+    margin-right: 40%;
+    margin-bottom: 20%;
+    float: left;
+    width: 60%;
+    height: 70%;
+    background-color: #F3F0F0;
+}
+.InformacionUsuario{
+    margin-left: 30%;
+    font-size:300%;
+
+}
+.datosUsuario{
+    float: right;
+    font-size: calc(4ram + 3vw);
+    margin-bottom: 10%;
+    margin-right: 10%;
+}
+.FotoDePerfil{
+    
+    height: calc(3rem + 2.5vw);
+    width: calc(3rem + 2.5vw);
+    margin-top: 5%;
+    margin-left: 4%;
+    margin-right: 10%;
+    border-radius: 100%;
+}
+
+    .BotonesPerfil{
+        margin-left:75%;
+        background-color: #F3F0F0;
+    }
+    .Modificar{
+        margin-top: 35%;
+        margin-left: 5%;
+        width: calc(3rem + 2.5vw);
+        height: auto;
+        margin-right: 90%;
+        background-color: blue;
+        color: white;
+        font-size: calc(2rem + 1vw);
+    }
+    .Eliminar{
+        margin-left: 5%;
+        width: calc(5rem + 4vw);
+        height: auto;
+        margin-bottom: 36%;
+        margin-right:90%;
+        background-color: red;
+        color: white;
+        font-size: calc(2rem + 1vw);
+    }
+    footer{
+        margin-top: 40%;
+    }
+}
+   </style>
+</head>
+<body>
+    <div class = "Perfil-grid">
+    <header id="header"></header>
+    <div class = "IntormacionTotalPerfil">
+    <div class = "InformacionPerfil">
+        <h2 class = "InformacionUsuario"> INFORMACIÓN DE USUARIO</h2>
+        <img src="../images/EjemploFotoPerfil.jpg" class="FotoDePerfil">
+        <form class = "datosUsuario">
+            <label for= "fname">Nombre</label><br>
+            <input type = "fname" id="fname"></input><br>
+            <label for= "fcorreo">Correo</label><br>
+            <input type = "fcorreo" id="fcorreo"></input><br>
+            <label for= "fcontraseña">Contraseña</label><br>
+            <input type = "fcontraseña" id="fcontraseña"></input><br>
+            <label for= "ftelefono">Teléfono</label><br>
+            <input type = "ftelefono" id="ftelefono"></input><br>
+            <label for=" "></label><br>
+        </form>
+    </div>
+    
+    <div class = "BotonesPerfil">
+        <button class = "Modificar"><i class="fa-solid fa-pen-to-square"></i>Guardar Cambios</button><br>
+        <br><button class = "Eliminar"><i class="fa-solid fa-trash"></i>Eliminar Cambios</button>
+    </div>
+</div>
+</div>
+</body>
+
+
+ <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer>
+</html>
