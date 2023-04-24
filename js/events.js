@@ -1,37 +1,63 @@
-// Importa el SDK de Firebase
-import firebase from 'firebase/app';
-import 'firebase/database';
+export const setupEvents = (data) => {
+  if (data.length){
+     const eventList = document.querySelector(".card-cards");
+     const searchInput = document.querySelector(".fa-searchengin");
+     let content = "";
+     data.forEach(element => {
+       const event= element.data();
+       
+       const template = `
+       <a href="../html/showEventInformation.html" class="redirect-to-show">
+        <div class="col">
+           <div class="card h-100 card-show-event">
+           <img src="${event.imagenEvento}" class="card-img-top" alt="...">
+           <div class="card-body">
+              <h5 class="card-title">${event.nombre}</h5>
+              <p class="card-text">${event.descripcion}</p>
+           </div>
+           </div>
+        </div>
+     </div>
+     </a>
+       `; 
+       content += template;
+     });
+     eventList.innerHTML = content;
 
-const firebaseConfig = {
-    apiKey: "AIzaSyAv3QoKKOW_050RiN7aXHRzUpOwLxoqbP0",
-    authDomain: "ulpgc-events-a59f5.firebaseapp.com",
-    projectId: "ulpgc-events-a59f5",
-    storageBucket: "ulpgc-events-a59f5.appspot.com",
-    messagingSenderId: "1074689670789",
-    appId: "1:1074689670789:web:b23976f4f3a2cf61dcf3ec",
-    measurementId: "G-36W8TWRWWQ"
-  };
+
+     searchInput.addEventListener("click", () => {
+     const searchTerm = document.querySelector(".search-input").value.toLowerCase();
+     
+     const eventList = document.querySelector(".card-cards");
+     const searchInput = document.querySelector(".fa-searchengin");
+     let content = "";
+     data.forEach(element => {
+       const event= element.data();
+       const title = `${event.nombre}`;
+        if (title.includes(searchTerm) && title.includes("")) {           
+           const template = `
+           <a href="../html/showEventInformation.html" class="redirect-to-show">
+              <div class="col">
+                 <div class="card h-100 card-show-event">
+                 <img src="${event.imagenEvento}" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">${event.nombre}</h5>
+                    <p class="card-text">${event.descripcion}</p>
+                 </div>
+                 </div>
+              </div>
+           </div>
+           </a>
+           `; 
+           content += template;
+        }
+     });
+     eventList.innerHTML = content;
+           
+      });
 
 
-// Inicializa Firebase
-firebase.initializeApp(firebaseConfig);
-
-// Accede a la base de datos
-const database = firebase.database();
-
-// Crear un nuevo evento
-const nuevoEvento = {
-    nombre: "Evento de prueba",
-    fecha: "2023-05-01",
-    lugar: "Ciudad de prueba",
-    descripción: "Un evento de prueba para fines de demostración"
-  };
-  
-  // Guardar el nuevo evento en la base de datos
-  database.ref('eventos').push(nuevoEvento)
-    .then(() => {
-      console.log("Evento creado exitosamente");
-    })
-    .catch((error) => {
-      console.error("Error al crear el evento:", error);
-    });
+  }else{
+   console.log("No se han cargado")
+  }
+}
