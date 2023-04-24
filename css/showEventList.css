@@ -16,3 +16,6 @@ html{
     margin-left: 4%;
     margin-top: -2%;
 }
+#table-event-list{
+    border-radius: 12%;
+}
