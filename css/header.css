@@ -1,78 +1,10 @@
-
-.iconos-header, .warning{
-    color: rgba(255, 153, 0, 0.87);
+#logo-header-ulpgc {
+    width: 5rem;
 }
 
-.utilidades_header{
-    padding: 1rem;
+.header-color-options {
+    color: #ffae00;
 }
-
-.form-group{
-    padding-bottom: 1rem;    
-}
-
-#logeate-header{
-    background:red;
-}
-#user{
-    padding-right: 5rem;
-
-}
-#search, .btn_edit{
-    height:2.5rem; 
-}
-.btn_edit{
-    display: inline-block; 
-}
-#search{
-    display: inline-block;
-    width:70%
-}
-
-
-.search-with-input{
-    padding-top: 0.5rem;
-}
-
-#calendar, #comment{
-    font-size: 2rem;
-}
-
-.warning-error{
-    color: red;    
-    width: 80%;
-    display: none;
-}
-
-.usuario{
-    margin-left: 2rem;
-}
-
-#user{
-    font-size: 3rem;
-}
-
-.logo_header{
-    width: calc(50px + 3vw);
-    min-width: calc(50px + 3vw);
-}
-
-.img-logo-header-ulpgc{
-    max-width: 90%;
-    width: 90%;
-    margin-left: 5%;
-}
-
-#header{
-    margin-bottom:2rem;
-}
-
-.registrarse{
-    display: none;
-    width: 100%;
-    border: var(--bs-border-width);
-    background-clip: padding-box;
-    border-radius: 0.375rem;
-    padding: 0.375rem 0.75rem;
-    line-height: 1.5;
+.dropdown-toggle::after {
+    background-image: none !important;
 }

@@ -3,44 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <title>Informacion del evento</title>
-        <link rel= "stylesheet" href="../css/showEventInformation.css" type="text/css">
+
+        <!--Dependencias de estilos -->
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel= "stylesheet" href="../css/showEventInformation.css">
+        <link rel="stylesheet" href="../css/header.css">
+        
+        <!-- Toast-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+        <!-- Font-awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!-- Feather -->        
         <script src="https://unpkg.com/feather-icons"></script>
 
         <!--Dependencias-->
-        <script src = "../js/footer.js"></script>
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-        <script src="../js/header.js"></script>
-        <script src="../js/loadTemplate.js"></script>
-        <script src="../js/loadEvent.js"></script>
-        <link rel="stylesheet" href="../css/header.css">
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <!---->
-        <script>
-            document.addEventListener('DOMContentLoaded', init);
-
-function loadTemplate(fileName, id, callback) {
-
-    fetch(fileName).then((res) => {
-        return res.text();
-    }).then((text) => {
-        document.getElementById(id).innerHTML = text;
-        //console.log(text)
-        if(callback){
-            callback();
-        }
-    })
-}
-
-
-function init() {
-    loadTemplate('./components/headerUserLogged.html', 'header');
-    loadTemplate('./components/footer.html', 'footer');
-  
-}
-            </script>
+        <script src = "../js/header.js" type="module"></script>
     </head>
     <body>
         <!--Header Dinamico -->        
@@ -78,18 +64,18 @@ function init() {
                 </p>
             </div>
         <h3 class="lil_header">Inscripción</h3>
-        <p>Entradas disponibles:<span id="number-show-event">38</span></p>
-        <p>Disponible hasta:<span id="fecha-show-event">vie, 8 sep 2023</span></p>
+        <p class="paragraph-show-information">Entradas disponibles:<span id="number-show-event">38</span></p>
+        <p class="paragraph-show-information">Disponible hasta:<span id="fecha-show-event">vie, 8 sep 2023</span></p>
         <button type="submit" class="lil_header" id="button-inscription" >Inscripcion</button>    
         </div>
             <div class="paragraph"> 
                 <h3 class="lil_header">Jornada de Puertas Abiertas 2023 </h3>
-                <p class="parrafo-con-ubicacion" id="descripcion-show-event"style="display: inline-block; width:50%;">Todos los años la Universidad de Las Palmas de Gran Canaria celebra su Jornada de Puertas Abiertas 2023 para que los futuros estudiantes, familiares, orientadores y profesores puedan conocer un día normal de la vida universitaria, así como informarse sobre las diferentes titulaciones que oferta la universidad y conocer sus instalaciones. De esta forma, los futuros estudiantes tienen la posibilidad de conocer las singularidades de cada una de las titulaciones y los centros de la ULPGC.</p>
+                <p class="parrafo-con-ubicacion paragraph-show-information" id="descripcion-show-event"style="display: inline-block; width:50%;">Todos los años la Universidad de Las Palmas de Gran Canaria celebra su Jornada de Puertas Abiertas 2023 para que los futuros estudiantes, familiares, orientadores y profesores puedan conocer un día normal de la vida universitaria, así como informarse sobre las diferentes titulaciones que oferta la universidad y conocer sus instalaciones. De esta forma, los futuros estudiantes tienen la posibilidad de conocer las singularidades de cada una de las titulaciones y los centros de la ULPGC.</p>
                 <img src="../images/mapa.PNG" class="image-mapa" alt="Mapa ubicacion"/>
             </div>
             <div class="paragraph"> 
                 <h3 class="lil_header">En colaboracion con</h3>
-                <p id="info-add-show-event"> El Cabildo de Gran Canaria ha asumido el compromiso de llevar a cabo actuaciones de corto y medio plazo en la Cumbre de la isla diseñando el Plan de Revitalización Medioambiental y Económica de la Cumbre de Gran Canaria. Asimismo, dada las propuestas de colaboración y donación que están haciendo personas, colectivos, entidades y empresas, se está montando la campaña La Cumbre Vive, que reúne actuaciones de carácter divulgativo, educación, comunicación y voluntariado en los ámbitos denominados: Restauración medioambiental, Recuperar el Campo, Conservar el Patrimonio Cultural, Activar la Economía Local y Cohesionar la sociedad isleña.</p>
+                <p id="info-add-show-event" class="paragraph-show-information"> El Cabildo de Gran Canaria ha asumido el compromiso de llevar a cabo actuaciones de corto y medio plazo en la Cumbre de la isla diseñando el Plan de Revitalización Medioambiental y Económica de la Cumbre de Gran Canaria. Asimismo, dada las propuestas de colaboración y donación que están haciendo personas, colectivos, entidades y empresas, se está montando la campaña La Cumbre Vive, que reúne actuaciones de carácter divulgativo, educación, comunicación y voluntariado en los ámbitos denominados: Restauración medioambiental, Recuperar el Campo, Conservar el Patrimonio Cultural, Activar la Economía Local y Cohesionar la sociedad isleña.</p>
             </div>
 
         </div>

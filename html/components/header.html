@@ -1,90 +1,117 @@
-      <!-- nav Bar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <div class="navbar-brand logo_header">
-                <img id="logo" src="../../images/logo.png" alt="Logo ULPGC Events">
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i id="calendar" class="fas fa-calendar utilidades_header"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i id="comment" class="fas fa-comment utilidades_header"></i></a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success btn_edit" type="submit"><i id="search" class="fas fa-search"></i></button>
-                    <input class="form-control me-2" type="search" id="search" placeholder="Buscar" aria-label="Search">
-                    <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#loginModal" aria-current="page" href="#"><i id="user" class="fas fa-user usuario"></i></a>
-                </form>
-            </div>
-        </div>
-    </nav>
-  <!-- Modals Login -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <img src="../../images/logo.png" id="logo-header-ulpgc"/>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-  <!-- Modal de Registrarse -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <li class="nav-item">
+              <a class="nav-link"  href="#" ><i id="calendar" class="fas fa-calendar fa-xl header-color-options" style="margin-left: 1rem;"></i></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link usuario-registrado" href="#"><i id="comment" class="fas fa-comment fa-xl header-color-options" style="margin-left: 1rem;"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link usuario-registrado" href="#"><i class="fa-regular fa-bell fa-2xl header-color-options" style="margin-left: 1rem;"></i></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+          <a class="nav-link"  href="#"><i class="fa-brands fa-searchengin fa-2xl header-color-options" style="margin-right:1rem; margin-top:1rem;"></i></a>
+          <input class="form-control me-2 search-input" type="search" placeholder="Buscar" aria-label="Search">
+        <li class="nav-item language-option">
+          <a class="nav-link" href="#"><i class="fa-solid fa-language fa-2xl header-color-options" style="margin-top: 1rem; margin-right: 1rem; margin-left: 1rem"></i></a>
+        </li>
+        <li class="nav-item usuario-no-registrado">
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#registrarseModal" href="#">Registrarse</a>
+        </li>
+        <li class="nav-item usuario-no-registrado">
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#logearseModal" href="#">Logearse</a>
+        </li>
+
+        
+        <li class="nav-item dropdown" >
+          <a class="nav-link  usuario-registrado" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-regular fa-user fa-2xl header-color-options"><p class="header-color-options" id="nombre-header" style="margin-left: 2rem; font-size: 1.5rem;font-family:Arial, Helvetica, sans-serif">Usuario</p></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Mis eventos</a></li>
+            <li class="user-institutional"><hr class="dropdown-divider"></li>
+            <li class="user-institutional"><a class="dropdown-item" href="#">Gestionar Eventos</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" id="cerrar-sesion" href="#">Cerrar Sesion</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Modal Registrarse -->
+<div class="modal fade" id="registrarseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrate</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="signup-form">
-          <div class="form-group">
-            <input type="text" id="signup-name" class=form-control placeholder="Nombre" required>
-          </div>
 
-          <div class="form-group">
-            <input type="text" id="signup-email" class=form-control placeholder="Correo" required>
-          </div>
-          
-          <div class="form-group">
-            <input type="tel" id="signup-phone" name="phone"  class=form-control pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Numero de telefono" required>
-          </div>
-          
-          <div class="form-group">
-            <input type="password" id="signup-password" class=form-control placeholder="Contraseña" required>
-          </div>
 
-          <div class="form-group">
-            <input type="password" id="signup-repeat-password" class=form-control placeholder="Repetir contraseña" required>
-          </div>
+        <form id="registrarse-form">
+          <label for="text">Nombre</label>
+          <input type="text" id="registrar-nombre" class="form-control mb-3" placeholder="Juan" required>
+
+          <label for="text">Telefono</label>
+          <input type="text" id="registrar-telefono" class="form-control mb-3" placeholder="654-30-39-23" required>
+
+          <label for="email">Correo</label>
+          <input type="email" id="registrar-correo" class="form-control mb-3" placeholder="example@gmail.com" required>
+
+          <label for="password">Contraseña</label>
+          <input type="password" id="registrar-contra" class="form-control mb-3" placeholder="***" required>
+          
+          <label for="password">Repetir contraseña</label>
+          <input type="password" id="registrar-repetir-contra" class="form-control mb-3" placeholder="***" required>
+          <button  type="submit" class="btn btn-primary">Registrarse</button>
+          
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Registrarse</button>
+
+
       </div>
     </div>
   </div>
 </div>
 
-<!-- Dependencias de Firebase-->
-<script>
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyAv3QoKKOW_050RiN7aXHRzUpOwLxoqbP0",
-  authDomain: "ulpgc-events-a59f5.firebaseapp.com",
-  projectId: "ulpgc-events-a59f5",
-  storageBucket: "ulpgc-events-a59f5.appspot.com",
-  messagingSenderId: "1074689670789",
-  appId: "1:1074689670789:web:b23976f4f3a2cf61dcf3ec",
-  measurementId: "G-36W8TWRWWQ"
-};
+<!-- Modal Logearse -->
+<div class="modal fade" id="logearseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Logearse</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-</script>
-<script src="../../js/registrarse.js"></script>
+
+        <form id="logearse-form">
+          <label for="email">Correo</label>
+          <input type="email" id="login-correo" class="form-control mb-3" placeholder="example@gmail.com" required>
+          <label for="password">Contraseña</label>
+          <input type="password" id="login-contra"class="form-control mb-3" placeholder="***" required>
+          <button type="submit" class="btn btn-primary">Logearse</button>
+        </form>
+
+
+    </div>
+  </div>
+</div>

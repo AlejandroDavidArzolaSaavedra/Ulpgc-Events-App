@@ -11,7 +11,7 @@ img{
     width: 90%;
     margin-left: 5%;
 }
-p{
+.paragraph-show-information{
     position: relative;
 
     width: 40%;
@@ -112,6 +112,7 @@ p{
 }
 .text_u_icons{
     text-align: center;
+    margin-top:1rem;
     padding-left: 1rem;
     font-size: calc(0.3rem + 1vw);
 
