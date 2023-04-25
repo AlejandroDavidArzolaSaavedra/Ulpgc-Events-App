@@ -19,3 +19,6 @@ html{
 #table-event-list{
     border-radius: 12%;
 }
+.date-field{
+    font-weight: 500;
+}
