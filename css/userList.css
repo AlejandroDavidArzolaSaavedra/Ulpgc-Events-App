@@ -30,11 +30,12 @@ html{
     border-color: white;
     color: black;
 }
-.btn-outline-success{
+
+#lupa{
     --bs-btn-border-color: none;
     --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: none;
 }
-
 
 #search2{
     display: inline-block;
@@ -45,4 +46,5 @@ html{
 
 #holder{
     border: none;
+    outline: none;
 }
