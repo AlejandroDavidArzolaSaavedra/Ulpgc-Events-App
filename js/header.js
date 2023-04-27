@@ -4,6 +4,7 @@ import { auth, db } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 import { setupEvents } from "./events.js";
 import { getDocs, collection } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js"
+import { renderEvents } from "./EventList.js";
 
 document.addEventListener('DOMContentLoaded', init);
 function loadTemplate(fileName, id, callback) {
@@ -43,6 +44,11 @@ function registerUser() {
             const lockIndex = document.getElementById("card-car-index");
             if (lockIndex != undefined){
                 setupEvents(querySnapShot.docs);
+            }
+            const lockIndex2 = document.getElementById("header-lista-eventos-usuario");
+            console.log(lockIndex2)
+            if (lockIndex2!= undefined){
+                renderEvents(querySnapShot.docs);
             }
 
             registrarUsuario.addEventListener("submit", async(e)=>{

@@ -1,5 +1,5 @@
 
-async function getEvents() {
+/*async function getEvents() {
     let url = '../staticData/events.json'
     try {
         let res = await fetch(url);
@@ -7,18 +7,20 @@ async function getEvents() {
     } catch (error) {
         console.log(error);
     }
-}
-async function renderEvents() {
+}*/
+export const renderEvents = (ListaEventos) => {
     var tableEvent = document.getElementById("table-event-list");
-    const data = await getEvents(); 
     let tr = ""
-    data.eventos.forEach(evento =>{
-        var month = getMonthString(evento.fecha.mes);
+    console.log(ListaEventos);
+    ListaEventos.forEach(eventoUser =>{
+        let evento = eventoUser.data();
+        console.log(evento);
+        var month = getMonthString(evento.fecha[1]);
         tr += "<tr>";
-        tr += `<td>${evento.nombreEvento}</td>`;
-        tr += `<td>${evento.fecha.dia},${month},${evento.fecha.anio}</td>`;
-        tr += `<td>${evento.tipoEvento}</td>`;
-        if(compareDate(evento.fecha.anio, evento.fecha.mes, evento.fecha.dia)){
+        tr += `<td>${evento.nombre}</td>`;
+        tr += `<td>${evento.fecha[0]},${month},${evento.fecha[2]}</td>`;
+        tr += `<td>${evento.categoria}</td>`;
+        if(compareDate(evento.fecha[0], evento.fecha[1], evento.fecha[2])){
             tr += `<td class="text-success date-field">En Fecha</td>`;
         }else{
             tr += `<td class="text-danger date-field">Fuera de Fecha</td>`;
@@ -41,7 +43,6 @@ async function renderEvents() {
         })
         tableEvent.innerHTML += tr;
 };  
-renderEvents();
 function exportCSVExcel() {
     $('#table-event-list').table2excel({
         exclude: ".no-export",
@@ -64,3 +65,4 @@ function getMonthString(index){
     var esMonthNames = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dic"];
     return esMonthNames[index-1];  
 }
+
