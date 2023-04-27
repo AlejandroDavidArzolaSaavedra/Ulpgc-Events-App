@@ -28,7 +28,18 @@
          <!-- Table2Excel Dependencies-->
          <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
          <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
-        
+            <script>
+                function exportCSVExcel() {
+                    $('#table-event-list').table2excel({
+                        exclude: ".no-export",
+                        filename: "download.xls",
+                        fileext: ".xls",
+                        exclude_links: true,
+                        exclude_inputs: true,
+                        preserveColors: true
+                    });
+                }
+            </script>
         
     <body>
          <header id="header"></header>         
@@ -54,4 +65,5 @@
         <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer> 
         </body>
         <script src="../js/EventList.js"></script>
+
 </html>
