@@ -4,7 +4,8 @@ import { auth, db } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 import { setupEvents } from "./events.js";
 import { getDocs, collection } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js"
-import { renderEvents } from "./EventList.js";
+import { loadListEvents } from "./loadListEvents.js";
+import { loadInformationEvents } from "./showInformationEvent.js";
 
 document.addEventListener('DOMContentLoaded', init);
 function loadTemplate(fileName, id, callback) {
@@ -13,7 +14,6 @@ function loadTemplate(fileName, id, callback) {
         return res.text();
     }).then((text) => {
         document.getElementById(id).innerHTML = text;
-        //console.log(text)
         if(callback){
             callback();
         }
@@ -22,8 +22,34 @@ function loadTemplate(fileName, id, callback) {
 
 function init() {
     loadTemplate('../html/components/header.html', 'header');
+    changeInstitutional();
     loadTemplate('../html/components/footer.html', 'footer');
+    loadEvents();
     registerUser();
+}
+
+
+
+async function loadEvents(){
+    const querySnapShot = await getDocs(collection(db, "evento"));       
+    const lockIndex = document.getElementById("card-car-index");
+    if (lockIndex != undefined){
+        setupEvents(querySnapShot.docs);
+    }
+}
+
+function changeInstitutional(){
+    const verifyInstitucional = document.querySelectorAll(".user-institutional");   
+    const usuarioAlmacenado = localStorage.getItem('usuario');
+    const patronCorreo = /@ulpgc\.[^.]+$/;
+    const usuario = JSON.parse(usuarioAlmacenado);
+    console.log(!patronCorreo.test(usuario.correo));
+    if (!patronCorreo.test(usuario.correo)) {
+        verifyInstitucional.forEach(veryfyUser => veryfyUser.classList.add("hidden"));
+        editbuttonIntListEventNoInstitutional();
+    } else {
+        verifyInstitucional.forEach(veryfyUser => veryfyUser.classList.remove("hidden"));
+    }  
 }
 
 function registerUser() {
@@ -41,21 +67,33 @@ function registerUser() {
             
             const querySnapShot = await getDocs(collection(db, "evento"));
             
-            const lockIndex = document.getElementById("card-car-index");
-            if (lockIndex != undefined){
-                setupEvents(querySnapShot.docs);
+
+            const lockIndex3 = document.getElementById("header-lista-eventos-usuario");
+            if (lockIndex3 != undefined){
+                loadListEvents(querySnapShot.docs);
             }
-            const lockIndex2 = document.getElementById("header-lista-eventos-usuario");
-            console.log(lockIndex2)
-            if (lockIndex2!= undefined){
-                renderEvents(querySnapShot.docs);
+
+            const lockIndex4 = document.getElementById("content-show-information");
+            if (lockIndex4 != undefined){
+                loadInformationEvents(querySnapShot.docs);
             }
+
 
             registrarUsuario.addEventListener("submit", async(e)=>{
                 e.preventDefault();
                 const nombre = registrarUsuario["registrar-nombre"].value;
                 const correo = registrarUsuario["registrar-correo"].value;
                 const contra = registrarUsuario["registrar-contra"].value;
+                const telefono = registrarUsuario["registrar-telefono"].value;
+                const usuario = {
+                    nombre: nombre,
+                    correo: correo,
+                    contra: contra,
+                    telefono: telefono
+                };
+
+                localStorage.setItem('usuario', JSON.stringify(usuario));
+
                 correoValidacion = correo;
                 try {    
                     const credenciales = await createUserWithEmailAndPassword(auth, correo, contra);
@@ -84,6 +122,13 @@ function registerUser() {
                 const correo = iniciarSesion["login-correo"].value;
                 const contra = iniciarSesion["login-contra"].value;
                 correoValidacion = correo;
+                const usuario = {
+                    correo: correo,
+                    contra: contra,
+                };
+
+                localStorage.setItem('usuario', JSON.stringify(usuario));
+
                 try {
                     const credenciales = await signInWithEmailAndPassword(auth, correo, contra);
                     const modalIniciar = document.querySelector("#logearseModal");
@@ -113,7 +158,12 @@ function registerUser() {
                     const nameUser = document.querySelector("#nombre-header");
                     linksNoRegistrado.forEach(links => links.style.display="none");
                     linksRegistrado.forEach(links => links.style.display="block");
-                    if (!patronCorreo.test(correoValidacion)) {
+
+                    const usuarioAlmacenado = localStorage.getItem('usuario');
+                    const usuario = JSON.parse(usuarioAlmacenado);
+                    console.log(!patronCorreo.test(usuario.correo));
+                    console.log(!patronCorreo.test(correoValidacion));
+                    if (!patronCorreo.test(correoValidacion) && !patronCorreo.test(usuario.correo)) {
                         verifyInstitucional.forEach(veryfyUser => veryfyUser.style.display="none");
                     }else{
                         verifyInstitucional.forEach(veryfyUser => veryfyUser.style.display="block");}

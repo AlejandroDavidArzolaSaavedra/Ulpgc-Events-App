@@ -42,13 +42,21 @@
     font: 20px;
 }
 
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
 .footer-grid {
     display: grid;
+    flex-direction: row;
+    width: 80%;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
     grid-gap: 10px;
     margin: auto;
-    width: 80%;
+  grid-template-rows: 1fr auto;
   }
   
   .col1, .col2, .col3, .col4, .col5 {
@@ -87,4 +95,11 @@
 }
 #footer{
     margin-top: 2rem;
+}
+
+/*Movil*/
+@media only screen and (max-width: 1000px) {
+    .footer-grid{
+        display: none;
+    }
 }

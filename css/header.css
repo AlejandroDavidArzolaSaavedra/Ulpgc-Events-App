@@ -1,6 +1,9 @@
 #logo-header-ulpgc {
     width: 5rem;
 }
+.hidden {
+    display: none;
+}  
 
 .header-color-options {
     color: #ffae00;

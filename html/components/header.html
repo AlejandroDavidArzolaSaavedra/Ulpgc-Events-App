@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
-    <img src="../../images/logo.png" id="logo-header-ulpgc"/>
+    <a href="../../html/index.html"><img src="../../images/logo.png" id="logo-header-ulpgc"/></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,7 +20,7 @@
       </ul>
       <ul class="navbar-nav ms-auto">
           <a class="nav-link"  href="#"><i class="fa-brands fa-searchengin fa-2xl header-color-options" style="margin-right:1rem; margin-top:1rem;"></i></a>
-          <input class="form-control me-2 search-input" type="search" placeholder="Buscar" aria-label="Search">
+          <input class="form-control me-2 search-input" type="search" id="input-search-head" placeholder="Buscar" aria-label="Search">
         <li class="nav-item language-option">
           <a class="nav-link" href="#"><i class="fa-solid fa-language fa-2xl header-color-options" style="margin-top: 1rem; margin-right: 1rem; margin-left: 1rem"></i></a>
         </li>
@@ -41,11 +41,13 @@
             
             <li><a class="dropdown-item" href="#">Perfil</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Mis eventos</a></li>
+            <li><a class="dropdown-item" href="../../html/showEventList.html">Mis eventos</a></li>
             <li class="user-institutional"><hr class="dropdown-divider"></li>
             <li class="user-institutional"><a class="dropdown-item" href="#">Gestionar Eventos</a></li>
+            <li class="user-institutional"><hr class="dropdown-divider"></li>
+            <li class="user-institutional"><a class="dropdown-item" href="../../html/createEvent.html">Crear Evento</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" id="cerrar-sesion" href="#">Cerrar Sesion</a></li>
+            <li><a class="dropdown-item" id="cerrar-sesion" href="../../html/index.html">Cerrar Sesion</a></li>
           </ul>
         </li>
 

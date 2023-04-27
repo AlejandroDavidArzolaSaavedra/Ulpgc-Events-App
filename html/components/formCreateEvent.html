@@ -1,57 +1,125 @@
-<div id="First">
-<div class="container-form">
-    <div class="form-create-event">
-      <h2 class="crear-event-form-title center">Crear Evento</h2>
-      <div class="center">
-        <img src="../../images/createEvent/firstStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
-      </div>
-      <div class="fields-form">
-        <label class="labelContainer" style="display: block; margin-right:4rem;">Nombre del evento</label>
-        <input type="text" placeholder="*Campo requerido max(50 caracteres)" style="display: block; width:15rem;margin-left:2rem;">
-        <label class="labelContainer" style="display: block; margin-right:5rem;">Lugar del evento</label>
-        <input type="text" placeholder="*Campo requerido max(50 caracteres)" style="display: block;width:15rem;margin-left:2rem;">
-        <label class="labelContainer" style="display: block; margin-right:6rem;">Tipo de evento</label>
-        <div class="field-select">
-          <div class="field-left-select">
-            <select name="Seleccione evento" style="margin-right:1rem;">
-              <option>Charlas</option>
-              <option>Reuniones Informativas</option>
-              <option>Asaderos</option>
-              <option>Fiesta</option>
-              <option>Cursos formativos</option>
-              <option>Senderismo</option>
-              <option>Otros</option>
-            </select>
+
+<div id="First" >
+  <div class="container-form">
+      <div class="form-create-event" id="container-form-first-part-event">
+        <h2 class="crear-event-form-title center">Crear Evento</h2>
+        <div class="center">
+          <img src="../../images/createEvent/firstStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
+        </div>
+        <div class="fields-form">
+          <label class="labelContainer" style="display: block; margin-right:4rem;">Nombre del evento</label>
+          <input type="text" class="form-control" placeholder="*Campo requerido max(50 caracteres)" style="display: block; width:15rem;margin-left:2rem;">
+          <label class="labelContainer form-label" style="display: block; margin-right:5rem;">Lugar del evento</label>
+          <input type="text" class="form-control" placeholder="*Campo requerido max(50 caracteres)" style="display: block;width:15rem;margin-left:2rem;">
+          <label class="labelContainer form-label" style="display: block; margin-right:6rem;">Tipo de evento</label>
+          <div class="field-select">
+            <div class="field-left-select">
+              <select name="Seleccione evento" class="form-select" style="margin-left:1rem;">
+                <option>Charlas</option>
+                <option>Reuniones Informativas</option>
+                <option>Asaderos</option>
+                <option>Fiesta</option>
+                <option>Cursos formativos</option>
+                <option>Senderismo</option>
+                <option>Otros</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="button-form center">
-        <button name="button" href="createEventsecond.html" style="margin-left:18rem; margin-top:2rem; border: none; width:3rem;height: 2rem;border-radius:5px;background: #0069FF;color: white;"><i class='fas fa-forward'></i></button>
+        <div class="button-form center">
+          <button name="button" type="button" onclick="valForm(1)" href="createEventsecond.html" style="margin-left:18rem; margin-top:2rem; border: none; width:3rem;height: 2rem;border-radius:5px;background: #0069FF;color: white;"><i class='fas fa-forward'></i></button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-  
-  <style>
-    .fields-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        }
-    .imagen-create-event{
-        width:15rem;
-    }
 
-    .fields-form{
-        text-align: center;
-    }
-    .center {
-      text-align: center;
-    }
+    <div id="Second" class="displayoff">
+      <div class="container-form">
+          <div class="form-create-event" id="container-form-second-part-event">
+            <h2 class="crear-event-form-title center">Crear Evento</h2>
+            <div class="center">
+              <img src="../../images/createEvent/SecondStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
+            </div>
+            <div class="fields-form">
+              <label class="labelContainer" style="display: block; margin-right:7rem;">Descripcion</label>
+              <textarea type="text" style="display: block; width:15rem;height:15rem;margin-left:2rem;"></textarea>
   
-    .labelContainer {
-      margin-top: 10px;
-      margin-bottom: 5px;
-    }
-  </style>
+                </div>
+              </div>
+            </div>
+            <div class="button-form center">
+              <button name="button"  type="button" onclick="valForm(2)" style="margin-left:18rem; margin-top:2rem; border: none; width:3rem;height: 2rem;border-radius:5px;background: #0069FF;color: white;"><i class='fas fa-forward'></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+  <div id="Third" class="displayoff">
+    <div class="container-form">
+        <div class="form-create-event">
+          <h2 class="crear-event-form-title center">Crear Evento</h2>
+          <div class="center">
+            <img src="../../images/createEvent/ThirdStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
+          </div>
+          <div class="fields-form">
+            <label class="labelContainer" style="display: block; margin-right:10rem;">Aforo</label>
+            <input type="text" placeholder="*Campo requerido max(50 caracteres)" style="display: block; width:15rem;margin-left:2rem;">
+            <label class="labelContainer" style="display: block; margin-right:5rem;">Fecha de evento</label>
+            <input type="date" id="fecha" style="margin-right: 4rem;" name="fecha">
+  
+            <div class="button-form center">
+            <button name="button"  type="button" onclick="valForm(3)" href="createEventsecond.html" style="margin-left:18rem; margin-top:2rem; border: none; width:3rem;height: 2rem;border-radius:5px;background: #0069FF;color: white;"><i class='fas fa-forward'></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="Fourth" class="displayoff">
+      <div class="container-form">
+          <div class="form-create-event">
+            <h2 class="crear-event-form-title center">Crear Evento</h2>
+            <div class="center">
+              <img src="../../images/createEvent/fourStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
+            </div>
+            <div class="fields-form">
+              <label class="labelContainer" style="display: block; margin-right:7rem;">Descripcion</label>
+              <textarea type="text" class="form-text" style="display: block; width:15rem;height:7rem;margin-left:2rem;"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="button-form center">
+              <button name="button"  type="submit" onclick="enviar()" style="margin-left:18rem; margin-top:2rem; border: none; width:3rem;height: 2rem;border-radius:5px;background: #0069FF;color: white; font-weight: bold; width:6rem"><bold>Crear</bold></button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+        
+        <style>
+          .fields-form {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              }
+          .imagen-create-event{
+              width:15rem;
+          }
+      
+          .fields-form{
+              text-align: center;
+          }
+          .center {
+            text-align: center;
+          }
+        
+          .labelContainer {
+            margin-top: 10px;
+            margin-bottom: 5px;
+          }
+          .displayoff{
+            display: none;
+          }
+        </style>
+  
+  
   

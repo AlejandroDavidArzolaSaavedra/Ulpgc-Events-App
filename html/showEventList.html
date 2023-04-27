@@ -23,28 +23,17 @@
  
          <!-- Scripts de funcionalidad -->
          <script src = "../js/header.js" type="module"></script>
-         <script src="../js/userList.js"></script>
+         <script src="../js/loadListEvents.js"  type="module"></script>
+         <script src = "../js/exportXls.js"></script>
 
-         <!-- Table2Excel Dependencies-->
+         <!-- Dependencias de excel -->
          <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-         <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
-            <script>
-                function exportCSVExcel() {
-                    $('#table-event-list').table2excel({
-                        exclude: ".no-export",
-                        filename: "download.xls",
-                        fileext: ".xls",
-                        exclude_links: true,
-                        exclude_inputs: true,
-                        preserveColors: true
-                    });
-                }
-            </script>
+         <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>        
         
-    <body>
+         <body>
          <header id="header"></header>         
             <h1 id="header-lista-eventos-usuario">Lista de Eventos</h1>
-            <button class="btn btn-success" type="submit" id="excel-button" onclick="exportCSVExcel()">
+            <button class="btn btn-success" id="excel-button" onclick="exportCSVExcel()">
                 Descargar Lista de Eventos Excel
             </button>    
             <div id="page_element">
