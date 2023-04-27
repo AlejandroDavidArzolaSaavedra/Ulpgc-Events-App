@@ -1,6 +1,15 @@
-console.log("Prueba");
+const usersEvents = (event) => {
 
-document.addEventListener('DOMContentLoaded', init);
+    console.log(event);
+    
+    const users = event.usuarios;
 
-const listaEventos = JSON.parse(localStorage.getItem('eventos'));
-const evento = listaEventos.find(e => e.nombre === titulo);
+    users.forEach(element => {
+        const template = `
+        <tr>
+            <td>${element.nombre}</td>
+            <td>${element.correo}</td>
+            <td>${element.telefono}</td>
+        </tr>`;
+    });
+}
