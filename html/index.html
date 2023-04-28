@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../../css/index.css">
-        
+        <link rel="stylesheet" href="../../css/categoryBar.css">
+
         <!-- Toast-->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
@@ -24,13 +25,22 @@
 
         <!-- Scripts de funcionalidad -->
         <script src = "../js/header.js" type="module"></script>
+        <script src = "../js/chooseCategory.js" type="module"></script>
+        <script src = "../js/categoryBar.js"></script>
 </head>
 
 <body>
 
-  <header id="header"></header>
-  <div class="card-cards row row-cols-1 row-cols-md-3 g-4 ml" id="card-car-index" style="margin-left: 2rem; margin-right: 2rem">
-  </div>
-      </body>
-      <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer>
+    <header id="header"></header>
+    <a id="filter-btn"><i class="fa-solid fa-filter fa-xl" style="color: #ffa200; margin:2rem;margin-left:1rem; animation-duration: var(--fa-animation-duration,3s);"> Filtrar Eventos</i></a>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-12" id="categoryBar"></div>
+        <div class="col-lg-9 col-md-9 col-12">
+          <div class="card-cards row row-cols-1 row-cols-md-2 g-4 ml" id="card-car-index"></div>
+        </div>
+      </div>
+    </div>
+     <!--Footer Dinamico -->
+     <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer>
 </html>

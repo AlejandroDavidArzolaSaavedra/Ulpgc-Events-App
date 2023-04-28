@@ -1,0 +1,66 @@
+<div class="categoryBarComponent">
+
+    <h4 style="text-align: center;" class="titleBarComponent"><i class="fa-solid fa-magnifying-glass-plus"></i> Categoria</h4>
+    <hr class="line-category-bar">
+
+    <div class="form-check">
+        <input class="form-check-input position-static filtro-bar" onclick="onlyOneCategory(this)"  name="check-category"  type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+        <p class="options-category">Asadero</p>
+    </div>
+    
+    <div class="form-check">
+        <input class="form-check-input position-static filtro-bar" onclick="onlyOneCategory(this)"  name="check-category" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+        <p  class="options-category">Charla</p>
+    </div>
+    
+    <div class="form-check">
+        <input class="form-check-input position-static filtro-bar" onclick="onlyOneCategory(this)"  name="check-category" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+        <p class="options-category">Reunion informativa</p>
+    </div>
+    
+    <div class="form-check">
+        <input class="form-check-input position-static filtro-bar" onclick="onlyOneCategory(this)"  name="check-category" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+        <p class="options-category">Curso formativo</p>
+    </div>
+    
+    <div class="form-check">
+        <input class="form-check-input position-static filtro-bar" onclick="onlyOneCategory(this)"  name="check-category" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+        <p class="options-category">Otros</p>
+    </div>
+    
+    <hr class="line-category-bar">
+    <h4 style="text-align: center;" class="titleBarComponent"><i class="fa-solid fa-person"></i> Aforo</h4>
+    <hr class="line-category-bar">
+    
+    <div class="form-check">
+            <input class="form-check-input position-static filtro-category" onclick="onlyOne(this)"  name="check" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+            <p class="options-category">0-50</p>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input position-static filtro-category" onclick="onlyOne(this)" name="check" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+            <p  class="options-category">50-100</p>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input position-static filtro-category" onclick="onlyOne(this)" name="check" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+            <p class="options-category">100-150</p>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input position-static filtro-category" onclick="onlyOne(this)" name="check" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+            <p class="options-category">150-200</p>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input position-static filtro-category" onclick="onlyOne(this)" name="check" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+            <p class="options-category">+200</p>
+        </div>
+        <hr class="line-category-bar">
+        <h4 style="text-align: center;" class="titleBarComponent"><i class="fa-solid fa-calendar-days"></i> Fecha</h4>
+        <hr class="line-category-bar">
+        <h5 style="margin-bottom: 1rem;"class="titleBarComponent">Desde:</h4>
+        <input type="date" class="form-control">
+        <h5 style="margin-bottom: 1rem; margin-top: 1rem;"class="titleBarComponent form-label">Hasta:</h4>
+        <input type="date" class="form-control">
+        <hr class="line-category-bar">
+        <div class="d-grid gap-2">
+        <button type="button" onclick="filterCards()" class="btn btn-light mb-2"><b><i class="fa-solid fa-magnifying-glass"></i> Aplicar Filtros</b></button>
+        </div>
+    </div>
