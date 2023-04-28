@@ -12,11 +12,10 @@ img{
     margin-left: 5%;
 }
 .paragraph-show-information{
-    position: relative;
-
+    max-width: 40%;
+    margin-right: 2rem;
     width: 40%;
     margin-left: 7.5%;
-    margin-top: 1rem;
     margin-bottom: 1rem;
 
     font-family: 'Heebo';
@@ -123,7 +122,9 @@ img{
     font-size: 2rem;
 }
 
-
+.parrafos-info-event{
+    margin-left:4rem;
+}
 #button-inscription{
     transition: background-color 0.3s ease;
     background-color: #0069FF; 
@@ -151,4 +152,18 @@ img{
     margin:0;
     margin-left:1rem;
     border: 1px gray solid;
+  }
+
+
+  .fa-map-location-dot{
+    font-size: 2.5rem;
+  }
+
+  .fa-person, .fa-calendar-days{
+    text-align: center;
+    font-size: 3rem;
+  }
+  .fa-clock{
+    font-size: 2.5rem;
+    margin-left: 1rem
   }

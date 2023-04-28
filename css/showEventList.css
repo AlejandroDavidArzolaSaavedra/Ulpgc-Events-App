@@ -9,10 +9,16 @@ html{
     margin: 4%;
     
 }
-#h1h{
+#header-lista-eventos-usuario{
     margin: 4%;
 }
 #excel-button{
     margin-left: 4%;
     margin-top: -2%;
+}
+#table-event-list{
+    border-radius: 12%;
+}
+.date-field{
+    font-weight: 500;
 }

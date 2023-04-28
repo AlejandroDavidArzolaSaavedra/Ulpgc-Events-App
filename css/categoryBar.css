@@ -1,0 +1,28 @@
+.categoryBarComponent{
+    max-width: 20%;
+    display: inline-block;
+    background-color: #4D4C4C;
+    padding: 1rem;
+    border: 1px black solid;
+    border-radius: 20px;
+    min-width: 17rem;
+    margin: 0.5rem;
+    color: white;
+}
+.options-category{
+    font-weight: bold;
+    margin: 0;
+}
+
+.form-check-input{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.titleBarComponent{
+    margin: 0;
+}
+
+.line-category-bar{
+    border-width: 3px;
+    color: white;
+}
