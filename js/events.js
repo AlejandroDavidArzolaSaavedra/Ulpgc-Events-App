@@ -27,7 +27,6 @@ export const setupEvents = (data) => {
      let content = "";
      data.forEach(element => {
        const event= element.data();
-       console.log(event)
        const template = `
        <a class="redirect-to-show">
        <div class="col" style="height:30rem;">
@@ -51,7 +50,6 @@ export const setupEvents = (data) => {
       // Recorrer cada elemento y agregar un evento de clic
       eventCards.forEach((card) => 
       {
-         console.log(card)
       card.addEventListener("click", () => {
       // Obtener el elemento "card-title" dentro del elemento actual
       const cardTitle = card.querySelector(".card-title");
@@ -76,7 +74,7 @@ export const setupEvents = (data) => {
          if (title.includes(searchTerm) && title.includes("")) {           
             const template = `
             <a class="redirect-to-show">
-       <div class="col">
+       <div class="col" style="height:30rem;">
           <div class="card h-100 card-show-event ${getCategoryClass(event.categoria)}">
              <img src="${event.imagenEvento}" class="card-img-top" alt="...">
              <div class="card-body">
@@ -122,16 +120,16 @@ export const setupEvents = (data) => {
                if (title.toLowerCase().includes(searchTerm) && title.includes("")) {
                   const template = `
                   <a class="redirect-to-show">
-       <div class="col">
-          <div class="card h-100 card-show-event ${getCategoryClass(event.categoria)}">
-             <img src="${event.imagenEvento}" class="card-img-top" alt="...">
-             <div class="card-body">
-                <h5 class="card-title">${event.nombre}</h5>
-                <p class="card-text">${event.descripcion}</p>
-             </div>
-          </div>
-       </div>
-    </a>
+                     <div class="col">
+                        <div class="card h-100 card-show-event ${getCategoryClass(event.categoria)}">
+                           <img src="${event.imagenEvento}" class="card-img-top" alt="...">
+                           <div class="card-body">
+                              <h5 class="card-title">${event.nombre}</h5>
+                              <p class="card-text">${event.descripcion}</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
                   `; 
                   content += template;
                }
@@ -150,7 +148,6 @@ export const setupEvents = (data) => {
             // Recorrer cada elemento y agregar un evento de clic
             eventCards.forEach((card) => 
             {
-               console.log(card)
             card.addEventListener("click", () => {
             // Obtener el elemento "card-title" dentro del elemento actual
             const cardTitle = card.querySelector(".card-title");
@@ -164,7 +161,7 @@ export const setupEvents = (data) => {
             });
                });
    }else{
-      console.log("heccho")
+      console.log("hecho")
    }
 
 

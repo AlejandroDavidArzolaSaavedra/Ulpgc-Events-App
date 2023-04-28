@@ -46,7 +46,6 @@ function changeInstitutional(){
     console.log(!patronCorreo.test(usuario.correo));
     if (!patronCorreo.test(usuario.correo)) {
         verifyInstitucional.forEach(veryfyUser => veryfyUser.classList.add("hidden"));
-        editbuttonIntListEventNoInstitutional();
     } else {
         verifyInstitucional.forEach(veryfyUser => veryfyUser.classList.remove("hidden"));
     }  
@@ -60,7 +59,7 @@ function registerUser() {
         .then(async (text) => {
             const registrarUsuario = document.querySelector("#registrarse-form");
             const iniciarSesion = document.querySelector("#logearse-form");
-
+            console.log(registrarUsuario,iniciarSesion,"asdasdasdsa")
             const linksRegistrado = document.querySelectorAll(".usuario-registrado");
             const linksNoRegistrado = document.querySelectorAll(".usuario-no-registrado");
             let correoValidacion = iniciarSesion["login-correo"].value;
@@ -126,7 +125,7 @@ function registerUser() {
                     correo: correo,
                     contra: contra,
                 };
-
+                console.log("estoy aqui")
                 localStorage.setItem('usuario', JSON.stringify(usuario));
 
                 try {
@@ -161,8 +160,6 @@ function registerUser() {
 
                     const usuarioAlmacenado = localStorage.getItem('usuario');
                     const usuario = JSON.parse(usuarioAlmacenado);
-                    console.log(!patronCorreo.test(usuario.correo));
-                    console.log(!patronCorreo.test(correoValidacion));
                     if (!patronCorreo.test(correoValidacion) && !patronCorreo.test(usuario.correo)) {
                         verifyInstitucional.forEach(veryfyUser => veryfyUser.style.display="none");
                     }else{

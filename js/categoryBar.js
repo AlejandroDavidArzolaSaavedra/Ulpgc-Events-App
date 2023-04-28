@@ -10,34 +10,29 @@ function loadTemplate(fileName, id, callback) {
         }
         })
 }
-
+let category;
+let aforo;
+let date;
 function filterCards() {
-
-    console.log("xxxxxxxxxxxx")
-        console.log("xxxxxxxxxxxx")
+    
+    fetch('../html/components/categoryBar.html')
+        .then((res) => {
+            return res.text();
+        })
+        .then(async (text) => {
     // Obtener todas las cards del contenedor
     const cards = document.querySelectorAll('.card-show-event');
-  
+    const categoriaBuscada = new String(category);
     // Recorrer las cards y ocultar/mostrar según los filtros seleccionados
     cards.forEach((card) => {
-      const category = card.querySelector('.options-category').textContent;
-      const aforo = parseInt(card.querySelector('.aforo').textContent);
-      const date = card.querySelector('.date').textContent;
-        console.log(card,"XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-        console.log("xxxxxxxxxxxx")
-        console.log("xxxxxxxxxxxx")
-      if (
-        (selectedCategory === 'todos' || category === selectedCategory) &&
-        (selectedAforo === 'todos' || aforo <= selectedAforos) &&
-        (fromDate === '' || date >= fromDate) &&
-        (toDate === '' || date <= toDate)
-      ) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+        console.log(card)
+        let categoriaCard = new String(card.categoria);
+        console.log(categoriaCard, card.categoria, card.nombre)
+        if(categoriaBuscada.toLowerCase()  === categoriaCard.toLowerCase()){
+            console.log("El coche", card.nombre,"tiene la misma categoria",category)
+        }
     });
-  }
+  });}
 
 function onlyOneCategory(checkbox) {
     var checkboxes = document.getElementsByName('check-category')
@@ -99,12 +94,9 @@ function selectFilters(){
                 // Obtener las fechas seleccionadas
                 const fromDate = fromDateInput.value;
                 const toDate = toDateInput.value;
-
-                // Hacer algo con los filtros seleccionados, por ejemplo, imprimirlos en la consola
-                console.log('Categorías seleccionadas:', selectedCategories);
-                console.log('Aforos seleccionados:', selectedAforos);
-                console.log('Desde:', fromDate);
-                console.log('Hasta:', toDate);
+                category = selectedCategories;
+                aforo = selectedAforos;
+                date = fromDate;
             });
         });
 }
