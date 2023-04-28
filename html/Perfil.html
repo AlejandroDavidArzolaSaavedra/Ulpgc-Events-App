@@ -152,7 +152,7 @@
 .InformacionPerfil{
     margin-left: 10%;
     margin-right: 40%;
-    margin-bottom: 20%;
+    margin-bottom: calc(1rem + 0.5vw);
     float: left;
     width: 60%;
     height: 70%;
@@ -165,14 +165,14 @@
 }
 .datosUsuario{
     float: right;
-    font-size: calc(4ram + 3vw);
-    margin-bottom: 10%;
+    font-size: calc(1rem + 0.5vw);
+    margin-bottom: calc(1rem + 0.5vw);
     margin-right: 10%;
 }
 .FotoDePerfil{
     
-    height: calc(3rem + 2.5vw);
-    width: calc(3rem + 2.5vw);
+    height: calc(20rem + 17vw);
+    width: calc(20rem + 17vw);
     margin-top: 5%;
     margin-left: 4%;
     margin-right: 10%;
@@ -186,22 +186,22 @@
     .Modificar{
         margin-top: 35%;
         margin-left: 5%;
-        width: calc(3rem + 2.5vw);
-        height: auto;
-        margin-right: 90%;
+        width: calc(5rem + 4vw);
+        height: calc(5rem + 4vw);
+        margin-right: 100%;
         background-color: blue;
         color: white;
-        font-size: calc(2rem + 1vw);
+        font-size: calc(1rem + 0.5vw);
     }
     .Eliminar{
         margin-left: 5%;
         width: calc(5rem + 4vw);
-        height: auto;
+        height: calc(5rem + 4vw);
         margin-bottom: 36%;
-        margin-right:90%;
+        margin-right:100%;
         background-color: red;
         color: white;
-        font-size: calc(2rem + 1vw);
+        font-size: calc(1rem + 0.5vw);
     }
     footer{
         margin-top: 40%;
@@ -218,13 +218,13 @@
         <img src="../images/EjemploFotoPerfil.jpg" class="FotoDePerfil">
         <form class = "datosUsuario">
             <label for= "fname">Nombre</label><br>
-            <input type = "fname" id="fname"></input><br>
+            <input id="NombreInformacionUsuario" readonly></input><br>
             <label for= "fcorreo">Correo</label><br>
-            <input type = "fcorreo" id="fcorreo"></input><br>
+            <input id="CorreoInformacionUsuario" readonly></input><br>
             <label for= "fcontraseña">Contraseña</label><br>
-            <input type = "fcontraseña" id="fcontraseña"></input><br>
+            <input type = password id="ContraseñaInformacionUsuario" readonly></input><br>
             <label for= "ftelefono">Teléfono</label><br>
-            <input type = "ftelefono" id="ftelefono"></input><br>
+            <input id="TelefonoInformacionUsuario" readonly></input><br>
             <label for=" "></label><br>
         </form>
     </div>

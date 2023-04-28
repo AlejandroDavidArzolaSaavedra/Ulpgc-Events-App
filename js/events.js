@@ -6,6 +6,7 @@ export const setupEvents = (data) => {
      data.forEach(element => {
        const event= element.data();
        
+       
        const template = `
        <a href="../html/showEventInformation.html" class="redirect-to-show">
         <div class="col">

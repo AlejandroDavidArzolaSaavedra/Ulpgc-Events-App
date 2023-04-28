@@ -3,6 +3,8 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWith
 import { auth, db } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 import { setupEvents } from "./events.js";
+import { changeInfoUser } from "./perfil.js";
+import { changeInfoUserSave } from "./modificarPerfil.js";
 import { getDocs, collection } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js"
 
 document.addEventListener('DOMContentLoaded', init);
@@ -39,17 +41,22 @@ function registerUser() {
             let correoValidacion = iniciarSesion["login-correo"].value;
             
             const querySnapShot = await getDocs(collection(db, "evento"));
+            const querySnapShotUser = await getDocs(collection(db, "users"));
+            let password;
             
             const lockIndex = document.getElementById("card-car-index");
             if (lockIndex != undefined){
                 setupEvents(querySnapShot.docs);
             }
 
+
+
             registrarUsuario.addEventListener("submit", async(e)=>{
                 e.preventDefault();
                 const nombre = registrarUsuario["registrar-nombre"].value;
                 const correo = registrarUsuario["registrar-correo"].value;
                 const contra = registrarUsuario["registrar-contra"].value;
+                password = contra;
                 correoValidacion = correo;
                 try {    
                     const credenciales = await createUserWithEmailAndPassword(auth, correo, contra);
@@ -57,6 +64,13 @@ function registerUser() {
                     const modalBoot =bootstrap.Modal.getInstance(modalRegistrar);
                     modalBoot.hide();
                     showMessage("Bienvenido " + nombre);
+                    const usuario = {
+                        nombre: nombre,
+                        correo: correo,
+                        contra: contra,
+                        telefono: telefono
+                    };
+                    localStorage.setItem('usuario', JSON.stringify(usuario));
                 } catch (error) {
                     let errorDeUsuario = error.code;
                     if(errorDeUsuario === 'auth/invalid-email'){
@@ -77,7 +91,13 @@ function registerUser() {
                 e.preventDefault()
                 const correo = iniciarSesion["login-correo"].value;
                 const contra = iniciarSesion["login-contra"].value;
+                password = contra;
                 correoValidacion = correo;
+                const usuario = {
+                    correo: correo,
+                    contra: contra
+                };
+                localStorage.setItem('usuario', JSON.stringify(usuario));
                 try {
                     const credenciales = await signInWithEmailAndPassword(auth, correo, contra);
                     const modalIniciar = document.querySelector("#logearseModal");
@@ -101,6 +121,7 @@ function registerUser() {
             });
             
             onAuthStateChanged(auth, async(user) =>{
+
                 if(user) {                       
                     const patronCorreo = /@ulpgc\.[^.]+$/;
                     const verifyInstitucional = document.querySelectorAll(".user-institutional");   
@@ -110,8 +131,20 @@ function registerUser() {
                     if (!patronCorreo.test(correoValidacion)) {
                         verifyInstitucional.forEach(veryfyUser => veryfyUser.style.display="none");
                     }else{
-                        verifyInstitucional.forEach(veryfyUser => veryfyUser.style.display="block");}
-                        
+                        verifyInstitucional.forEach(veryfyUser => veryfyUser.style.display="block");
+                    }
+                    const querySnapShotUser = await getDocs(collection(db, "users"));
+                    const lockPerfil = document.getElementById("CorreoInformacionUsuario");
+                    const lockChangePerfil = document.getElementById("cambiarCorreoUsuario");
+                    console.log(lockChangePerfil);
+                    console.log(password);
+                    if (lockPerfil != undefined){
+                        changeInfoUser(querySnapShotUser.docs,password);
+                    }
+
+                    if (lockChangePerfil != undefined){
+                        changeInfoUserSave(querySnapShotUser.docs,password);
+                    }
                 }else{
                     linksRegistrado.forEach(links => links.style.display="none");
                     linksNoRegistrado.forEach(links => links.style.display="block");
