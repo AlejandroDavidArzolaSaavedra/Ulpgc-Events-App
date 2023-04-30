@@ -27,6 +27,11 @@ export const setupEvents = (data) => {
      let content = "";
      data.forEach(element => {
        const event= element.data();
+<<<<<<< HEAD
+       
+       
+=======
+>>>>>>> 01e1e3d7bc8a0e0a58c0cfa4f5ac94ec444a9b51
        const template = `
        <a class="redirect-to-show">
        <div class="col" style="height:calc(35rem+20vw);">
