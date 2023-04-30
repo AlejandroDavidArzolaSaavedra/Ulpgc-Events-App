@@ -89,6 +89,10 @@ function registerUser() {
                 loadListEvents(querySnapShot.docs);
             }
 
+            const lockIndex4 = document.getElementById("content-show-information");
+            if (lockIndex4 != undefined){
+                loadInformationEvents(querySnapShot.docs);
+            }
 
             if(registrarUsuario){
             registrarUsuario.addEventListener("submit", async(e)=>{
@@ -96,7 +100,9 @@ function registerUser() {
                 const nombre = registrarUsuario["registrar-nombre"].value;
                 const correo = registrarUsuario["registrar-correo"].value;
                 const contra = registrarUsuario["registrar-contra"].value;
-                password = contra;
+                const telefono = registrarUsuario["registrar-telefono"].value;
+                
+
                 correoValidacion = correo;
                 try {    
                     const credenciales = await createUserWithEmailAndPassword(auth, correo, contra);
@@ -122,13 +128,6 @@ function registerUser() {
                     
                     modalBoot.hide();
                     showMessage("Bienvenido " + nombre);
-                    const usuario2 = {
-                        nombre: nombre,
-                        correo: correo,
-                        contra: contra,
-                        telefono: telefono
-                    };
-                    localStorage.setItem('usuario', JSON.stringify(usuario2));
                 } catch (error) {
                     let errorDeUsuario = error.code;
                     if(errorDeUsuario === 'auth/invalid-email'){
@@ -149,14 +148,14 @@ function registerUser() {
                 e.preventDefault()
                 const correo = iniciarSesion["login-correo"].value;
                 const contra = iniciarSesion["login-contra"].value;
-                password = contra;
                 correoValidacion = correo;
                 contraUser = contra;
                 const usuario = {
                     correo: correo,
-                    contra: contra
-                };
+                    contra: contra,
+                }
                 localStorage.setItem('usuario', JSON.stringify(usuario));
+
                 try {
                     const credenciales = await signInWithEmailAndPassword(auth, correo, contra);
                     const modalIniciar = document.querySelector("#logearseModal");
