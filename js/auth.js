@@ -24,6 +24,8 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
     console.error("Error durante el registro:", errorCode, errorMessage);
   });
 
+  
+
 firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
     const user = userCredential.user;

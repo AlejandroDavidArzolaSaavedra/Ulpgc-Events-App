@@ -5,5 +5,5 @@
 #container-form-first-part-event, #container-form-second-part-event{
     border: 1px black solid;
     display: inline-block;
+    border-radius: 10px;
 }
-

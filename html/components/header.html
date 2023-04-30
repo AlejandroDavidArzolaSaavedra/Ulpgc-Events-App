@@ -39,11 +39,11 @@
 
           <ul class="dropdown-menu">
             
-            <li><a class="dropdown-item" href="#">Perfil</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="../../html/showEventList.html">Mis eventos</a></li>
+            <li><a class="dropdown-item" href="../../html/perfil.html">Perfil</a></li>
+            <li><hr class="dropdown-divider mis-eventos-no-institucional"></li>
+            <li><a class="dropdown-item mis-eventos-no-institucional" href="../../html/showEventList.html">Mis eventos</a></li>
             <li class="user-institutional"><hr class="dropdown-divider"></li>
-            <li class="user-institutional"><a class="dropdown-item" href="#">Gestionar Eventos</a></li>
+            <li class="user-institutional"><a class="dropdown-item" href="./../html/showEventList.html">Gestionar Eventos</a></li>
             <li class="user-institutional"><hr class="dropdown-divider"></li>
             <li class="user-institutional"><a class="dropdown-item" href="../../html/createEvent.html">Crear Evento</a></li>
             <li><hr class="dropdown-divider"></li>
@@ -83,7 +83,13 @@
           
           <label for="password">Repetir contraseña</label>
           <input type="password" id="registrar-repetir-contra" class="form-control mb-3" placeholder="***" required>
-          <button  type="submit" class="btn btn-primary">Registrarse</button>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input position-static border border-dark filtro-category " id="blankCheckbox" onclick="onlyOne(this)" name="check" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+            <p  class="options-category">Acepto las condiciones de servicio y politicas de privacidad de ULPGC EVENTS</p>
+        </div>
+        
+        <button  type="submit" id="registrar-btn" class="btn btn-primary" disabled>Registrarse</button>
           
         </form>
 
@@ -92,7 +98,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- Modal Logearse -->
 <div class="modal fade" id="logearseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

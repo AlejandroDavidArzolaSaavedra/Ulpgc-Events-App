@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', init);
 
 function loadTemplate(fileName, id, callback) {
@@ -13,25 +14,129 @@ function loadTemplate(fileName, id, callback) {
 let category;
 let aforo;
 let date;
-function filterCards() {
-    
+let dateTo;
+
+
+function compareDate(dateFrom, dateWhile){
+    return reservedDate.getTime() > actualDate.getTime()
+}
+
+const filterEvents = (category, capacityRange, dateStamp, dateStampWhile, events) => {
+    // Objeto que asocia los rangos de capacidad con los valores mínimos y máximos
+    const capacityRanges = {
+      "0-50": [0, 50],
+      "50-100": [50, 100],
+      "100-150": [100, 150],
+      "150-200": [150, 200],
+      "+200": [201, Infinity]
+    };
+    let dateFrom;
+    let dateToStop;
+    if(dateStamp){
+        const dateTransform = new Date(dateStamp);
+        dateFrom = dateTransform;
+    }
+    if(dateStampWhile){
+        const dateToTransform = new Date(dateStampWhile);
+        dateToStop = dateToTransform;
+    }
+    // Filtra los eventos por categoría, rango de capacidad y fecha
+    const filteredEvents = events.filter((event) => {
+      let match = true;
+      if(category){
+      if (category.toLowerCase() && event.categoria.toLowerCase() !== category.toLowerCase()) {
+        match = false;
+      }}
+      if (capacityRange) {
+        const [minCapacity, maxCapacity] = capacityRanges[capacityRange];
+        if (event.aforo < minCapacity || event.aforo > maxCapacity) {
+          match = false;
+        }
+      }
+      if (dateFrom && new Date(event.fecha) < new Date(dateFrom)) {
+        match = false;
+      }
+      if (dateToStop && new Date(event.fecha) > new Date(dateToStop)) {
+        match = false;
+      }
+      return match;
+    });
+  
+    return filteredEvents;
+  }
+  
+
+  function getCategoryClass(categoria) {
+    let casteo = categoria.toString();
+    if(casteo.toLowerCase()  === "Reunion informativa".toLowerCase()){
+       return "card text-white bg-primary mb-3";}
+    if(categoria.toLowerCase() === "Curso formativo".toLowerCase()){
+       return "card text-dark bg-warning mb-3";
+    }
+    switch (categoria) {
+      case "Asadero":
+        return "card text-white bg-dark mb-3";
+        case "Charla":
+        return "card bg-light mb-3";
+      case "Otros":
+          return "card text-white bg-success mb-3";
+    }
+  }
+
+  
+const filterCards =() => {
     fetch('../html/components/categoryBar.html')
         .then((res) => {
             return res.text();
         })
         .then(async (text) => {
-    // Obtener todas las cards del contenedor
-    const cards = document.querySelectorAll('.card-show-event');
     const categoriaBuscada = new String(category);
-    // Recorrer las cards y ocultar/mostrar según los filtros seleccionados
-    cards.forEach((card) => {
-        console.log(card)
-        let categoriaCard = new String(card.categoria);
-        console.log(categoriaCard, card.categoria, card.nombre)
-        if(categoriaBuscada.toLowerCase()  === categoriaCard.toLowerCase()){
-            console.log("El coche", card.nombre,"tiene la misma categoria",category)
-        }
-    });
+    const querySnap = localStorage.getItem('evento');
+    const cardsEvents = JSON.parse(querySnap);
+    const eventosFiltrado = filterEvents(category[0], aforo[0], date,dateTo, cardsEvents)
+
+    const eventList = document.querySelector(".card-cards");
+
+     let content = "";
+     eventosFiltrado.forEach(element => {
+       const template = `
+       <a class="redirect-to-show">
+       <div class="col" style="height:30rem;">
+          <div class="card h-100 card-show-event ${getCategoryClass(element.categoria)}">
+             <img src="${element.imagenEvento}" class="card-img-top" alt="...">
+             <div class="card-body">
+                <h5 class="card-title">${element.nombre}</h5>
+                <p class="card-text">${element.descripcion}</p>
+             </div>
+          </div>
+       </div>
+    </a>
+       `; 
+       content += template;
+     });
+     if(!content){
+        content=`<div class="alert alert-warning h2 w-100" style="margin-bottom:20rem" role="alert">
+           No existen eventos con estos filtros
+           </div>
+           `
+     }      
+     eventList.innerHTML = content;
+     const eventCards = document.querySelectorAll(".card-show-event");
+
+      // Recorrer cada elemento y agregar un evento de clic
+      eventCards.forEach((card) => 
+      {
+      card.addEventListener("click", () => {
+      // Obtener el elemento "card-title" dentro del elemento actual
+      const cardTitle = card.querySelector(".card-title");
+
+      // Obtener el título del evento
+      const eventTitle = cardTitle.textContent;
+
+      // Redirigir a la página de detalles del evento, pasando el título como parámetro
+      window.location.href = `../html/showEventInformation.html?title=${encodeURIComponent(eventTitle)}`;
+      });
+      });
   });}
 
 function onlyOneCategory(checkbox) {
@@ -65,9 +170,7 @@ function selectFilters(){
             const categoryCheckboxes = filtersForm.querySelectorAll(".filtro-bar");
             const aforoCheckboxes = filtersForm.querySelectorAll('.filtro-category');
             const fromDateInput = filtersForm.querySelector('input[type="date"]');
-            const toDateInput = filtersForm.querySelectorAll('input[type="date"]')[1];
-            
-
+            const toDateInput = filtersForm.querySelectorAll('input[type="date"]')[1]; 
             const filterBtn = document.getElementById('filter-btn');
             const categoryBar = document.getElementById('category-bar');
             const cards = document.getElementById('cards');
@@ -93,10 +196,15 @@ function selectFilters(){
 
                 // Obtener las fechas seleccionadas
                 const fromDate = fromDateInput.value;
+                console.log(fromDate)
+                console.log("pppppp");
                 const toDate = toDateInput.value;
                 category = selectedCategories;
                 aforo = selectedAforos;
-                date = fromDate;
+                date = fromDateInput.value;
+                dateTo = toDateInput.value
             });
         });
 }
+
+

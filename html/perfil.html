@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+
+    <!--Dependencias de estilos -->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel= "stylesheet" href="../css/Perfil.css">
+    
+    <!-- Toast-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+
+    <!-- Scripts de funcionalidad -->
+    <script src = "../js/header.js" type="module"></script>
+    <script src = "../js/modificarPerfil.js" type="module"></script>
+
+</head>
+<body>
+    <div class = "Perfil-grid">
+    <header id="header"></header>
+    <div class = "IntormacionTotalPerfil" style="text-align: center;">
+    <div class = "InformacionPerfil-id-class" id="informacion-perfil-id">
+        <h2 class = "InformacionUsuario" style="text-align: left; width:30rem; margin-left: 2rem;"> INFORMACIÓN DE USUARIO</h2>
+        <img src="../images/EjemploFotoPerfil.JPG" class="FotoDePerfil">
+        <form class = "datosUsuario">
+            <label for= "fname" class="form-label mt-4" style="margin-right: 15rem; margin-top: 0.5rem;">Nombre</label>
+            <input id="NombreInformacionUsuario"class="form-control"></input>
+            <label for= "fcorreo" class="form-label" style="margin-right: 15rem; margin-top: 0.5rem;">Correo</label>
+            <input id="CorreoInformacionUsuario" class="form-control"></input>
+            <label for= "fcontraseña" class="form-label" style="margin-right: 13rem; margin-top: 0.5rem;">Contraseña</label>
+            <input type = password  class="form-control" id="ContraseñaInformacionUsuario"></input>
+            <label for= "ftelefono"class="form-label" style="margin-right: 14rem; margin-top: 0.5rem;">Teléfono</label>
+            <input id="TelefonoInformacionUsuario" class="form-control"></input>
+            <label for=" "></label><br>
+                <button type=button id="button-edit-perfil"class="Modificar" style="margin-bottom: 4rem; margin-top: 1.5rem;" ><i class="fa-solid fa-pen-to-square"></i>Modificar Perfil</button>
+                <button type=button  class = "Modificar hidden mb-4" id="button-save-perfil"><i class="fa-solid fa-pen-to-square"></i>Guardar cambios</button>
+                <button type=button class = "Eliminar hidden" id= "BotonEliminarCambios"><i class="fa-solid fa-trash"></i>Eliminar Cambios</button>
+        </form>
+    </div>
+</div>
+</div>
+
+<div class="modal modal-backdrop" tabindex="-1" role="dialog" id="confirm-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmar acción</h5>
+          <button type="button" class="close" data-dismiss="modal" id="exit-close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="confirm-message"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"id="cancel-modal-button" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="confirm-button">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="confirm-modal" aria-labelledby="confirm-modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmar acción</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="confirm-message"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="confirm-button">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>
+ <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer>
+</html>
+

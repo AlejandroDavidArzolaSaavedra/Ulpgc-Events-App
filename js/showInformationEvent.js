@@ -6,9 +6,8 @@ export const loadInformationEvents = (ListaEventos) => {
     ListaEventos.forEach(eventoUser =>{
         let evento = eventoUser.data();
         if(evento.nombre == eventTitle){
-            console.log(evento.fecha[0], evento.fecha[1],evento.fecha[2],evento.fecha[3])
+            
             var month = getMonthString(evento.fecha[1]);
-            console.log("somos el mismo evento", evento.nombre, eventTitle)
             tr+=`<h1 id="title_header">${evento.nombre}</h1>
             <img class="h-25" src="${evento.imagenEvento}" id="imagen-show-event" style="border-radius: 10px;" alt="Imagen del evento"></img>
             </div>
@@ -53,7 +52,6 @@ export const loadInformationEvents = (ListaEventos) => {
                 <p id="info-add-show-event" class="paragraph-show-information"> ${evento.infoAdicional}</p>'
                 `
         }
-        console.log(evento.nombre);
         })
         tableEvent.innerHTML += tr;
 }
