@@ -9,9 +9,10 @@ html{
     margin: 4%;
     
 }
-#header-lista-eventos-usuario{
+#header-lista-eventos-usuario, #header-lista-usuarios-del-evento{
     margin: 4%;
 }
+
 #excel-button{
     margin-left: 4%;
     margin-top: -2%;

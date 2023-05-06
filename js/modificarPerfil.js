@@ -17,6 +17,7 @@ export const changeInfoUserSave = (usuarioRegistrado) => {
        
     const modificarBoton = document.getElementById("BotonModificarUsuario");
     console.log(modificarBoton);
+    crossOriginIsolated.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     modificarBoton.addEventListener("click", async () => {
 
         const nombre = document.getElementById("cambiarNombreUsuario").value;
