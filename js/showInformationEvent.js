@@ -6,8 +6,7 @@ export const loadInformationEvents = (ListaEventos) => {
     
     ListaEventos.forEach(eventoUser =>{
         let evento = eventoUser.data();
-        console.log(evento.fecha,evento.fecha.day,"asdddddddddddddd")
-        console.log("assssssssssssssss")
+
         if(evento.nombre == eventTitle){
             var month = getMonthString(evento.fecha.month);
             tr+=`<h1 id="title_header">${evento.nombre}</h1>
@@ -61,9 +60,7 @@ export const loadInformationEvents = (ListaEventos) => {
         const usuarioAlmacenado = localStorage.getItem('usuario');
         const correoComprobar = JSON.parse(usuarioAlmacenado).correo;
         const patronCorreo = /@ulpgc\.[^.]+$/;
-        console.log(usuarioAlmacenado.correo, "assssssssssssssssssssssssssssssssssssss")
         if (patronCorreo.test(correoComprobar)) {
-            console.log("no deberria entrar aqui")
             botonInscribirse.style.display = "none";
         }else{
             botonInscribirse.style.display = "inline-block";

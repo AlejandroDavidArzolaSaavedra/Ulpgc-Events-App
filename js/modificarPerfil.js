@@ -16,22 +16,14 @@ export const changeInfoUserSave = (usuarioRegistrado) => {
     document.getElementById("cambiarContraseñaUsuario").value = usuarioRegistrado.contra;
        
     const modificarBoton = document.getElementById("BotonModificarUsuario");
-    console.log(modificarBoton);
-    crossOriginIsolated.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     modificarBoton.addEventListener("click", async () => {
 
         const nombre = document.getElementById("cambiarNombreUsuario").value;
         const correo = document.getElementById("cambiarCorreoUsuario").value;
         const telefono = document.getElementById("cambiarTelefonoUsuario").value;
         const contraseña = document.getElementById("cambiarContraseñaUsuario").value;
-        console.log(nombre);
-        console.log(correo);
-        console.log(telefono);
-        console.log(contraseña);
         const userDocRef = await getDocs(collection(db, "users"));
         
-       
-        console.log(userDocRef,"ASDASDSDSDADASDASDASD");
          await updateDoc(userDocRef, {
           nombre: nombre,
           correo: correo,
@@ -59,8 +51,7 @@ export const changeInfoUserSave = (usuarioRegistrado) => {
     const Nombre = "isai@gmail.com";
     const usuarioAlmacenado = localStorage.getItem('usuario');
     const usuario = JSON.parse(usuarioAlmacenado);
-    console.log(usuario.contra);
-    
+
     document.getElementById("NombreInformacionUsuario").value = usuarioRegistrado.nombre;
     document.getElementById("CorreoInformacionUsuario").value = usuarioRegistrado.correo;
     document.getElementById("TelefonoInformacionUsuario").value = usuarioRegistrado.telefono;        

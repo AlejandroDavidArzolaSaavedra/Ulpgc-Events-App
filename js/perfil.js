@@ -2,7 +2,6 @@ export const changeInfoUser = (listUsers,usuarioRegistrado) => {
     const Nombre = "isai@gmail.com";
     const usuarioAlmacenado = localStorage.getItem('usuario');
     const usuario = JSON.parse(usuarioAlmacenado);
-    console.log(usuario.contra);
     
     listUsers.forEach(user => {
         const userInfo= user.data();

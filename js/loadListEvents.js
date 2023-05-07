@@ -40,11 +40,8 @@ export const loadListEvents = (ListaEventos) => {
         const usuario = JSON.parse(usuarioAlmacenado)
         const buttonblink = document.querySelectorAll(".redirect-to-show");
         const buttonadapt = document.querySelectorAll(".user-event-modificate");
-        console.log(buttonblink)
         if (patronCorreo.test(usuario.correo)) {
-            console.log(buttonblink)
             buttonblink.forEach(optionblink => optionblink.style.display="none");
-            console.log(buttonadapt)
             buttonadapt.forEach(option => option.style.display="inline-block");
         }else{
             buttonadapt.forEach(option => option.style.display="none");
@@ -88,7 +85,6 @@ export const loadListEvents = (ListaEventos) => {
 
      deleteEventButton.addEventListener('click', async () => {
        // Eliminar el evento si el usuario confirma
-       console.log(cancelDeleteButton);
        
        if (row && row.parentNode) {
          row.parentNode.removeChild(row);
@@ -100,11 +96,9 @@ export const loadListEvents = (ListaEventos) => {
         const uidUsuario = JSON.parse(parametrosUsuario).uid;
 
         const patronCorreo = /@ulpgc\.[^.]+$/;
-        console.log(row)
         if (patronCorreo.test(correoComprobar)) {
           borradoDeLaBaseDeDatosFirebase(row.firstElementChild.textContent)
         }else{
-          console.log(row.firstElementChild.textContent)
           borradoDeLaBaseDeDatosFirebaseNoInstitutional(row.firstElementChild.textContent,uidUsuario)
         }
         }
@@ -118,9 +112,7 @@ export const loadListEvents = (ListaEventos) => {
 
 async function borradoDeLaBaseDeDatosFirebaseNoInstitutional(eventID, uidUsuario) {
   try {
-      console.log("ESTOY AQUI")
       const eventoRef = doc(db, "evento", eventID);
-      console.log(eventID,uidUsuario)
       let comprobacion;
       const q = query(collection(db, "evento"), where("eventoId", "==", eventID));
       const querySnapshot = await getDocs(q);
@@ -137,14 +129,12 @@ async function borradoDeLaBaseDeDatosFirebaseNoInstitutional(eventID, uidUsuario
 
 async function borradoDeLaBaseDeDatosFirebase(eventID) {
   try {
-    console.log("ESTOY AQUI")
     let comprobacion;
     const q = query(collection(db, "evento"), where("eventoId", "==", eventID));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       comprobacion = doc.data();
     });
-    console.log(comprobacion.eventoId, "asssssssssssssssssssssssssssssssssssssssssss")
     await deleteDoc(doc(db, "evento", comprobacion.eventoId));
     console.log("Documento eliminado correctamente");
     return 0;       

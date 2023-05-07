@@ -196,8 +196,6 @@ function selectFilters(){
 
                 // Obtener las fechas seleccionadas
                 const fromDate = fromDateInput.value;
-                console.log(fromDate)
-                console.log("pppppp");
                 const toDate = toDateInput.value;
                 category = selectedCategories;
                 aforo = selectedAforos;

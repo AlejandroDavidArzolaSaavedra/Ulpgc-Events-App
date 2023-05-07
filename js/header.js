@@ -27,7 +27,6 @@ function init() {
     changeInstitutional();
     loadTemplate('../html/components/header.html', 'header');
     loadTemplate('../html/components/footer.html', 'footer');
-    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaa");
     loadEvents();
     registerUser();
 }
@@ -35,10 +34,8 @@ let usuarioRegistradoTemporal;
 async function loadEvents(){
     const eventsRef = collection(db, 'evento');
     const q = query(eventsRef, orderBy('fechaDeSubida', 'desc'));
-    console.log("asdasdddddddddddddddd"); 
     const querySnapshot = await getDocs(q);
     const eventos = querySnapshot.docs.map((doc) => doc.data());
-    console.log(q);
  
     localStorage.setItem('evento', JSON.stringify(eventos));
     const lockIndex = document.getElementById('card-car-index');
@@ -63,7 +60,6 @@ function changeInstitutional(){
 
 let contraUser;
 let usuarioTemporal;
-console.log("asaaaaaaaaaaaaaaaaaa")
 function registerUser() {
     fetch('../html/components/header.html')
         .then((res) => {
@@ -79,7 +75,6 @@ function registerUser() {
             const querySnapShot = await getDocs(collection(db, "evento"));
             const checkbox = document.getElementById("blankCheckbox");
             const button = document.getElementById("registrar-btn");
-            console.log(checkbox)
             checkbox.addEventListener("change", function() {
               if (this.checked) {
                 button.removeAttribute("disabled");
@@ -212,10 +207,8 @@ function registerUser() {
                     
 async function getEvent(){
     try {
-        console.log("ESTOY AQUsssssssssssssssssI");
         const resultado = await getUser(usuarioTemporal.uid);
         let usuarioTemporalVisto = resultado;
-        console.log(usuarioTemporalVisto);
         const response = await getInfoEvent(usuarioTemporal.uid); 
         return response;       
     } catch (error) {
@@ -225,26 +218,22 @@ async function getEvent(){
   
   async function getInfoEvent(userId){
     try {
-        console.log("XXXXXXXXXXXXXXXXXXXXXXXXXX")
         const q = query(collection(db, "evento"), where("Creador", "==", userId));
         let usuarioDeLaAplicacion = [];
         const querySnapshot = await getDocs(q);
-        console.log("XXXXXXXXXXXXXXXXXXXXXXXXXX")
         querySnapshot.forEach((doc) => {
             usuarioDeLaAplicacion.push(doc.data());
         });
         return usuarioDeLaAplicacion;
     } catch (error) {
-        console.log("Peto por error",error)
+        console.log("Hubo un error",error)
     }
   }
 
   async function getEventNoInstitutional (){
     try {
-        console.log("ESTOY AQUI")
         const resultado = await getUser(usuarioTemporal.uid);
         let usuarioTemporalVisto = resultado;
-        console.log(usuarioTemporalVisto);
         const response = await getEventNoInstitutionalInfoEvent(usuarioTemporal.uid); 
         return response;       
     } catch (error) {
@@ -270,8 +259,7 @@ async function getEvent(){
   
     const eventosUsuarioInstituctional = await getEvent(usuarioTemporal.uid);
     const eventosUusarioNoInstitutional = await getEventNoInstitutional(usuarioTemporal.uid);
-    console.log(eventosUsuarioInstituctional)
-    console.log("buenooo")
+
 
 
     const lockIndex3 = document.getElementById("header-lista-eventos-usuario");
@@ -291,14 +279,11 @@ async function getEvent(){
 
                     if (lockPerfil != undefined){
                         const resultado = await getUser(usuarioTemporal.uid);
-                        console.log(resultado,"ssssss")
+
                         let lockUserPerfil = resultado;
-                        console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-                        console.log(usuarioTemporal.uid)
                         changeInfoUser(lockUserPerfil);
                     }
 
-                    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
                     if (lockChangePerfil != undefined){
                         changeInfoUserSave(querySnapShotUser.docs,contraUser);
                     }
@@ -322,7 +307,7 @@ async function insertUser(user){
         const reponse = await setDoc(doc(db, "users", user.userId), user);
         return reponse;
     } catch (error) {
-        console.log("Peto por error",error)
+        console.log("Hubo un error",error)
     }
 }
 
@@ -354,7 +339,7 @@ async function getInfoUser(userId){
         });
         return usuarioDeLaAplicacion;
     } catch (error) {
-        console.log("Peto por error",error)
+        console.log("Hubo un error",error)
     }
 }
 ///////////////////////////////////////////////////
@@ -387,8 +372,6 @@ buttonSave.addEventListener('click', function() {
     
     confirmButton.onclick = async function() {
         
-        
-        console.log("EJEMASSSSSSSSSSSSSSSSSSSSSSSS")
         const resultado = await getUser(usuarioTemporal.uid);
         let editarPerfil = resultado;
         let contraAux;
@@ -399,9 +382,7 @@ buttonSave.addEventListener('click', function() {
         editarPerfil.nombre = document.getElementById("NombreInformacionUsuario").value;
         
         editarPerfil.telefono = document.getElementById("TelefonoInformacionUsuario").value;
-        
-        console.log(editarPerfil)
-        console.log(contraAux,"asdasdas")    
+
         
         editarPerfil.contra = document.getElementById("ContraseñaInformacionUsuario").value;
         const resultado2 = await getUser(usuarioTemporal.uid);   
@@ -412,9 +393,7 @@ buttonSave.addEventListener('click', function() {
         // Actualizar firebase authentication
         let incremento = 0;
         let nopassnoemail = 1
-        console.log("lo jurooooooooo")
         if(contraAux != document.getElementById("ContraseñaInformacionUsuario").value){
-            console.log("contras distintas")
             incremento+=1
             nopassnoemail-=1
             addUser(editarPerfil)        
@@ -469,7 +448,6 @@ function actualizarFirebaseAuthentication( newEmail) {
   function functionActualizarFirebaseAuth(newPassword) {
 
     paswrodAuxiliarCambio = newPassword;
-    console.log(newPassword,"ASSSSSS")
     updatePassword(auth.currentUser, newPassword)
     .then(() => {
       console.log("Contraseña actualizada con éxito");

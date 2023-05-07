@@ -31,7 +31,6 @@ function loadTemplate(fileName, id, callback) {
       }, () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           url_imagen = downloadURL;
-          console.log(downloadURL);
         }).catch((error) => {
           console.error('Error al obtener la URL de descarga:', error);
         });
@@ -67,10 +66,7 @@ function loadTemplate(fileName, id, callback) {
           ejemplo.addEventListener("click",function() {
             let fechaActual = new Date()
             const fecha = document.querySelector("#input-create-event-fecha").value;
-            console.log("asdads")
-            console.log(fecha);
             
-            console.log("ejemploxxxxxxxxwwwwwwwwwwwwwwwwwwxxxxxxxxxxxxxxx")
             const modal = document.querySelector('#confirmar-creacion-evento-modal');
             $(modal).modal('show');        
             const deleteEventButton = document.querySelector('#deleteEventButton-Cancel');
@@ -181,9 +177,6 @@ function loadTemplate(fileName, id, callback) {
                 listaDeUsuarios: listaDeUsuarios,
                 nombre: nombre
             };
-            console.log(uid_evento);
-            console.log(evento);
-            console.log("DIOSSSS")
             addEvent(evento, uid_evento);
         }
         

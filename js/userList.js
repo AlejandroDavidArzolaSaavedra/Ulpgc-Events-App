@@ -2,8 +2,7 @@ import { getDocs, getDoc, updateDoc, collection, query, deleteDoc, where, doc} f
 import { db } from "./firebase.js";
 
 export const usersEvents = (usuarioDelEvento) => {
-    console.log(usuarioDelEvento)
-    console.log("prueba a corregir")
+
     var tableEvent = document.getElementById("table-event-list");
     let tr = "";
     usuarioDelEvento.forEach((usuarios) => {
@@ -65,7 +64,6 @@ export const usersEvents = (usuarioDelEvento) => {
 
      deleteEventButton.addEventListener('click', async () => {
        // Eliminar el evento si el usuario confirma
-       console.log(cancelDeleteButton);
        
        if (row && row.parentNode) {
          row.parentNode.removeChild(row);

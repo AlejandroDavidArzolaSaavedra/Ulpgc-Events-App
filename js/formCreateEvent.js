@@ -1,13 +1,10 @@
 import { setDoc } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js";
 const button = document.querySelector("#crear-evento-confirm-event");
-console.log(button,"wwwwwwwwwwwwwwwwwwwwwwwwwwasdasssssssssssssssss");
 if (button){
-    console.log("joosssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss");
     setTimeout(() => { console.log("World!"); }, 50000);
     asdas
     button.addEventListener("submit", async(e)=>{
         e.preventDefault();
-        console.log(button,"asdasssssssssssssssss")
         button.addEventListener('click', accesoclick);
 
     
@@ -37,13 +34,11 @@ const accesoALaBD = () =>{
     var ficheros = []
     var leer = new FileReader();
     leer.readAsDataURL(urlEvent);
-    console.log("Esto es lo que se llama leer", leer)
     
     
     
     const infoAdicional = document.querySelector("#input-create-event-info-adicional").value;
 
-    console.log("ejemploooooooooooooooooooooooooooooooooooooooooooooooooo")
     const evento = {
         Creador: creador,
         aforo: aforo,
@@ -57,7 +52,6 @@ const accesoALaBD = () =>{
         nombre: nombre
     };
 
-    console.log("asdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     addEvent(evento);
 }
 
@@ -67,7 +61,7 @@ async function insertEvent(event) {
       //const response = await setDoc(doc(db, "evento","0"), event);
       //return response;
     } catch (error) {
-      console.log("Peto por error", error);
+      console.log("Ocurrio un error", error);
     }
   }
   
@@ -82,13 +76,11 @@ async function insertEvent(event) {
   }
 
 const accesoclick = ()  =>{
-    console.log("EJEMPLOOOOO")
    const modal = document.querySelector('#confirmar-creacion-evento-modal');
     const deleteEventButton = document.querySelector('#deleteEventButton-Cancel');
     const closeButton = document.querySelector('[data-dismiss="modal"]');
     const crearEvento = document.querySelector('#CreateEventButtonCreate');
     const textCrearEvento = document.querySelector("#contenido-body-crear-evento");
-    console.log(modal)
     $(modal).modal('show');
 
     if (closeButton) {
@@ -102,7 +94,6 @@ const accesoclick = ()  =>{
       });
     if(crearEvento){
         crearEvento.addEventListener('click', () => {
-            console.log()
             crearEvento.style.display = "none";
             deleteEventButton.style.display = "none";
             console.log("Formulario enviado correctamente");
