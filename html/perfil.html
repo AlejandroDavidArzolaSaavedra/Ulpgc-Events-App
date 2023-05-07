@@ -191,7 +191,7 @@
         margin-right: 100%;
         background-color: blue;
         color: white;
-        font-size: 150%;
+        font-size: calc(1rem + 0.5vw);
     }
     .Eliminar{
         margin-left: 5%;
@@ -212,19 +212,19 @@
 <body>
     <div class = "Perfil-grid">
     <header id="header"></header>
-    <div class = "IntormacionTotalPerfil" style="text-align: center;">
-    <div class = "InformacionPerfil-id-class" id="informacion-perfil-id">
-        <h2 class = "InformacionUsuario" style="text-align: left; width:30rem; margin-left: 2rem;"> INFORMACIÓN DE USUARIO</h2>
-        <img src="../images/EjemploFotoPerfil.JPG" class="FotoDePerfil">
+    <div class = "IntormacionTotalPerfil">
+    <div class = "InformacionPerfil">
+        <h2 class = "InformacionUsuario"> INFORMACIÓN DE USUARIO</h2>
+        <img src="../images/EjemploFotoPerfil.jpg" class="FotoDePerfil">
         <form class = "datosUsuario">
-            <label for= "fname" class="form-label mt-4" style="margin-right: 15rem; margin-top: 0.5rem;">Nombre</label>
-            <input id="NombreInformacionUsuario"class="form-control"></input>
-            <label for= "fcorreo" class="form-label" style="margin-right: 15rem; margin-top: 0.5rem;">Correo</label>
-            <input id="CorreoInformacionUsuario" class="form-control"></input>
-            <label for= "fcontraseña" class="form-label" style="margin-right: 13rem; margin-top: 0.5rem;">Contraseña</label>
-            <input type = password  class="form-control" id="ContraseñaInformacionUsuario"></input>
-            <label for= "ftelefono"class="form-label" style="margin-right: 14rem; margin-top: 0.5rem;">Teléfono</label>
-            <input id="TelefonoInformacionUsuario" class="form-control"></input>
+            <label for= "fname">Nombre</label><br>
+            <input id="NombreInformacionUsuario" readonly></input><br>
+            <label for= "fcorreo">Correo</label><br>
+            <input id="CorreoInformacionUsuario" readonly></input><br>
+            <label for= "fcontraseña">Contraseña</label><br>
+            <input type = password id="ContraseñaInformacionUsuario" readonly></input><br>
+            <label for= "ftelefono">Teléfono</label><br>
+            <input id="TelefonoInformacionUsuario" readonly></input><br>
             <label for=" "></label><br>
         </form>
     </div>
