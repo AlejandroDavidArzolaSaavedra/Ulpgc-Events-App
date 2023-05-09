@@ -1,5 +1,5 @@
 
-import { createUserWithEmailAndPassword,EmailAuthProvider,reauthenticateWithCredential, onAuthStateChanged, updateEmail, updatePassword, signOut,getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-auth.js";
+import { createUserWithEmailAndPassword, onAuthStateChanged, updateEmail, updatePassword, signOut,getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-auth.js";
 import { auth, db } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 import { setupEvents } from "./events.js";
@@ -10,6 +10,7 @@ import { changeInfoUserSave,changeInfoUser } from "./modificarPerfil.js";
 import { loadInformationEvents } from "./showInformationEvent.js";
 
 document.addEventListener('DOMContentLoaded', init);
+
 function loadTemplate(fileName, id, callback) {
 
     fetch(fileName).then((res) => {
@@ -32,19 +33,17 @@ function init() {
 let usuarioRegistradoTemporal;
 async function loadEvents(){
     const eventsRef = collection(db, 'evento');
-    const q = query(eventsRef, orderBy('fechaDeSubida', 'asc'));
-  
+    const q = query(eventsRef, orderBy('fechaDeSubida', 'desc'));
     const querySnapshot = await getDocs(q);
     const eventos = querySnapshot.docs.map((doc) => doc.data());
-    console.log(q);
+ 
     localStorage.setItem('evento', JSON.stringify(eventos));
     const lockIndex = document.getElementById('card-car-index');
     if (lockIndex != undefined) {
       setupEvents(querySnapshot.docs);
     }
+
 }
-
-
 function changeInstitutional(){
     const verifyInstitucional = document.querySelectorAll(".user-institutional");   
     const usuarioAlmacenado = localStorage.getItem('usuario');
@@ -58,6 +57,7 @@ function changeInstitutional(){
         verifyInstitucional.forEach(veryfyUser => veryfyUser.classList.remove("hidden"));
     }  }
 }
+
 let contraUser;
 let usuarioTemporal;
 function registerUser() {
@@ -75,7 +75,6 @@ function registerUser() {
             const querySnapShot = await getDocs(collection(db, "evento"));
             const checkbox = document.getElementById("blankCheckbox");
             const button = document.getElementById("registrar-btn");
-            console.log(checkbox)
             checkbox.addEventListener("change", function() {
               if (this.checked) {
                 button.removeAttribute("disabled");
@@ -84,10 +83,6 @@ function registerUser() {
               }
             });  
 
-            const lockIndex3 = document.getElementById("header-lista-eventos-usuario");
-            if (lockIndex3 != undefined){
-                loadListEvents(querySnapShot.docs);
-            }
 
             const lockIndex4 = document.getElementById("content-show-information");
             if (lockIndex4 != undefined){
@@ -118,7 +113,7 @@ function registerUser() {
                         userId: usuarioTemporal.uid,
                     };
                     usuarioRegistradoTemporal=usuario;
-
+                    usuarioTemporal = usuario;
                     contraUser = contra;
                     localStorage.setItem('usuario', JSON.stringify(usuario));
     
@@ -141,8 +136,7 @@ function registerUser() {
                     }
                 }
             })
-        }
-            
+        }   
             if(iniciarSesion){
             iniciarSesion.addEventListener("submit", async e =>{
                 e.preventDefault()
@@ -176,6 +170,8 @@ function registerUser() {
             const cerrarSesion = document.querySelector("#cerrar-sesion");
             cerrarSesion.addEventListener("click",async () =>{
                 localStorage.removeItem('usuario');
+                localStorage.removeItem('ParametrosUsuario');
+                localStorage.removeItem('evento');
                 await signOut(auth);
                 window.location.href = "http://127.0.0.1:5501/html/index.html";
             });
@@ -184,12 +180,14 @@ function registerUser() {
                 if(user) {         
                     usuarioTemporal = user;              
                     const patronCorreo = /@ulpgc\.[^.]+$/;
+                    localStorage.setItem('ParametrosUsuario', JSON.stringify(usuarioTemporal));
                     const verifyInstitucional = document.querySelectorAll(".user-institutional");   
                     const nameUser = document.querySelector("#nombre-header");
                     linksNoRegistrado.forEach(links => links.style.display="none");
                     linksRegistrado.forEach(links => links.style.display="block");
                     const option_no_Institucional = document.querySelectorAll(".mis-eventos-no-institucional");  
                     
+                
                     const usuarioAlmacenado = localStorage.getItem('usuario');
                     const usuario = JSON.parse(usuarioAlmacenado);
                     if (usuario){
@@ -206,13 +204,83 @@ function registerUser() {
                     const lockPerfil = document.getElementById("CorreoInformacionUsuario");
                     const lockChangePerfil = document.getElementById("cambiarCorreoUsuario");
                    
+                    
+async function getEvent(){
+    try {
+        const resultado = await getUser(usuarioTemporal.uid);
+        let usuarioTemporalVisto = resultado;
+        const response = await getInfoEvent(usuarioTemporal.uid); 
+        return response;       
+    } catch (error) {
+        console.log("Problemas al añadir", error)        
+    }
+  }
+  
+  async function getInfoEvent(userId){
+    try {
+        const q = query(collection(db, "evento"), where("Creador", "==", userId));
+        let usuarioDeLaAplicacion = [];
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+            usuarioDeLaAplicacion.push(doc.data());
+        });
+        return usuarioDeLaAplicacion;
+    } catch (error) {
+        console.log("Hubo un error",error)
+    }
+  }
 
+  async function getEventNoInstitutional (){
+    try {
+        const resultado = await getUser(usuarioTemporal.uid);
+        let usuarioTemporalVisto = resultado;
+        const response = await getEventNoInstitutionalInfoEvent(usuarioTemporal.uid); 
+        return response;       
+    } catch (error) {
+        console.log("Problemas al añadir", error)        
+    }
+  }
+  
+  async function getEventNoInstitutionalInfoEvent(userId) {
+    try {
+      const q = query(collection(db, "evento"), where("listaDeUsuarios", "array-contains", userId));
+      let eventosDelUsuario = [];
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        eventosDelUsuario.push(doc.data());
+      });
+      return eventosDelUsuario;
+    } catch (error) {
+      console.log("Error al obtener los eventos del usuario:", error);
+    }
+  }
+  
+
+  
+    const eventosUsuarioInstituctional = await getEvent(usuarioTemporal.uid);
+    const eventosUusarioNoInstitutional = await getEventNoInstitutional(usuarioTemporal.uid);
+
+
+
+    const lockIndex3 = document.getElementById("header-lista-eventos-usuario");
+    if (lockIndex3 != undefined){
+
+         
+        const usuarioAlmacenado = localStorage.getItem('usuario');
+        const correoComprobar = JSON.parse(usuarioAlmacenado).correo;
+        const patronCorreo = /@ulpgc\.[^.]+$/;
+       
+        if (patronCorreo.test(correoComprobar)) {
+            loadListEvents(eventosUsuarioInstituctional);
+        }else{
+            loadListEvents(eventosUusarioNoInstitutional);
+        }
+    }
 
                     if (lockPerfil != undefined){
                         const resultado = await getUser(usuarioTemporal.uid);
-                        console.log(resultado,"ssssss")
+
                         let lockUserPerfil = resultado;
-                        console.log(usuarioTemporal.uid)
                         changeInfoUser(lockUserPerfil);
                     }
 
@@ -239,7 +307,7 @@ async function insertUser(user){
         const reponse = await setDoc(doc(db, "users", user.userId), user);
         return reponse;
     } catch (error) {
-        console.log("Peto por error",error)
+        console.log("Hubo un error",error)
     }
 }
 
@@ -271,15 +339,15 @@ async function getInfoUser(userId){
         });
         return usuarioDeLaAplicacion;
     } catch (error) {
-        console.log("Peto por error",error)
+        console.log("Hubo un error",error)
     }
 }
-
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 
 const buttonSave = document.querySelector("#button-save-perfil");
+
 const confirmModal = document.getElementById('confirm-modal');
 const confirmMessage = document.getElementById('confirm-message');
 const confirmButton = document.getElementById('confirm-button');
@@ -304,22 +372,17 @@ buttonSave.addEventListener('click', function() {
     
     confirmButton.onclick = async function() {
         
-        
-        console.log("CHUTTTYYY")
         const resultado = await getUser(usuarioTemporal.uid);
         let editarPerfil = resultado;
         let contraAux;
         let mailAux = editarPerfil.correo;
         contraAux = editarPerfil.contra;
-        console.log(editarPerfil.userId)
         let temp = document.getElementById("CorreoInformacionUsuario").value;
         
         editarPerfil.nombre = document.getElementById("NombreInformacionUsuario").value;
         
         editarPerfil.telefono = document.getElementById("TelefonoInformacionUsuario").value;
-        
-        console.log(editarPerfil)
-        console.log(contraAux,"asdasdas")    
+
         
         editarPerfil.contra = document.getElementById("ContraseñaInformacionUsuario").value;
         const resultado2 = await getUser(usuarioTemporal.uid);   
@@ -329,9 +392,10 @@ buttonSave.addEventListener('click', function() {
 
         // Actualizar firebase authentication
         let incremento = 0;
+        let nopassnoemail = 1
         if(contraAux != document.getElementById("ContraseñaInformacionUsuario").value){
-            console.log("contras distintas")
             incremento+=1
+            nopassnoemail-=1
             addUser(editarPerfil)        
             functionActualizarFirebaseAuth(editarPerfil.correo);  
         }
@@ -339,10 +403,13 @@ buttonSave.addEventListener('click', function() {
             if(mailAux != document.getElementById("CorreoInformacionUsuario").value){
                 addUser(editarPerfil)
                 actualizarFirebaseAuthentication(editarPerfil.correo);
+                nopassnoemail-=1
             }
         }
         incremento=0;
-        
+        if(nopassnoemail){
+            addUser(editarPerfil) 
+        }
         // Aquí iría el código para guardar los cambios
         confirmModal.style.display = 'none';
         
@@ -381,7 +448,6 @@ function actualizarFirebaseAuthentication( newEmail) {
   function functionActualizarFirebaseAuth(newPassword) {
 
     paswrodAuxiliarCambio = newPassword;
-    console.log(newPassword,"ASSSSSS")
     updatePassword(auth.currentUser, newPassword)
     .then(() => {
       console.log("Contraseña actualizada con éxito");
@@ -390,28 +456,3 @@ function actualizarFirebaseAuthentication( newEmail) {
       console.log("Ocurrió un error al actualizar la contraseña:", error);
     });
   }
-  
-
-
-  async function getEvent(user){
-    try {
-        const response = await getInfoEvent(user); 
-        return response;       
-    } catch (error) {
-        console.log("Problemas al añadir", error)        
-    }
-}
-
-async function getInfoEvent(userId){
-    try {
-        const q = query(collection(db, "events"), where("Creador", "==", userId));
-        let usuarioDeLaAplicacion;
-        const querySnapshot = await getDocs(q);
-        querySnapshot.forEach((doc) => {
-            usuarioDeLaAplicacion = doc.data();
-        });
-        return usuarioDeLaAplicacion;
-    } catch (error) {
-        console.log("Peto por error",error)
-    }
-}

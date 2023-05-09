@@ -12,7 +12,8 @@
       <!-- Toast-->
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
       <!-- Font-awesome -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
@@ -23,37 +24,8 @@
 
       <!-- Scripts de funcionalidad -->
       <script src = "../js/header.js" type="module"></script>
-      <script src = "../js/formCreateEvent.js"></script>
-
-    <script>
- function loadTemplate(fileName, id, callback) {
-  fetch(fileName)
-    .then((res) => res.text())
-    .then((text) => {
-      document.getElementById(id).innerHTML = text;
-      if (callback) {
-        callback();
-      }
-    });
-}
-
-function init() {
-  loadTemplate('./components/formCreateEvent.html', 'createEvent', function() {
-   
-    function changeFields() {
-      const formContainer = document.getElementById('form-container');
-      formContainer.innerHTML = `
-        <label for="new-field">Nuevo campo:</label>
-        <input type="text" id="new-field" name="new-field">
-      `;
-    }
-  });
-}
-
-document.addEventListener('DOMContentLoaded', init);
-
-
-    </script>
+      <script src = "../js/formCreateEvent.js" type="module"></script>
+      <script src = "../js/prueba.js"  type="module"></script>
 </head>
 <body>
     <header id="header"></header>
@@ -62,3 +34,71 @@ document.addEventListener('DOMContentLoaded', init);
     <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer>
 </body>
 </html>
+
+
+<script>
+function valForm(nform){
+        let var1,var2= "";
+        switch(nform){
+        case 1:
+            var1="First";
+            var2="Second";
+            break;
+        case 2:
+            var1="Second";
+            var2="Third";
+            break;
+        case 3:
+            var1="Third";
+            var2="Fourth";
+            break;
+        case 4:
+            var1="Fourth";
+            var2="Fifth";
+            break;
+        default:
+            break;
+        }
+        
+        const formactual = document.getElementById(var1)
+        const formsig = document.getElementById(var2)
+        console.log(formsig);
+        formactual.classList.add("displayoff");
+        formsig.classList.remove("displayoff")
+        console.log("me han pulsado")
+    }
+    
+    
+function valFormReturn(nform){
+        let var1,var2= "";
+        switch(nform){
+        case 2:
+            var1="First";
+            var2="Second";
+            break;
+        case 3:
+            var1="Second";
+            var2="Third";
+            break;
+        case 4:
+            var1="Third";
+            var2="Fourth";
+            break;
+        case 5:
+            console.log("jojojojo")
+            var1="Fourth";
+            var2="Fifth";
+            break;
+            default:
+                break;
+        }
+        
+        const formactual = document.getElementById(var1)
+        const formsig = document.getElementById(var2)
+        console.log(formsig);
+        formsig.classList.add("displayoff");
+        formactual.classList.remove("displayoff")
+        console.log("me han pulsado")
+        }
+  
+  </script>

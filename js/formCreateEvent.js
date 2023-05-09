@@ -1,58 +1,125 @@
-function enviar(){
-    console.log("Formulario enviado correctamente")
-}
+import { setDoc } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js";
+const button = document.querySelector("#crear-evento-confirm-event");
+if (button){
+    setTimeout(() => { console.log("World!"); }, 50000);
+    asdas
+    button.addEventListener("submit", async(e)=>{
+        e.preventDefault();
+        button.addEventListener('click', accesoclick);
 
-function valForm(nform){
-    let var1,var2= "";
-    switch(nform){
-    case 1:
-        var1="First";
-        var2="Second";
-        break;
-    case 2:
-        var1="Second";
-        var2="Third";
-        break;
-    case 3:
-        var1="Third";
-        var2="Fourth";
-        break;
-        default:
-            break;
-    }
     
-    const formactual = document.getElementById(var1)
-    const formsig = document.getElementById(var2)
-    console.log(formsig);
-    formactual.classList.add("displayoff");
-    formsig.classList.remove("displayoff")
-    console.log("me han pulsado")
-}
 
-
-function valFormReturn(nform){
-    let var1,var2= "";
-    switch(nform){
-    case 2:
-        var1="First";
-        var2="Second";
-        break;
-    case 3:
-        var1="Second";
-        var2="Third";
-        break;
-    case 4:
-        var1="Third";
-        var2="Fourth";
-        break;
-        default:
-            break;
-    }
+const accesoALaBD = () =>{    
+    const usuarioAlmacenado = localStorage.getItem('ParametrosUsuario');
+    const creador = JSON.parse(usuarioAlmacenado).uid;
+    const nombre = document.querySelector("#input-create-event-nombre").value;
+    const lugar = document.querySelector("#input-create-event-lugar").value;
+    const tipo  = document.querySelector("#input-create-type-event").value;
+    const descripcion  = document.querySelector("#input-create-event-descripcion").value;
+    const aforo = document.querySelector("#input-create-event-aforo").value;
+    const urlEvent = document.querySelector("#file-input-event").value;
+    const fecha = document.querySelector("#input-create-event-fecha");
+    const hour = document.querySelector("#input-create-event-hour");
     
-    const formactual = document.getElementById(var1)
-    const formsig = document.getElementById(var2)
-    console.log(formsig);
-    formsig.classList.add("displayoff");
-    formactual.classList.remove("displayoff")
-    console.log("me han pulsado")
+
+
+    const miFecha = new Date(miFechaInput.value);
+    const day = miFecha.getDate();
+    const month = miFecha.getMonth() + 1;
+    const year = miFecha.getFullYear();
+
+    const listaDeUsuarios = []
+    const url = "./images/evento_festival.jpg";
+
+    var ficheros = []
+    var leer = new FileReader();
+    leer.readAsDataURL(urlEvent);
+    
+    
+    
+    const infoAdicional = document.querySelector("#input-create-event-info-adicional").value;
+
+    const evento = {
+        Creador: creador,
+        aforo: aforo,
+        categoria: tipo,
+        lugar: lugar,
+        descripcion: descripcion,
+        fechaDeSubida: {day,month,year,hour},
+        imagenEvento: url,
+        infoAdicional: infoAdicional,
+        listaDeUsuarios: listaDeUsuarios,
+        nombre: nombre
+    };
+
+    addEvent(evento);
 }
+
+
+async function insertEvent(event) {
+    try {
+      //const response = await setDoc(doc(db, "evento","0"), event);
+      //return response;
+    } catch (error) {
+      console.log("Ocurrio un error", error);
+    }
+  }
+  
+  async function addEvent(event) {
+    try {
+      const response = await insertEvent(event);
+      console.log("Evento añadido correctamente");
+      return response;
+    } catch (error) {
+      console.log("Problemas al añadir", error);
+    }
+  }
+
+const accesoclick = ()  =>{
+   const modal = document.querySelector('#confirmar-creacion-evento-modal');
+    const deleteEventButton = document.querySelector('#deleteEventButton-Cancel');
+    const closeButton = document.querySelector('[data-dismiss="modal"]');
+    const crearEvento = document.querySelector('#CreateEventButtonCreate');
+    const textCrearEvento = document.querySelector("#contenido-body-crear-evento");
+    $(modal).modal('show');
+
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+        $(modal).modal('hide');
+        });}
+ 
+      deleteEventButton.addEventListener('click', async () => {
+        // Cerrar el modal
+        $(modal).modal('hide');
+      });
+    if(crearEvento){
+        crearEvento.addEventListener('click', () => {
+            crearEvento.style.display = "none";
+            deleteEventButton.style.display = "none";
+            console.log("Formulario enviado correctamente");
+            textCrearEvento.innerHTML = "Subiendo evento a ULPGC EVENTS..."
+            enviarDatosADb();
+        });
+        }
+
+        
+        function enviarDatosADb() {
+            return new Promise(function(resolve, reject) {
+              // Simulación de acceso a la base de datos
+              setTimeout(function() {
+                resolve();
+              }, 2000);
+            }).then(function() {
+              // Si la promesa se resuelve correctamente
+              $("#create-event-button").text("Evento creado correctamente");
+              setTimeout(function() {
+                accesoALaBD();
+                //window.location.href = "http://127.0.0.1:5501/html/showEventList.html";
+              }, 1000);
+            }).catch(function() {
+              // Si la promesa es rechazada
+              $(modal).modal('hide');
+            });
+          }
+        }});
+    }

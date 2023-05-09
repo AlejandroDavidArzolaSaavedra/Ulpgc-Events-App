@@ -2,14 +2,12 @@ document.addEventListener('DOMContentLoaded', init);
 
 function loadTemplate() {
     const cards = document.querySelectorAll('.card');
-    console.log(cards);
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
             // código para mostrar los detalles del evento
-            console.log(card);
             const titulo = card.querySelector('.card-title').value;
-            console.log("titulo")
+
 
             // Obtener los datos del Local Storage
             const eventos = JSON.parse(localStorage.getItem('eventos'));

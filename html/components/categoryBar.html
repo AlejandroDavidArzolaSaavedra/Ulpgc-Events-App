@@ -56,11 +56,12 @@
         <h4 style="text-align: center;" class="titleBarComponent"><i class="fa-solid fa-calendar-days"></i> Fecha</h4>
         <hr class="line-category-bar">
         <h5 style="margin-bottom: 1rem;"class="titleBarComponent">Desde:</h4>
-        <input type="date" class="form-control">
+        <input type="date" class="form-control" name="check-date">
         <h5 style="margin-bottom: 1rem; margin-top: 1rem;"class="titleBarComponent form-label">Hasta:</h4>
-        <input type="date" class="form-control">
+        <input type="date" class="form-control" name="check-date">
         <hr class="line-category-bar">
         <div class="d-grid gap-2">
-        <button type="button" onclick="filterCards()" class="btn btn-light mb-2"><b><i class="fa-solid fa-magnifying-glass"></i> Aplicar Filtros</b></button>
+        <button type="button" onclick="filterCards()" class="btn btn-light mb-2" id="aplicar-filtros"><b><i class="fa-solid fa-magnifying-glass"></i> Aplicar Filtros</b></button>
+        <button type="button" onclick="deleteFilter()" class="btn btn-light mb-2"><b><i class="fa-solid fa-eraser"></i> Borrar Filtros</b></button>
         </div>
     </div>

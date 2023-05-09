@@ -1,5 +1,6 @@
+
 <div class="crear-evento mt-4" style="text-align: center;">
-<div id="First" >
+  <div id="First" >
   <div class="container-form">
       <div class="form-create-event" id="container-form-first-part-event">
         <h2 class="crear-event-form-title center mt-4">Crear Evento</h2>
@@ -8,13 +9,13 @@
         </div>
         <div class="fields-form">
           <label class="labelContainer " style="display: block; margin-right:8rem;">Nombre del evento</label>
-          <input type="text" class="form-control" placeholder="*Campo requerido max(50 caracteres)" style="display: block; width:19rem;margin-left:2rem; margin-right:2rem;">
+          <input type="text" class="form-control" id="input-create-event-nombre" placeholder="*Campo requerido max(50 caracteres)" style="display: block; width:19rem;margin-left:2rem; margin-right:2rem;">
           <label class="labelContainer form-label" style="display: block; margin-right:9rem;">Lugar del evento</label>
-          <input type="text" class="form-control " placeholder="*Campo requerido max(50 caracteres)" style="display: block;width:19rem;margin-left:2rem;  margin-right:2rem;">
+          <input type="text" class="form-control " id="input-create-event-lugar" placeholder="*Campo requerido max(50 caracteres)" style="display: block;width:19rem;margin-left:2rem;  margin-right:2rem;">
           <label class="labelContainer form-label" style="display: block; margin-right:10rem;">Tipo de evento</label>
           <div class="field-select">
             <div class="field-left-select">
-              <select name="Seleccione evento" class="form-select" style=" width: 19rem; margin-left:2rem; margin-right:2rem;">
+              <select name="Seleccione evento" class="form-select" id="input-create-type-event" style=" width: 19rem; margin-left:2rem; margin-right:2rem;">
                 <option>Charla</option>
                 <option>Reunion Informativa</option>
                 <option>Asadero</option>
@@ -25,7 +26,7 @@
           </div>
         </div>
         <div class="button-form center">
-          <button name="button" class="mb-5 type="button" onclick="valForm(1)" href="createEventsecond.html" style="margin-left:12rem; margin-top:2rem; border: none; width:5rem;margin-right:3rem;height: 3rem;border-radius:5px;background: #0069FF;color: white; font-size: 2rem;"><i class='fas fa-forward'></i></button>
+          <button name="button" class="mb-5" type="button" onclick="valForm(1)" href="createEventsecond.html" style="margin-left:12rem; margin-top:2rem; border: none; width:5rem;margin-right:3rem;height: 3rem;border-radius:5px;background: #0069FF;color: white; font-size: 2rem;"><i class='fas fa-forward'></i></button>
         </div>
       </div>
     </div>
@@ -36,11 +37,11 @@
           <div class="form-create-event" style="width:23rem;height:30rem;" id="container-form-second-part-event">
             <h2 class="crear-event-form-title center mt-4">Crear Evento</h2>
             <div class="center">
-              <img src="../../images/createEvent/SecondStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
+              <img src="../../images/createEvent/firstStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
             </div>
             <div class="fields-form">
               <label class="labelContainer form-label" style="display: block; margin-right:8.6rem;">Descripcion</label>
-              <textarea type="text" class="form-control" style="display: block; width:15rem;height:13.3rem;"></textarea>
+              <textarea type="text" id="input-create-event-descripcion" class="form-control" style="display: block; width:15rem;height:13.3rem;"></textarea>
             </div>
             <div class="button-form center">
               <button name="button"  type="button" onclick="valFormReturn(2)" style="margin-top:1rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: red;font-size:1.8rem;color: white; font-weight: bold; margin-right:2rem;"><bold><i class="fa-solid fa-rotate-left"></i></bold></button>
@@ -55,16 +56,16 @@
       <div class="form-create-event" style="width:23rem;height:30rem;" id="container-form-second-part-event">
         <h2 class="crear-event-form-title center mt-4">Crear Evento</h2>
           <div class="center">
-            <img src="../../images/createEvent/ThirdStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
+            <img src="../../images/createEvent/SecondStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
           </div>
           <div class="fields-form">
             <label class="labelContainer form-label" style="display: block; margin-right:13.2rem;">Aforo</label>
-            <input type="text" class="form-control " placeholder="*Campo requerido max(50 caracteres)" style="display: block;width:19rem;margin-left:2rem;  margin-right:2rem;">
+            <input type="text" class="form-control " id="input-create-event-aforo" placeholder="*Campo requerido max(50 caracteres)" style="display: block;width:19rem;margin-left:2rem;  margin-right:2rem;">
             <label class="labelContainer form-label" style="display: block; margin-right:9rem;">Fecha de evento</label>
-            <input type="date" class="form-control"id="fecha" style="width:19rem;" name="fecha">
+            <input type="date" class="form-control"id="input-create-event-fecha" style="width:19rem;" name="fecha">
             <div class="mb-3">
-              <label for="formFile" class="form-label" style="margin-right:9.7rem; margin-top: 1rem;">Foto del evento</label>
-              <input class="form-control" type="file" style="width:19rem" id="formFile">
+              <label for="formFile" class="form-label" style="margin-right:9.7rem; margin-top: 1rem;">Hora de comienzo</label>
+              <input class="form-control" id="input-create-event-hour" type="time" style="width:19rem" id="formDate-hour">
             </div>
             <div class="button-form center">
               <button name="button"  type="button" onclick="valFormReturn(3)" style="margin-top:1rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: red;font-size:1.8rem;color: white; font-weight: bold; margin-right:2rem;"><bold><i class="fa-solid fa-rotate-left"></i></bold></button>
@@ -74,8 +75,31 @@
       </div>
     </div>
   </div>
+
+  <div id="Fourth" class="displayoff">
+    <div class="container-form">
+      <div class="form-create-event" style="width:23rem;height:30rem;" id="container-form-second-part-event">
+        <h2 class="crear-event-form-title center mt-4">Crear Evento</h2>
+          <div class="center">
+            <img src="../../images/createEvent/ThirdStepCreateEvent.PNG" class="imagen-create-event" alt="Pasos de la creacion">
+          </div>
+          <div class="fields-form">
+            <div class="mb-3">
+              <label for="formFile" class="form-label" style="margin-right:9.7rem; margin-top: 1rem;">Foto del evento</label>
+              <input class="form-control" id="file-input-event" type="file" style="width:19rem" id="formFile">
+            </div>
+            <img id="imagen-crear-evento" style="width:200px;height:150px; border: 0.4px gray dotted">
+            <label id = "upprogress"></label>
+            <div class="button-form center">
+              <button name="button"  type="button" onclick="valFormReturn(4)" style="margin-top:1rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: red;font-size:1.8rem;color: white; font-weight: bold; margin-right:2rem;"><bold><i class="fa-solid fa-rotate-left"></i></bold></button>
+              <button name="button" class="mb-4" type="button" onclick="valForm(4)" href="createEventsecond.html" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px;background: #0069FF;color: white; font-size: 1.9rem;"><i class='fas fa-forward'></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   
-    <div id="Fourth" class="displayoff">
+    <div id="Fifth" class="displayoff">
       <div class="container-form">
         <div class="form-create-event" style="width:23rem;height:30rem;" id="container-form-second-part-event">
             <h2 class="crear-event-form-title center  mt-4">Crear Evento</h2>
@@ -84,18 +108,38 @@
             </div>
             <div class="fields-form">
               <label class="labelContainer" style="display: block; margin-right:7rem;">Info Adicional</label>
-              <textarea type="text" class="form-control" style="display: block; width:15rem;height:13.3rem;"></textarea></div>
+              <textarea type="text" class="form-control" id="input-create-event-info-adicional" style="display: block; width:15rem;height:13.3rem;"></textarea></div>
                 
               <div class="button-form center" style="display: inline-block;">
-                <button name="button"  type="button" onclick="valFormReturn(4)" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: red;font-size:1.5rem;color: white; font-weight: bold; width:6rem; margin-right:2rem;"><bold><i class="fa-solid fa-rotate-left"></i></bold></button>
-                <button name="button"  type="submit" onclick="enviar()" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: #0069FF;font-size:1.5rem;color: white; font-weight: bold; width:6rem"><bold>Crear</bold></button>
+                <button name="button"  type="button" onclick="valFormReturn(5)" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: red;font-size:1.5rem;color: white; font-weight: bold; width:6rem; margin-right:2rem;"><bold><i class="fa-solid fa-rotate-left"></i></bold></button>
+                <button name="button" id="crear_evento_confirm_event-confirm" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: #0069FF;font-size:1.5rem;color: white; font-weight: bold; width:6rem"><bold>Crear</bold></button>
             </div>
             </form>
           </div>
         </div>
       </div>
     </div>      
-        <style>
+  
+    <div class="modal fade" id="confirmar-creacion-evento-modal" tabindex="-1" aria-labelledby="confirmar-creacion-titulo" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmar-creacion-titulo">Confirmar creación de evento</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="contenido-body-crear-evento">
+            ¿Está seguro de que desea crear este evento?
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="deleteEventButton-Cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" id="CreateEventButtonCreate"class="btn btn-primary" id="confirmar-creacion-btn">Crear evento</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  <style>
           .fields-form {
               display: flex;
               flex-direction: column;
@@ -120,6 +164,5 @@
             display: none;
           }
         </style>
-  
-  
-  
+
+

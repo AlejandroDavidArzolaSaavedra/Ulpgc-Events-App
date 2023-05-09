@@ -196,8 +196,6 @@ function selectFilters(){
 
                 // Obtener las fechas seleccionadas
                 const fromDate = fromDateInput.value;
-                console.log(fromDate)
-                console.log("pppppp");
                 const toDate = toDateInput.value;
                 category = selectedCategories;
                 aforo = selectedAforos;
@@ -207,4 +205,21 @@ function selectFilters(){
         });
 }
 
+function deleteFilter(){
+  var checkboxes = document.getElementsByName('check');
+    checkboxes.forEach((item) => {
+        item.checked = false
+    });
+    var checkboxes = document.getElementsByName('check-category');
+    checkboxes.forEach((item) => {
+        item.checked = false
+    });
 
+    var checkboxes = document.getElementsByName('check-date');
+    checkboxes.forEach((item) => {
+        item.value = ""
+    });
+
+    const aplicar = document.getElementById('aplicar-filtros');
+    aplicar.click();
+}
