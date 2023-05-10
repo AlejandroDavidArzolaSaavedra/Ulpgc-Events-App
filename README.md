@@ -15,15 +15,16 @@ IsaiCordero
 AlbeMR10
 
 # Technologies Used
-![Mi imagen](./images/asadero.jpg)
-- HTML: Markup language to create the structure of the application.
 
-- CSS: Styling language to give design and appearance to the application.
+- <i class="fab fa-html5"></i> HTML: Markup language to create the structure of the application.
 
-- JS: Programming language to give interactivity and dynamism to the application.
+- <i class="fab fa-css3-alt"></i> CSS: Styling language to give design and appearance to the application.
 
-- Bootstrap: CSS and JS framework for creating modern and responsive user interfaces.
-Firebase: Mobile and web application development platform that includes multiple tools such as Firestore for database management, Authentication for user authentication, Hosting for web hosting, and Storage for file storage.
+- <i class="fab fa-js"></i> JS: Programming language to give interactivity and dynamism to the application.
+
+- <i class="fab fa-bootstrap"></i> Bootstrap: CSS and JS framework for creating modern and responsive user interfaces.
+
+- <i class="fab fa-google"></i> Firebase: Mobile and web application development platform that includes multiple tools such as Firestore for database management, Authentication for user authentication, Hosting for web hosting, and Storage for file storage.
 
 
 Clean Architecture
