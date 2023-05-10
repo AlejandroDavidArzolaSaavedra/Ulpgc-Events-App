@@ -6,13 +6,16 @@ This project uses the SCRUM methodology to develop an app that allows organizing
 
 # Development Team
 
-Alejandro
-Yeray
-Isai
-Alberto
+AlejandroDavidArzolaSaavedra
+
+yabpenserio
+
+IsaiCordero
+
+AlbeMR10
 
 # Technologies Used
-![Mi imagen]("./images/asadero.png")
+![Mi imagen](./images/asadero.jpg)
 - HTML: Markup language to create the structure of the application.
 
 - CSS: Styling language to give design and appearance to the application.
