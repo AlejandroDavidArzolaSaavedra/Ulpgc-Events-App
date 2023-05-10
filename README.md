@@ -16,9 +16,7 @@ AlbeMR10
 
 # Technologies Used
 
-- <i class="fab fa-html5"></i> &nbsp; &nbsp; icon-html5
-
- HTML: Markup language to create the structure of the application.
+- <g-emoji alias=":emoji_alias:" fallback-src="./images/iconsReadme/html.png"> </g-emoji> HTML: Markup language to create the structure of the application.
 
 - <i class="fab fa-css3-alt"></i> CSS: Styling language to give design and appearance to the application.
 
