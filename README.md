@@ -16,7 +16,9 @@ AlbeMR10
 
 # Technologies Used
 
-- <i class="fa-brands fa-html5" style="color: #ffa200;"></i> HTML: Markup language to create the structure of the application.
+- <i class="fa-brands fa-html5" style="color: #ffa200;"></i> &nbsp; &nbsp; icon-html5
+
+ HTML: Markup language to create the structure of the application.
 
 - <i class="fab fa-css3-alt"></i> CSS: Styling language to give design and appearance to the application.
 
