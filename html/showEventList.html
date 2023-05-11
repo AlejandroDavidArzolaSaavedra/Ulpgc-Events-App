@@ -33,14 +33,20 @@
          <body>
          <header id="header"></header>         
             <h1 id="header-lista-eventos-usuario">Lista de Eventos</h1>
-            <button class="btn btn-success" id="excel-button" onclick="exportCSVExcel()">
+            <script>
+              
+              
+              
+                        
+            </script>
+            <button class="btn btn-success" id="excel-button">
                 Descargar Lista de Eventos Excel
             </button>    
             <div id="page_element">
                     <table class="table table-striped table-hover table-responsive" id="table-event-list">
                         <thead class="bg-primary text-white">
                             <tr>
-                            <th scope="col" class="hidden">id</th>
+                            <th scope="col" class="hidden no-export">id</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Fecha</th>
                             <th scope="col">Tipo de Evento</th>
