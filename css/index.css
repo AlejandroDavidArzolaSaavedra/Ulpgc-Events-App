@@ -22,3 +22,7 @@
 .col{
     margin-bottom: 1rem;
 }
+
+#footer{
+  z-index: 100;
+}

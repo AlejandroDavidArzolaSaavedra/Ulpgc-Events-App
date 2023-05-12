@@ -456,3 +456,12 @@ function actualizarFirebaseAuthentication( newEmail) {
       console.log("Ocurrió un error al actualizar la contraseña:", error);
     });
   }
+
+  window.onscroll = function(){
+    var header = document.getElementById("header");
+    if(window.pageYOffset > 0){
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky")
+    }
+  }
