@@ -1,0 +1,113 @@
+{
+    "Header" : {
+        "registro" : "Registrarse",
+        "iniciarSesion" : "Iniciar Sesión",
+        "buscar" : "Buscar",
+        "perfil" : "Perfil",
+        "gestionarEventos" : "Gestionar Eventos",
+        "crearEventos" : "Crear Evento",
+        "cerrarSesión" : "Cerrar Sesión",
+        "misEventos" : "Mis Eventos"
+    },
+    "Footer" :{
+        "planificarEvetos" : "PLANIFICAR EVENTOS",
+        "buscarEventos" : "Buscar Eventos",
+        "eventosPropios" : "Eventos Propios",
+        "calendario" : "Calendario",
+        "sobreNosotros" : "SOBRE NOSOTROS",
+        "tiktok" : "Tiktok",
+        "twitter" : "Twitter",
+        "youtube" : "Youtube",
+        "desarrollo" : "DESARROLLO",
+        "github" : "Github",
+        "trello" : "Trello",
+        "figma" : "Figma",
+        "contáctanos" : "CONTACTANOS",
+        "correo" : "Correo",
+        "whatsapp" : "Whatsapp",
+        "teléfono" : "Teléfono"
+    },
+    "perfil" : {
+        "informacionUsuario" : "Información de usuario",
+        "nombre" : "Nombre",
+        "correo" : "Correo",
+        "contraseña" : "Contraseña",
+        "teléfono" : "Teléfono",
+        "modificarPerfil" : "Modificar perfil",
+        "eliminarPerfil" : "Eliminar perfil",
+        "guardarCambios" : "Guardar cambios",
+        "eliminarCambios" : "Eliminar cambios"
+    },
+    "filtro" : {
+        "filtrarEventos" : "Filtrar eventos",
+        "categoria" : "Categoria",
+        "asadero" : "Asadero",
+        "charla" : "Charla",
+        "reunionInformativa" : "Reunion Informativa",
+        "cursoFormativo" : "Curso Formativo",
+        "otros" : "Otras",
+        "aforo" : "Aforo",
+        "fecha" : "Fecha",
+        "desde" : "Desde",
+        "hasta" : "Hasta",
+        "aplicarFiltros" : "Aplicar filtros"
+    },
+    "listaEventos" : {
+        "listaDeEventos" : "Lista eventos",
+        "nombre" : "Nombre",
+        "fecha" : "Fecha",
+        "tipoDeEvento" : "Tipo de evento",
+        "estado" : "Estado",
+        "asadero" : "Asadero",
+        "charla" : "Charla",
+        "reunionInformativa" : "Reunion Informativa",
+        "cursoFormativo" : "Curso Formativo",
+        "otros" : "Otras",
+        "descargarListaEventos" : "Descargar lista de eventos Excel",
+        "fueraDeFecha" : "Fuera de fecha",
+        "editar" : "Editar",
+        "eliminar" : "Eliminar",
+        "inscripciones" : "Inscripciones"
+    },
+    "listaUsuario" : {
+        "usuariosInscritos" : "Usuarios inscritos",
+        "nombre" : "Nombre",
+        "correo" : "Correo",
+        "teléfono" : "Teléfono",
+        "descargarListaUsuarios" : "Descargar lista usuarios Excel"
+    },
+    "crearEvento" : {
+        "crearEvento" : "Crear evento",
+        "nombre" : "Nombre",
+        "lugar" : "Lugar",
+        "tipo" : "Tipo",
+        "asadero" : "Asadero",
+        "charla" : "Charla",
+        "reunionInformativa" : "Reunion Informativa",
+        "cursoFormativo" : "Curso Formativo",
+        "otros" : "Otras",
+        "descripcion" : "Descripción",
+        "aforo" : "Aforo",
+        "fecha" : "Fecha",
+        "foto" : "Foto",
+        "informacionAdicional" : "Información adicional",
+        "caracteresMaximo" : "Máximo de caracteres: 50",
+        "seleccionarArchivo" : "Seleccionar archivo"
+    },
+    "modalHeader" : {
+        "iniciarSesion" : "Iniciar Sesión",
+        "correo" : "Correo",
+        "contraseña" : "Contraseña",
+        "registro" : "Registrarse",
+        "nombre" : "Nombre",
+        "teléfono" : "teléfono",
+        "repetirContraseña" : "Repetir contraseña",
+        "condiciones" : "Acepto las condiciones de servicio y politicas de privacidad de ULPGC EVENTS"
+    },
+    "modalListEvents" : {
+        "eliminarEvento" : "Eliminar evento",
+        "cancelar" : "Cancelar",
+        "eliminar" : "Eliminar",
+        "pregunta" : "¿Está seguro que quiere eliminar el evento?"
+    }
+}
