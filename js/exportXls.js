@@ -1,7 +1,7 @@
-function exportCSVExcel() {
+export function exportCSVExcel(username) {
     $('#table-event-list').table2excel({
         exclude: ".no-export",
-        filename: "download.xls",
+        filename: `${username}.xls`,
         fileext: ".xls",
         exclude_links: true,
         exclude_inputs: true,

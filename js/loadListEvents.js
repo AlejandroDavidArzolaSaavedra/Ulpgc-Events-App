@@ -1,5 +1,7 @@
 import { getDocs, getDoc, updateDoc, collection, query, deleteDoc, where, doc} from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js";
 import { db } from "./firebase.js";
+import { exportCSVExcel } from "./exportXls.js"
+
 
 export const loadListEvents = (ListaEventos) => {
     var tableEvent = document.getElementById("table-event-list");
@@ -8,7 +10,7 @@ export const loadListEvents = (ListaEventos) => {
       let evento = eventoUser
       var month = getMonthString(evento.fecha.month);
       tr += "<tr>";
-      tr += `<td class="">${evento.eventoId}</td>`;
+      tr += `<td class="hidden no-export">${evento.eventoId}</td>`;
       tr += `<td class="nombre-evento-lista-usuario">${evento.nombre}</td>`;
       tr += `<td>${evento.fecha.day},${month},${evento.fecha.year}</td>`;
       tr += `<td>${evento.categoria}</td>`;
@@ -142,6 +144,28 @@ async function borradoDeLaBaseDeDatosFirebase(eventID) {
     console.log("Problemas al eliminar", error);      
   }
 }
+
+
+  const button = document.getElementById("excel-button");
+  button.addEventListener("click", async function() {
+    const userId = JSON.parse(localStorage.getItem("ParametrosUsuario")).uid
+    async function getInfoUser(userId){
+      try {
+          const q = query(collection(db, "users"), where("userId", "==", userId));
+          let usuarioDeLaAplicacion;
+          const querySnapshot = await getDocs(q);
+          querySnapshot.forEach((doc) => {
+              usuarioDeLaAplicacion = doc.data();
+          });
+          return usuarioDeLaAplicacion;
+      } catch (error) {
+          console.log("Hubo un error",error)
+      }
+  }
+    var user = await getInfoUser(userId)
+    var username = user.nombre
+    exportCSVExcel(username)
+  });
 
 
 
