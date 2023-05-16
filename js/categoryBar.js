@@ -227,11 +227,16 @@ function deleteFilter(){
 
 window.addEventListener('scroll', function(){
   var object = document.getElementById('categoryBar');
-  var footer = document.querySelector('footer');
+  var footer = document.getElementById('footer');
+  var pagina = document.getElementById('cuerpo');
+
   var objectRect = object.getBoundingClientRect();
   var footerRect = footer.getBoundingClientRect();
 
-  if (objectRect.top + objectRect.height <= footerRect.top) {
+  pagina.style.minHeight = objectRect.height + 500 + 'px';
+  console.log(objectRect.height);
+
+  if (objectRect.height <= footerRect.top) {
     // Si el objeto todavía no ha alcanzado el pie de página
     object.style.top = window.pageYOffset + 'px';
   } else {
