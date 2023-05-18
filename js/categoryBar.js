@@ -101,7 +101,7 @@ const filterCards =() => {
      eventosFiltrado.forEach(element => {
        const template = `
        <a class="redirect-to-show">
-       <div class="col" style="height:30rem;">
+       <div class="col">
           <div class="card h-100 card-show-event ${getCategoryClass(element.categoria)}">
              <img src="${element.imagenEvento}" class="card-img-top" alt="...">
              <div class="card-body">
@@ -175,11 +175,12 @@ function selectFilters(){
             const categoryBar = document.getElementById('category-bar');
             const cards = document.getElementById('cards');
 
+            if(filterBtn){
             filterBtn.addEventListener('click', function() {
                 categoryBar.classList.toggle('hidden');
                 cards.classList.toggle('col-md-9');
                 cards.classList.toggle('col-md-12');
-            });
+            });}
 
             // Añadir un listener al botón de aplicar filtros
             applyFiltersButton.addEventListener('click', () => {
@@ -223,3 +224,23 @@ function deleteFilter(){
     const aplicar = document.getElementById('aplicar-filtros');
     aplicar.click();
 }
+
+window.addEventListener('scroll', function(){
+  var object = document.getElementById('categoryBar');
+  var footer = document.getElementById('footer');
+  var pagina = document.getElementById('cuerpo');
+
+  var objectRect = object.getBoundingClientRect();
+  var footerRect = footer.getBoundingClientRect();
+
+  pagina.style.minHeight = objectRect.height + 500 + 'px';
+  console.log(objectRect.height);
+
+  if (objectRect.height <= footerRect.top) {
+    // Si el objeto todavía no ha alcanzado el pie de página
+    object.style.top = window.pageYOffset + 'px';
+  } else {
+    // Si el objeto ha alcanzado el pie de página
+    object.style.top = footerRect.top - objectRect.height + 'px';
+  }
+});

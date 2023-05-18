@@ -22,3 +22,12 @@
 .col{
     margin-bottom: 1rem;
 }
+
+#footer{
+  z-index: 100;
+}
+
+#categoryBar{
+  position: relative;
+  transform: translateY(5%);
+}

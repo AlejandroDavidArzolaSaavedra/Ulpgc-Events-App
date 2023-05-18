@@ -1,4 +1,5 @@
 function getCategoryClass(categoria) {
+   console.log('fdlfk')
    let casteo = categoria.toString();
    if(casteo.toLowerCase()  === "Reunion informativa".toLowerCase()){
       return "card text-white bg-primary mb-3";}
@@ -29,7 +30,7 @@ export const setupEvents = (data) => {
        const event= element.data();
        const template = `
        <a class="redirect-to-show">
-       <div class="col" style="height:calc(35rem+20vw);">
+       <div class="col">
           <div class="card h-100 card-show-event ${getCategoryClass(event.categoria)}">
              <img src="${event.imagenEvento}" class="card-img-top" alt="...">
              <div class="card-body">
@@ -74,7 +75,7 @@ export const setupEvents = (data) => {
          if (title.includes(searchTerm) && title.includes("")) {           
             const template = `
             <a class="redirect-to-show">
-       <div class="col" style="height:30rem;">
+       <div class="col">
           <div class="card h-100 card-show-event ${getCategoryClass(event.categoria)}">
              <img src="${event.imagenEvento}" class="card-img-top" alt="...">
              <div class="card-body">

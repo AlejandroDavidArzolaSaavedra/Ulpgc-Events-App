@@ -17,3 +17,10 @@ button{
 .dropdown-toggle::after {
     background-image: none !important;
 }
+.sticky{
+    position: sticky;
+    top: 0;
+}
+#header{
+    z-index: 100;
+}
