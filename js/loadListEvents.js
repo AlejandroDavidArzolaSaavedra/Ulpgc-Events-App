@@ -7,11 +7,11 @@ export const loadListEvents = (ListaEventos) => {
     ListaEventos.forEach((eventoUser) => {
       let evento = eventoUser
       var month = getMonthString(evento.fecha.month);
-      tr += "<tr>";
-      tr += `<td class="">${evento.eventoId}</td>`;
-      tr += `<td class="nombre-evento-lista-usuario">${evento.nombre}</td>`;
-      tr += `<td>${evento.fecha.day},${month},${evento.fecha.year}</td>`;
-      tr += `<td>${evento.categoria}</td>`;
+      tr += '<tr>';
+      tr += `<td class="hidden">${evento.eventoId}</td>`;
+      tr += `<td class="nombre-evento-lista-usuario", id = "nombreEvento">${evento.nombre}</td>`;
+      tr += `<td id = "fechaEvento">${evento.fecha.day},${month},${evento.fecha.year}</td>`;
+      tr += `<td id = "tipoEvento">${evento.categoria}</td>`;
       if (compareDate(evento.fecha.day, evento.fecha.month, evento.fecha.year)) {
         tr += `<td class="text-success date-field">En Fecha</td>`;
       } else {

@@ -4,6 +4,12 @@
 .hidden {
     display: none;
 }  
+button{
+    border:none;
+}
+.fa-moon{
+    font-size: 1.5rem;
+}
 
 .header-color-options {
     color: #ffae00;
