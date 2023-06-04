@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-#container-form-first-part-event, #container-form-second-part-event,#container-form-third-part-event,#container-form-fourth-part-event,#container-form-fifth-part-event{
+#container-form-first-part-event, #container-form-second-part-event{
     border: 1px black solid;
     display: inline-block;
     border-radius: 10px;

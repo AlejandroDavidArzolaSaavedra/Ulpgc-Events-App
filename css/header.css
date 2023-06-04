@@ -57,7 +57,43 @@ button{
 .header-color-options {
     color: #ffae00;
 }
-.dropdown-toggle::after {
-    background-image: none !important;
+
+.dropdown-toggle .fa-chevron-down {
+    display: none !important;
+  }
+.bootstrap-select .dropdown-toggle .caret {
+    display:none;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+}
+#header{
+    z-index: 100;
+}
+
+#footer{
+    z-index: 100;
+  }
+.navbar-expand-lg{
+    border-bottom: 1px solid #ccc;
+}
+
+.col1{
+    width: 200px;
+}
+/*Movil*/
+@media only screen and (max-width: 990px) {
+    #modo-noche, .fa-user, .fa-searchengin, .fa-comment, #bell-header, #comment, #calendar{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #modo-noche, .fa-searchengin, .fa-user, #bell-header, #comment, #calendar{
+        margin-left: 0;
+    }
+    #search-header{
+        display: none;
+    }
 }
   

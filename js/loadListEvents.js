@@ -1,8 +1,6 @@
 import { getDocs, getDoc, updateDoc, collection, query, deleteDoc, where, doc} from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js";
 import { exportCSVExcel } from "./exportXls.js"
 import { db } from "./firebase.js";
-import { exportCSVExcel } from "./exportXls.js"
-
 
 export const loadListEvents = (ListaEventos) => {
     var tableEvent = document.getElementById("table-event-list");
@@ -222,28 +220,6 @@ button.addEventListener("click", async function() {
   var username = user.nombre;
   exportCSVExcel(username)
 });
-
-  const button = document.getElementById("excel-button");
-  button.addEventListener("click", async function() {
-    const userId = JSON.parse(localStorage.getItem("ParametrosUsuario")).uid
-    async function getInfoUser(userId){
-      try {
-          const q = query(collection(db, "users"), where("userId", "==", userId));
-          let usuarioDeLaAplicacion;
-          const querySnapshot = await getDocs(q);
-          querySnapshot.forEach((doc) => {
-              usuarioDeLaAplicacion = doc.data();
-          });
-          return usuarioDeLaAplicacion;
-      } catch (error) {
-          console.log("Hubo un error",error)
-      }
-  }
-    var user = await getInfoUser(userId)
-    var username = user.nombre
-    exportCSVExcel(username)
-  });
-
 
 
 function compareDate(day,month,year){
