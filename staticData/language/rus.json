@@ -1,0 +1,153 @@
+{
+    "header" : {
+        "registro" : "Регистрация",
+        "iniciarSesion" : "Войти в систему",
+        "buscar" : "Поиск",
+        "usuario": "Пользователь",
+        "perfil" : "Профиль",
+        "gestionarEventos" : "Управление событиями",
+        "crearEventos" : "Создать событие",
+        "cerrarSesión" : "Выход",
+        "misEventos" : "Мои события"
+    },
+    "modalHeader": {
+        "iniciarSesion": "Вход",
+        "correo": "Электронная почта",
+        "ejemploCorreo": "example@gmail.com",
+        "contraseña": "Пароль",
+        "registro": "Регистрация",
+        "nombre": "Имя",
+        "ejemploNombre": "Иван Иванов",
+        "teléfono": "Телефон",
+        "ejemploTeléfono": "123-456-7890",
+        "repetirContraseña": "Повторите пароль",
+        "condiciones": "Я согласен с условиями обслуживания и политикой конфиденциальности ULPGC EVENTS"
+    },
+    "footer" :{
+        "planificarEventos" : "ПЛАНИРОВАНИЕ СОБЫТИЙ",
+        "buscarEventos" : "Поиск событий",
+        "eventosPropios" : "Собственные события",
+        "calendario" : "Календарь",
+        "sobreNosotros" : "О НАС",
+        "tiktok" : "Tiktok",
+        "twitter" : "Твиттер",
+        "youtube" : "Ютуб",
+        "desarrollo" : "РАЗРАБОТКА",
+        "github" : "Github",
+        "trello" : "Trello",
+        "figma" : "Figma",
+        "contáctanos" : "КОНТАКТЫ",
+        "correo" : "Электронная почта",
+        "whatsapp" : "WhatsApp",
+        "teléfono" : "Телефон"
+    },
+    "perfil" : {
+        "informacionUsuario" : "Информация о пользователе",
+        "nombre" : "Имя",
+        "correo" : "Электронная почта",
+        "contraseña" : "Пароль",
+        "teléfono" : "Телефон",
+        "modificarPerfil" : "Изменить профиль",
+        "eliminarPerfil" : "Удалить профиль",
+        "guardarCambios" : "Сохранить изменения",
+        "eliminarCambios" : "Отменить изменения"
+    },
+    "index" : {
+        "verFiltros" : " Просмотреть фильтры"
+    },
+    "filtro" : {
+        "filtrarEventos" : "Фильтровать мероприятия",
+        "categoria" : "Категория",
+        "asadero" : "Шашлык",
+        "charla" : "Доклад",
+        "reunionInformativa" : "Информационное собрание",
+        "cursoFormativo" : "Обучающий курс",
+        "otros" : "Другие",
+        "aforo" : "Вместимость",
+        "fecha" : "Дата",
+        "desde" : "C",
+        "hasta" : "По",
+        "aplicarFiltros" : "Применить фильтры",
+        "borrarFiltros" : "Очистить фильтры"
+        },
+    "listaEventos": {
+        "listaDeEventos": "Список мероприятий",
+        "nombre": "Название",
+        "fecha": "Дата",
+        "tipoDeEvento": "Тип мероприятия",
+        "estado": "Состояние",
+        "asadero": "Жареное мясо",
+        "charla": "Разговор",
+        "reunionInformativa": "Информационное собрание",
+        "cursoFormativo": "Обучающий курс",
+        "otros": "Другие",
+        "descargarListaEventos": "Скачать список мероприятий в Excel",
+        "fueraDeFecha": "Вне срока",
+        "editar": "Редактировать",
+        "eliminar": "Удалить",
+        "inscripciones": "Регистрации"
+        },
+    "modalListEvents": {
+        "eliminarEvento": "Удалить мероприятие",
+        "cancelar": "Отмена",
+        "eliminar": "Удалить",
+        "pregunta": "Вы уверены, что хотите удалить мероприятие?"
+    },
+    "listaUsuario": {
+        "usuariosInscritos": "Зарегистрированные пользователи",
+        "nombre": "Имя",
+        "correo": "Электронная почта",
+        "teléfono": "Телефон",
+        "descargarListaUsuarios": "Скачать список пользователей в Excel"
+    },
+    "crearEvento": {
+        "crearEvento": "Создать событие",
+        "nombre": "Название",
+        "ejemploNombre": "*Обязательное поле, максимум 50 символов",
+        "lugar": "Место",
+        "ejemploLugar": "*Обязательное поле, максимум 50 символов",
+        "tipo": "Тип",
+        "asadero": "Гриль",
+        "charla": "Беседа",
+        "reunionInformativa": "Информационное собрание",
+        "cursoFormativo": "Обучающий курс",
+        "otros": "Другое",
+        "descripcion": "Описание",
+        "aforo": "Количество мест",
+        "ejemploAforo": "*Обязательное поле, максимум 50 символов",
+        "fecha": "Дата",
+        "hora": "Время начала",
+        "foto": "Выберите фото мероприятия...",
+        "informacionAdicional": "Дополнительная информация",
+        "seleccionarArchivo": "Выбрать файл",
+        "crear": "создать",
+        "modificar":"Изменить событие",
+        "modify": "изменить"
+    },
+    "modalCrearEvento" : {
+        "tituloModal" : "Подтвердить создание события",
+        "preguntaModal" : "Вы уверены, что хотите создать это событие?",
+        "crearEvento" : "Создать событие",
+        "cancelar" : "Отмена"
+    },
+    "infoEvento": {
+        "inscripcion": "Регистрация",
+        "entradasDisponibles": "Доступно билетов",
+        "personas": "люди",
+        "disponibleHasta": "Доступно билетов до",
+        "infoEvento": "Информация о мероприятии",
+        "infoAdicionalEvento": "Дополнительная информация о мероприятии"
+    },
+    "modalUsuario": {
+        "tituloModal": "Подтвердите действие",
+        "preguntaModal": "Вы уверены, что хотите сохранить изменения?",
+        "aceptar": "Принять",
+        "cancelar": "Отмена"
+    },
+    "modalEliminarEvento": {
+        "tituloModal": "Удалить мероприятие",
+        "preguntaModal": "Вы уверены, что хотите удалить мероприятие",
+        "eliminar": "Удалить",
+        "cancelar": "Отмена"
+      }
+}

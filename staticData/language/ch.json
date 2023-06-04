@@ -1,0 +1,153 @@
+{
+    "header" : {
+        "registro" : "注册",
+        "iniciarSesion" : "登录",
+        "buscar" : "搜索",
+        "usuario": "用户",
+        "perfil" : "个人资料",
+        "gestionarEventos" : "管理活动",
+        "crearEventos" : "创建活动",
+        "cerrarSesión" : "退出登录",
+        "misEventos" : "我的活动"
+    },
+    "modalHeader": {
+        "iniciarSesion": "登录",
+        "correo": "电子邮件",
+        "ejemploCorreo": "example@gmail.com",
+        "contraseña": "密码",
+        "registro": "注册",
+        "nombre": "姓名",
+        "ejemploNombre": "张三",
+        "teléfono": "电话",
+        "ejemploTeléfono": "123-456-7890",
+        "repetirContraseña": "重复密码",
+        "condiciones": "我接受 ULPGC EVENTS 的服务条款和隐私政策"
+    },
+    "footer" :{
+        "planificarEventos" : "计划活动",
+        "buscarEventos" : "搜索活动",
+        "eventosPropios" : "我的活动",
+        "calendario" : "日历",
+        "sobreNosotros" : "关于我们",
+        "tiktok" : "Tiktok",
+        "twitter" : "Twitter",
+        "youtube" : "Youtube",
+        "desarrollo" : "开发",
+        "github" : "Github",
+        "trello" : "Trello",
+        "figma" : "Figma",
+        "contáctanos" : "联系我们",
+        "correo" : "邮箱",
+        "whatsapp" : "Whatsapp",
+        "teléfono" : "电话"
+    },
+    "perfil" : {
+        "informacionUsuario" : "用户信息",
+        "nombre" : "姓名",
+        "correo" : "邮箱",
+        "contraseña" : "密码",
+        "teléfono" : "电话",
+        "modificarPerfil" : "修改个人资料",
+        "eliminarPerfil" : "删除个人资料",
+        "guardarCambios" : "保存更改",
+        "eliminarCambios" : "取消更改"
+    },
+    "index" : {
+        "verFiltros" : " 查看过滤器"
+    },
+    "filtro" : {
+        "filtrarEventos" : "筛选活动",
+        "categoria" : "类别",
+        "asadero" : "野餐",
+        "charla" : "讲座",
+        "reunionInformativa" : "信息会议",
+        "cursoFormativo" : "培训课程",
+        "otros" : "其他",
+        "aforo" : "容量",
+        "fecha" : "日期",
+        "desde" : "从",
+        "hasta" : "至",
+        "aplicarFiltros" : "应用筛选条件",
+        "borrarFiltros" : "清除筛选条件"
+    },
+    "listaEventos": {
+        "listaDeEventos": "活动列表",
+        "nombre": "名称",
+        "fecha": "日期",
+        "tipoDeEvento": "活动类型",
+        "estado": "状态",
+        "asadero": "烤肉活动",
+        "charla": "讲座",
+        "reunionInformativa": "信息会议",
+        "cursoFormativo": "培训课程",
+        "otros": "其他",
+        "descargarListaEventos": "下载Excel活动列表",
+        "fueraDeFecha": "过期",
+        "editar": "编辑",
+        "eliminar": "删除",
+        "inscripciones": "报名"
+    },
+    "modalListEvents": {
+        "eliminarEvento": "删除活动",
+        "cancelar": "取消",
+        "eliminar": "删除",
+        "pregunta": "您确定要删除此活动吗？"
+    },
+    "listaUsuario": {
+        "usuariosInscritos": "已注册用户",
+        "nombre": "名称",
+        "correo": "邮箱",
+        "teléfono": "电话",
+        "descargarListaUsuarios": "下载Excel用户列表"
+    },
+    "crearEvento" : {
+        "crearEvento" : "创建活动",
+        "nombre" : "名称",
+        "ejemploNombre" : "*必填项，最多50个字符",
+        "lugar" : "地点",
+        "ejemploLugar" : "*必填项，最多50个字符",
+        "tipo" : "类型",
+        "asadero" : "烧烤聚会",
+        "charla" : "演讲",
+        "reunionInformativa" : "信息会议",
+        "cursoFormativo" : "培训课程",
+        "otros" : "其他",
+        "descripcion" : "描述",
+        "aforo" : "人数限制",
+        "ejemploAforo" : "*必填项，最多50个字符",
+        "fecha" : "日期",
+        "hora" : "开始时间",
+        "foto" : "选择活动照片...",
+        "informacionAdicional" : "额外信息",
+        "seleccionarArchivo" : "选择文件",
+        "crear": "创建",
+        "modificar":"修改事件",
+        "modify": "修改"
+    },
+    "modalCrearEvento" : {
+        "tituloModal" : "确认创建活动",
+        "preguntaModal" : "您确定要创建此活动吗？",
+        "crearEvento" : "创建活动",
+        "cancelar" : "取消"
+    },
+    "infoEvento": {
+        "inscripcion": "报名",
+        "entradasDisponibles": "可用门票",
+        "personas": "人",
+        "disponibleHasta": "可用门票",
+        "infoEvento": "活动信息",
+        "infoAdicionalEvento": "附加活动信息"
+    },
+    "modalUsuario": {
+        "tituloModal": "确认操作",
+        "preguntaModal": "您确定要保存更改吗？",
+        "aceptar": "接受",
+        "cancelar": "取消"
+        },
+    "modalEliminarEvento": {
+            "tituloModal": "删除活动",
+            "preguntaModal": "您确定要删除该活动吗？",
+            "eliminar": "删除",
+            "cancelar": "取消"
+          }
+}

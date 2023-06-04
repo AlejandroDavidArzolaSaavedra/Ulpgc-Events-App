@@ -1,16 +1,30 @@
 {
-    "Header" : {
+    "header" : {
         "registro" : "Registrarse",
         "iniciarSesion" : "Iniciar Sesión",
         "buscar" : "Buscar",
+        "usuario": "Usuario",
         "perfil" : "Perfil",
         "gestionarEventos" : "Gestionar Eventos",
         "crearEventos" : "Crear Evento",
         "cerrarSesión" : "Cerrar Sesión",
         "misEventos" : "Mis Eventos"
     },
-    "Footer" :{
-        "planificarEvetos" : "PLANIFICAR EVENTOS",
+    "modalHeader" : {
+        "iniciarSesion" : "Iniciar Sesión",
+        "correo" : "Correo",
+        "ejemploCorreo": "example@gmail.com",
+        "contraseña" : "Contraseña",
+        "registro" : "Registrarse",
+        "nombre" : "Nombre",
+        "ejemploNombre": "Pepe",
+        "teléfono" : "teléfono",
+        "ejemploTeléfono" : "teléfono",
+        "repetirContraseña" : "Repetir contraseña",
+        "condiciones" : "Acepto las condiciones de servicio y politicas de privacidad de ULPGC EVENTS"
+    },
+    "footer" :{
+        "planificarEventos" : "PLANIFICAR EVENTOS",
         "buscarEventos" : "Buscar Eventos",
         "eventosPropios" : "Eventos Propios",
         "calendario" : "Calendario",
@@ -38,19 +52,23 @@
         "guardarCambios" : "Guardar cambios",
         "eliminarCambios" : "Eliminar cambios"
     },
+    "index" : {
+        "verFiltros" : " Ver filtros"
+    },
     "filtro" : {
         "filtrarEventos" : "Filtrar eventos",
         "categoria" : "Categoria",
         "asadero" : "Asadero",
         "charla" : "Charla",
-        "reunionInformativa" : "Reunion Informativa",
-        "cursoFormativo" : "Curso Formativo",
-        "otros" : "Otras",
+        "reunionInformativa" : "Reunion informativa",
+        "cursoFormativo" : "Curso formativo",
+        "otros" : "Otros",
         "aforo" : "Aforo",
         "fecha" : "Fecha",
         "desde" : "Desde",
         "hasta" : "Hasta",
-        "aplicarFiltros" : "Aplicar filtros"
+        "aplicarFiltros" : "Aplicar filtros",
+        "borrarFiltros" : "Borrar filtros"
     },
     "listaEventos" : {
         "listaDeEventos" : "Lista eventos",
@@ -66,8 +84,14 @@
         "descargarListaEventos" : "Descargar lista de eventos Excel",
         "fueraDeFecha" : "Fuera de fecha",
         "editar" : "Editar",
-        "eliminar" : "Eliminar",
+        "eliminar" : "Borrar",
         "inscripciones" : "Inscripciones"
+    },
+    "modalListEvents" : {
+        "eliminarEvento" : "Eliminar evento",
+        "cancelar" : "Cancelar",
+        "eliminar" : "Eliminar",
+        "pregunta" : "¿Está seguro que quiere eliminar el evento?"
     },
     "listaUsuario" : {
         "usuariosInscritos" : "Usuarios inscritos",
@@ -79,35 +103,51 @@
     "crearEvento" : {
         "crearEvento" : "Crear evento",
         "nombre" : "Nombre",
+        "ejemploNombre" : "*Campo requerido max(50 caracteres)",
         "lugar" : "Lugar",
+        "ejemploLugar" : "*Campo requerido max(50 caracteres)",
         "tipo" : "Tipo",
         "asadero" : "Asadero",
         "charla" : "Charla",
         "reunionInformativa" : "Reunion Informativa",
         "cursoFormativo" : "Curso Formativo",
-        "otros" : "Otras",
+        "otros" : "Otros",
         "descripcion" : "Descripción",
         "aforo" : "Aforo",
+        "ejemploAforo" : "*Campo requerido max(50 caracteres)",
         "fecha" : "Fecha",
-        "foto" : "Foto",
+        "hora" : "Hora de comienzo",
+        "foto" : "Selecciona foto del evento...",
         "informacionAdicional" : "Información adicional",
-        "caracteresMaximo" : "Máximo de caracteres: 50",
-        "seleccionarArchivo" : "Seleccionar archivo"
+        "seleccionarArchivo" : "Seleccionar archivo",
+        "crear": "crear",
+        "modificar":"Modificar evento",
+        "modify": "modificar"
     },
-    "modalHeader" : {
-        "iniciarSesion" : "Iniciar Sesión",
-        "correo" : "Correo",
-        "contraseña" : "Contraseña",
-        "registro" : "Registrarse",
-        "nombre" : "Nombre",
-        "teléfono" : "teléfono",
-        "repetirContraseña" : "Repetir contraseña",
-        "condiciones" : "Acepto las condiciones de servicio y politicas de privacidad de ULPGC EVENTS"
+    "modalCrearEvento" : {
+        "tituloModal" : "Confirmar creación de evento",
+        "preguntaModal" : "¿Está seguro de que desea crear este evento?",
+        "crearEvento" : "Crear evento",
+        "cancelar" : "Cancelar"
     },
-    "modalListEvents" : {
-        "eliminarEvento" : "Eliminar evento",
-        "cancelar" : "Cancelar",
+    "infoEvento" : {
+        "inscripcion" : "Inscripción",
+        "entradasDisponibles" : "Entradas disponibles ",
+        "disponibleHasta" : "Disponible hasta: ",
+        "personas": "personas",
+        "infoEvento" : "Info del evento",
+        "infoAdicionalEvento" : "Info adicional del evento"
+    },
+    "modalUsuario" : {
+        "tituloModal" : "Confirmar acción",
+        "preguntaModal" : "¿Estás seguro que deseas guardar los cambios?",
+        "aceptar" : "Aceptar",
+        "cancelar" : "Cancelar"
+    },
+    "modalEliminarEvento" : {
+        "tituloModal" : "Eliminar evento",
+        "preguntaModal" : "¿Está seguro que desea eliminar el evento",
         "eliminar" : "Eliminar",
-        "pregunta" : "¿Está seguro que quiere eliminar el evento?"
+        "cancelar" : "Cancelar"
     }
 }

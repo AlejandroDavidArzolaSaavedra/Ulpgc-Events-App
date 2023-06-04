@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>ULPGC EVENTS</title>
+      <link rel="icon" href="../images/logoUlpgc.png">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-    <meta charset="UTF-8">
-    <title>ULPGC EVENTS</title>
+      <!--Dependencias de estilos -->
+      <link rel="stylesheet" href="../css/header.css">
+      <link rel="stylesheet" href="../css/footer.css">
+      <link rel="stylesheet" href="../css/index.css">
+      <link rel="stylesheet" href="../../css/categoryBar.css">
 
-        <!--Dependencias de estilos -->
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../../css/index.css">
-        <link rel="stylesheet" href="../../css/categoryBar.css">
+      <!-- Toast-->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-        <!-- Toast-->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <!-- Font-awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
-        <!-- Font-awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-
-        <!-- Scripts de funcionalidad -->
-        <script src = "../js/header.js" type="module"></script>
-        <script src = "../js/chooseCategory.js" type="module"></script>
-        <script src = "../js/categoryBar.js"></script>
+      <!-- Scripts de funcionalidad -->
+      <script src = "../js/header.js" type="module"></script>
+      <script src = "../js/chooseCategory.js" type="module"></script>
+      <script src = "../js/categoryBar.js"></script>
+      <script src = "../js/changeLanguage.js"></script>
+          
+      <!-- Bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </head>
 
-<body>
-
+  <body id="cuerpo-pagina">
     <header id="header"></header>
-    <a id="filter-btn"><i class="fa-solid fa-filter fa-xl" style="color: #ffa200; margin:2rem;margin-left:1rem; animation-duration: var(--fa-animation-duration,3s);"> Filtrar Eventos</i></a>
+    <button type="button" class="btn btn-light mb-2 transparent-button" style="margin-top: 1rem; font-size: 1.5rem;background-color: transparent; border-color: transparent;" id="ocultar-filtros-category"><i class="fa-solid fa-filter header-color-options" id="title-filter"> Ver Filtros</i></button>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-3 col-md-3 col-12" id="categoryBar"></div>
-        <div class="col-lg-9 col-md-9 col-12">
+          <div class="col-lg-3 col-md-3 col-12 z-3 category-bar" id="categoryBar"></div>
+        <div class="col-lg-9 col-md-9 col-12"  id="col-container">
           <div class="card-cards row row-cols-1 row-cols-md-2 g-4 ml" id="card-car-index"></div>
         </div>
       </div>
     </div>
-     <!--Footer Dinamico -->
-     <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer>
+      <!--Footer Dinamico -->
+      <footer><div id="footer"></div></footer>
+    </body>
 </html>

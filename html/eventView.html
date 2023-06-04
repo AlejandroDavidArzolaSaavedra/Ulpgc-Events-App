@@ -2,12 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Informacion del evento</title>
+        <title>ULPGC EVENTS</title>
+        <link rel="icon" href="../images/logoUlpgc.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!--Dependencias de estilos -->
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel= "stylesheet" href="../css/showEventInformation.css">
         <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel= "stylesheet" href="../css/eventView.css">
         
         <!-- Toast-->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -24,12 +26,15 @@
 
         <!-- Feather -->        
         <script src="https://unpkg.com/feather-icons"></script>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
         <!--Dependencias-->
         <script src = "../js/header.js" type="module"></script>
         <script src = "../js/showInformationEvent.js" type="module"></script>
+        <script src = "../js/changeLanguage.js"></script>
+        
     </head>
-    <body style="background: linear-gradient(to bottom,white 85%,gray);">
+    <body id="cuerpo-pagina">
         <!--Header Dinamico -->        
         <header id="header"></header>
 
@@ -37,6 +42,6 @@
         <div class="title" id="content-show-information"></div>
         
         <!--Footer Dinamico -->
-        <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer>
+        <footer><div id="footer"></div></footer>
     </body>
 </html>

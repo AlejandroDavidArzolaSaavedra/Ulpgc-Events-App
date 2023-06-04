@@ -1,5 +1,6 @@
 import {db } from "../js/firebase.js";
 import {updateDoc, getDocs, collection } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js"
+import {query, where } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js"
 
 let originalNombre = '';
 let originalCorreo = '';
@@ -33,7 +34,7 @@ export const changeInfoUserSave = (usuarioRegistrado) => {
     });
     const botonEliminarCambios = document.getElementById('BotonEliminarCambios');
     botonEliminarCambios.addEventListener('click', async () => {
-   
+        console.log("wwwwwwwwwwwwwowwwwwwwwwwwwwwwwww");
         document.getElementById('cambiarNombreUsuario').value = originalNombre;
         document.getElementById('cambiarCorreoUsuario').value = originalCorreo;
         document.getElementById('cambiarTelefonoUsuario').value = originalTelefono;
@@ -41,16 +42,16 @@ export const changeInfoUserSave = (usuarioRegistrado) => {
     });
     
   }
-
-
 /////////////////////////////////////////////////////////////
 //                  INFORMACION DEL PERFIL
 /////////////////////////////////////////////////////////////
 
-  export const changeInfoUser = (usuarioRegistrado) => {
+  export const changeInfoUser = async (usuarioRegistrado) => {
     const Nombre = "isai@gmail.com";
     const usuarioAlmacenado = localStorage.getItem('usuario');
     const usuario = JSON.parse(usuarioAlmacenado);
+
+
 
     document.getElementById("NombreInformacionUsuario").value = usuarioRegistrado.nombre;
     document.getElementById("CorreoInformacionUsuario").value = usuarioRegistrado.correo;

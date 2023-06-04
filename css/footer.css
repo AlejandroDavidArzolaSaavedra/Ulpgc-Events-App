@@ -1,86 +1,60 @@
-.fa-calendar{
+
+.links-footer{
+    margin-right: 0.5rem;
     font: 20px;
 }
-.fa-user{
-    font:20px;
-}
 .fa-searchengin{
-    font:20px;
     color: #FF8A00;
 }
 .fa-twitter{
-    font:20px;
     color: #00D1FF;
 }
 .fa-youtube{
-    font: 20px;
     color: red;
 }
 .fa-tiktok{
-    font: 20px;
     color: #851111;
 }
-.fa-figma{
-    font: 20px;
-}
-.fa-github{
-    font:20px;
-}
-.fa-phone{
-    font:20px;
-    
-}
 .fa-trello{
-    font:20px;
     color: #0085FF;
 }
 .fa-whatsapp{
-    font: 20px;
     color: #24FF00;
 }
-.fa-envelope{
-    font: 20px;
-}
-
 .flex-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  
+}  
 .footer-grid {
     display: grid;
     flex-direction: row;
     width: 80%;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr auto;
     grid-gap: 10px;
     margin: auto;
-  grid-template-rows: 1fr auto;
   }
   
-  .col1, .col2, .col3, .col4, .col5 {
+.col1, .col2, .col3, .col4, .col5 {
     text-align: center;
     padding: 10px;
-  }
-  .row1, .row2, .row3 {
+}
+.col1, .col2, .col4, .col5{
+    margin-top: 1rem;
+}
+
+.row1, .row2, .row3 {
     text-align: left;
     margin-left:2rem;
-  }
+}
 
-  .logo-footer-img-ulpgc{
+.logo-footer-img-ulpgc{
     width: 10rem;
-  }
-  .col1, .col2, .col4, .col5{
-    margin-top: 1rem;
-  }
+}
 
 .title-footer{
     font-size: 1.2rem;
-}
-
-.links-footer{
-    margin-right: 0.5rem;
 }
 
 .links-footer-options{
@@ -88,13 +62,15 @@
     text-decoration: none;
 }
 
+
 .title-footer{
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
     margin-top: 1rem;    
 }
 #footer{
     margin-top: 2rem;
+    background-color: #4D4C4C;
 }
 
 /*Movil*/
@@ -102,4 +78,17 @@
     .footer-grid{
         display: none;
     }
+}
+
+/*Movil*/
+@media only screen and (min-width: 1100px) {
+    .flex-wrapper {
+        min-height: calc(18vh + 10vw);
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .footer-grid {
+        flex-grow: 1;
+      }
 }

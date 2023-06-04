@@ -1,124 +1,135 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style=" border-bottom: 1px solid #ccc;">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" id="contenedor-navbar-header">
   <div class="container">
+    
     <a href="../../html/index.html"><img src="../../images/logo.png" id="logo-header-ulpgc"/></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button class="navbar-toggler" style="background-color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span id="barrita-de-opciones" class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
         <li class="nav-item">
-              <a class="nav-link"  href="#" ><i id="calendar" class="fas fa-calendar fa-xl header-color-options" style="margin-left: 1rem;"></i></a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link usuario-registrado" href="#"><i id="comment" class="fas fa-comment fa-xl header-color-options" style="margin-left: 1rem;"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link usuario-registrado" href="#"><i class="fa-regular fa-bell fa-2xl header-color-options" style="margin-left: 1rem;"></i></a>
+          <a class="nav-link" ><i id="calendar" class="fas fa-calendar fa-xl header-color-options"></i></a>
+        </li>
+        <li class="nav-item">
+
+          <a class="nav-link usuario-registrado"><i id="comment" class="fas fa-comment  fa-xl header-color-options"></i></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link usuario-registrado"><i  id="bell-header"class="fa-regular fa-bell fa-2xl header-color-options"></i></a>
         </li>
       </ul>
+
       <ul class="navbar-nav ms-auto">
-          <a class="nav-link"  href="#"><i class="fa-brands fa-searchengin fa-2xl header-color-options" style="margin-right:1rem; margin-top:1rem;"></i></a>
-          <input class="form-control me-2 search-input" type="search" id="input-search-head" placeholder="Buscar" aria-label="Search">
+        
+        <a class="nav-link" id="search-header-phone" ><i id="search-header"class="fa-brands fa-searchengin fa-2xl header-color-options"></i></a>
+        <input class="form-control me-2 search-input" type="search" id="input-search-head" aria-label="Search">
+        
+        <i id="modo-noche" class="fa-solid fa-moon header-color-options"></i>
+
         <li class="nav-item language-option">
-          <a class="nav-link" href="#"><i class="fa-solid fa-language fa-2xl header-color-options" style="margin-top: 1rem; margin-right: 1rem; margin-left: 1rem"></i></a>
+          <select class="selectpicker hide-caret form-select" id="language-selector" data-width="fit">
+            <option class="option-language" value="#es" data-icon="../../images/flags/spain.svg">Español</option>
+            <option class="option-language" value="#de" data-icon="../../images/flags/german.svg" data-content='Deutsch'>Deutsch</option>
+            <option class="option-language" value="#en" data-icon="../../images/flags/uk.svg" data-content='English'>English</option>
+            <option class="option-language" value="#fr" data-icon="../../images/flags/france.svg" data-content='French'>French</option>
+            <option class="option-language" value="#pt" data-icon="../../images/flags/portuguesse.svg" data-content='Português'>Português</option>
+            <option class="option-language" value="#cn" data-icon="../../images/flags/china.svg" data-content='中国'>中国</option>
+            <option class="option-language" value="#ru" data-icon="../../images/flags/russian.svg" data-content='русский'>русский</option>
+        </select>
+        </li>
+
+        <li class="nav-item usuario-no-registrado">
+          <a class="nav-link white-color-background" data-bs-toggle="modal" id="registrarse-header" data-bs-target="#registrarseModal"></a>
         </li>
         <li class="nav-item usuario-no-registrado">
-          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#registrarseModal" href="#">Registrarse</a>
-        </li>
-        <li class="nav-item usuario-no-registrado">
-          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#logearseModal" href="#">Logearse</a>
+          <a class="nav-link white-color-background" data-bs-toggle="modal" id="login-header" data-bs-target="#logearseModal"></a>
         </li>
 
         
         <li class="nav-item dropdown" >
-          <a class="nav-link  usuario-registrado" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-regular fa-user fa-2xl header-color-options"><p class="header-color-options" id="nombre-header" style="margin-left: 2rem; font-size: 1.5rem;font-family:Arial, Helvetica, sans-serif">Usuario</p></i>
+          <a class="nav-link  usuario-registrado"data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-regular fa-user fa-2xl header-color-options"><p class="header-color-options" id="nombre-header"></p></i>
           </a>
 
           <ul class="dropdown-menu">
-            
-            <li><a class="dropdown-item" href="../../html/perfil.html">Perfil</a></li>
+            <li><a class="dropdown-item" id="perfil-header" href="../../html/profile.html"></a></li>
             <li><hr class="dropdown-divider mis-eventos-no-institucional"></li>
-            <li><a class="dropdown-item mis-eventos-no-institucional" href="../../html/showEventList.html">Mis eventos</a></li>
+            
+            <li><a class="dropdown-item mis-eventos-no-institucional" id="mis-eventos-header" href="../../html/eventList.html"></a></li>
             <li class="user-institutional"><hr class="dropdown-divider"></li>
-            <li class="user-institutional"><a class="dropdown-item" href="./../html/showEventList.html">Gestionar Eventos</a></li>
+            
+            <li class="user-institutional"><a class="dropdown-item" id="gestionar-eventos-header"href="./../html/eventList.html"></a></li>
             <li class="user-institutional"><hr class="dropdown-divider"></li>
-            <li class="user-institutional"><a class="dropdown-item" href="../../html/createEvent.html">Crear Evento</a></li>
+            
+            <li class="user-institutional"><a class="dropdown-item" id="crear-evento-header" href="../../html/createEvent.html"></a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" id="cerrar-sesion" href="../../html/index.html">Cerrar Sesion</a></li>
+            
+            <li><a class="dropdown-item" id="cerrar-sesion" href="../../html/index.html"></a></li>
           </ul>
         </li>
-
       </ul>
     </div>
   </div>
 </nav>
 
-
 <!-- Modal Registrarse -->
 <div class="modal fade" id="registrarseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content" id="modal-registrarse">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
 
-
         <form id="registrarse-form">
-          <label for="text">Nombre</label>
+          <label id="nombre-registrarse-label" for="text"></label>
           <input type="text" id="registrar-nombre" class="form-control mb-3" placeholder="Juan" required>
 
-          <label for="text">Telefono</label>
+          <label id="telefono-registrarse-label" for="text"></label>
           <input type="text" id="registrar-telefono" class="form-control mb-3" placeholder="654-30-39-23" required>
 
-          <label for="email">Correo</label>
+          <label id="correo-registrarse-label" for="email"></label>
           <input type="email" id="registrar-correo" class="form-control mb-3" placeholder="example@gmail.com" required>
 
-          <label for="password">Contraseña</label>
+          <label id="correo-contra-label" for="password"></label>
           <input type="password" id="registrar-contra" class="form-control mb-3" placeholder="***" required>
           
-          <label for="password">Repetir contraseña</label>
+          <label id="correo-repetir-registrarse-label" for="password"></label>
           <input type="password" id="registrar-repetir-contra" class="form-control mb-3" placeholder="***" required>
 
           <div class="form-check mb-3">
-            <input class="form-check-input position-static border border-dark filtro-category " id="blankCheckbox" onclick="onlyOne(this)" name="check" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-            <p  class="options-category">Acepto las condiciones de servicio y politicas de privacidad de ULPGC EVENTS</p>
+            <input class="form-check-input position-static border border-dark filtro-category " id="blankCheckbox" onclick="onlyOne(this)" name="check" type="checkbox" id="blankCheckbox" value="option1">
+            <p  id="aceptar-condiciones-label" class="options-category"></p>
         </div>
         
-        <button  type="submit" id="registrar-btn" class="btn btn-primary" disabled>Registrarse</button>
-          
+        <button  type="submit" id="registrar-btn" class="btn btn-primary" disabled></button>  
         </form>
-
-
       </div>
     </div>
   </div>
 </div>
+
 
 <!-- Modal Logearse -->
 <div class="modal fade" id="logearseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content" id="modal-logearse">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Logearse</h1>
+        <h1 class="modal-title fs-5 logeate-etiqueta-label" id="exampleModalLabel"></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
-
         <form id="logearse-form">
-          <label for="email">Correo</label>
+          <label id="correo-logearse-label" for="email"></label>
           <input type="email" id="login-correo" class="form-control mb-3" placeholder="example@gmail.com" required>
-          <label for="password">Contraseña</label>
+          <label id="contra-logearse-label" for="password"></label>
           <input type="password" id="login-contra"class="form-control mb-3" placeholder="***" required>
-          <button type="submit" class="btn btn-primary">Logearse</button>
+          <button type="submit"  id="btn-logearse-modal"class="btn btn-primary"></button>
         </form>
     </div>
   </div>
 </div>
-<script>
-

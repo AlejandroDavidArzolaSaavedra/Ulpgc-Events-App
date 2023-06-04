@@ -1,0 +1,154 @@
+{
+    "header": {
+        "registro": "S'inscrire",
+        "iniciarSesion": "Se connecter",
+        "buscar": "Rechercher",
+        "usuario": "Utilisateur",
+        "perfil": "Profil",
+        "gestionarEventos": "Gérer les événements",
+        "crearEventos": "Créer un événement",
+        "cerrarSesión": "Se déconnecter",
+        "misEventos": "Mes événements"
+    },
+    "modalHeader": {
+        "iniciarSesion": "Se connecter",
+        "correo": "Email",
+        "ejemploCorreo": "example@gmail.com",
+        "contraseña": "Mot de passe",
+        "registro": "S'inscrire",
+        "nombre": "Nom",
+        "ejemploNombre": "Jean Dupont",
+        "teléfono": "Téléphone",
+        "ejemploTeléfono": "123-456-7890",
+        "repetirContraseña": "Répéter le mot de passe",
+        "condiciones": "J'accepte les conditions de service et la politique de confidentialité d'ULPGC EVENTS"
+    },
+    "footer": {
+        "planificarEventos": "PLANIFIER DES ÉVÉNEMENTS",
+        "buscarEventos": "Rechercher des événements",
+        "eventosPropios": "Événements propres",
+        "calendario": "Calendrier",
+        "sobreNosotros": "À PROPOS DE NOUS",
+        "tiktok": "Tiktok",
+        "twitter": "Twitter",
+        "youtube": "Youtube",
+        "desarrollo": "DÉVELOPPEMENT",
+        "github": "Github",
+        "trello": "Trello",
+        "figma": "Figma",
+        "contáctanos": "CONTACTEZ-NOUS",
+        "correo": "Courriel",
+        "whatsapp": "WhatsApp",
+        "teléfono": "Téléphone"
+    },
+    "perfil": {
+        "informacionUsuario": "Informations sur l'utilisateur",
+        "nombre": "Nom",
+        "correo": "Courriel",
+        "contraseña": "Mot de passe",
+        "teléfono": "Téléphone",
+        "modificarPerfil": "Modifier le profil",
+        "eliminarPerfil": "Supprimer le profil",
+        "guardarCambios": "Sauvegarder les changements",
+        "eliminarCambios": "Annuler les modifications"
+    },
+    "index" : {
+        "verFiltros" : " Voir les filtres"
+    },
+    
+    "filtro": {
+        "filtrarEventos": "Filtrer les événements",
+        "categoria": "Catégorie",
+        "asadero": "barbecue en plein air",
+        "charla": "conférence",
+        "reunionInformativa": "Réunion informative",
+        "cursoFormativo": "Cours de formation",
+        "otros": "Autres",
+        "aforo": "Capacité",
+        "fecha": "Date",
+        "desde": "Depuis",
+        "hasta": "Jusqu'à",
+        "aplicarFiltros": "Appliquer les filtres",
+        "borrarFiltros": "Effacer les filtres"
+    },
+    "listaEventos": {
+        "listaDeEventos": "Liste des événements",
+        "nombre": "Nom",
+        "fecha": "Date",
+        "tipoDeEvento": "Type d'événement",
+        "estado": "Statut",
+        "asadero": "barbecue en plein air",
+        "charla": "conférence",
+        "reunionInformativa": "Réunion informative",
+        "cursoFormativo": "Formation",
+        "otros": "Autres",
+        "descargarListaEventos": "Télécharger la liste des événements Excel",
+        "fueraDeFecha": "Hors délai",
+        "editar": "Modifier",
+        "eliminar": "Supprimer",
+        "inscripciones": "Inscriptions"
+    },
+    "modalListEvents": {
+        "eliminarEvento": "Supprimer l'événement",
+        "cancelar": "Annuler",
+        "eliminar": "Supprimer",
+        "pregunta": "Êtes-vous sûr de vouloir supprimer l'événement ?"
+    },
+    "listaUsuario": {
+        "usuariosInscritos": "Utilisateurs inscrits",
+        "nombre": "Nom",
+        "correo": "Email",
+        "teléfono": "Téléphone",
+        "descargarListaUsuarios": "Télécharger la liste des utilisateurs Excel"
+    },
+    "crearEvento" : {
+        "crearEvento" : "Créer un événement",
+        "nombre" : "Nom",
+        "ejemploNombre" : "*Champ requis max(50 caractères)",
+        "lugar" : "Lieu",
+        "ejemploLugar" : "*Champ requis max(50 caractères)",
+        "tipo" : "Type",
+        "asadero" : "Barbecue",
+        "charla" : "Conférence",
+        "reunionInformativa" : "Réunion d'information",
+        "cursoFormativo" : "Cours de formation",
+        "otros" : "Autre",
+        "descripcion" : "Description",
+        "aforo" : "Capacité",
+        "ejemploAforo" : "*Champ requis max(50 caractères)",
+        "fecha" : "Date",
+        "hora" : "Heure de début",
+        "foto" : "Sélectionnez la photo de l'événement...",
+        "informacionAdicional" : "Informations supplémentaires",
+        "seleccionarArchivo" : "Sélectionner un fichier",
+        "crear": "créer",
+        "modificar":"Modifier l'événement",
+        "modify": "modifier"
+    },
+    "modalCrearEvento": {
+        "tituloModal": "Confirmer la création d'événement",
+        "preguntaModal": "Êtes-vous sûr de vouloir créer cet événement ?",
+        "crearEvento": "Créer événement",
+        "cancelar": "Annuler"
+    },
+    "infoEvento": {
+        "inscripcion": "Inscription",
+        "entradasDisponibles": "Billets disponibles ",
+        "personas": "personnes",
+        "disponibleHasta": "Disponible jusqu'au ",
+        "infoEvento": "Informations sur l'événement",
+        "infoAdicionalEvento": "Informations supplémentaires sur l'événement"
+    },
+    "modalUsuario": {
+        "tituloModal": "Confirmer l'action",
+        "preguntaModal": "Êtes-vous sûr de vouloir enregistrer les modifications ?",
+        "aceptar": "Accepter",
+        "cancelar": "Annuler"
+        },
+        "modalEliminarEvento": {
+            "tituloModal": "Supprimer l'événement",
+            "preguntaModal": "Êtes-vous sûr de vouloir supprimer l'événement",
+            "eliminar": "Supprimer",
+            "cancelar": "Annuler"
+          }
+}

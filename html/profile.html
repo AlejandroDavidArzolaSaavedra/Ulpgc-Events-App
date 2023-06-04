@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ULPGC EVENTS</title>
+        <link rel="icon" href="../images/logoUlpgc.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!--Dependencias de estilos -->
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel= "stylesheet" href="../css/profile.css">
+        
+        <!-- Toast-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+        <!-- Font-awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+
+        <!-- Scripts de funcionalidad -->
+        <script src = "../js/header.js" type="module"></script>
+        <script src = "../js/changeLanguage.js"></script>
+
+        <!-- Scripts para el cambio de idioma -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body id="cuerpo-pagina">
+        <div class = "Perfil-grid">
+            <header id="header"></header>
+            <div class = "IntormacionTotalPerfil">
+                <div class = "InformacionPerfil">
+                    <form class = "datosUsuario">
+                        <h2 class = "InformacionUsuario" id="information-profile"></h2>
+                        <div class="content-user-information">
+                            <div class="image-info-user">
+                                <img src="../images/EjemploFotoPerfil.jpg" class="FotoDePerfil">
+                            </div>
+                            
+                            <div class="label-info-user">
+                                <label  class="label" id="nombre-profile" for= "fname"></label>
+                            </div>
+                            <div class="input-text-profile">
+                                <input id="NombreInformacionUsuario" class="form-control" style="width:60%;"></input>
+                            </div>
+                            
+                            <div class="label-info-user">
+                                <label class="label" id="correo-profile" for= "fcorreo"></label>
+                            </div>
+                            <div class="input-text-profile">
+                                <input id="CorreoInformacionUsuario" class="form-control" style="width:60%;"></input>
+                            </div>
+
+                            <div class="label-info-user">
+                                <label class="label" id="contra-profile" for="fcontraseña"></label>
+                            </div>
+                            <div class="input-text-profile">
+                                <input type = password id="ContraseñaInformacionUsuario" class="form-control" style="width:60%;"></input>
+                            </div>
+                            
+                            <div class="label-info-user">
+                                <label class="label" id="tele-profile" for= "ftelefono"></label>
+                            </div>
+                            <div class="input-text-profile">
+                                <input id="TelefonoInformacionUsuario" class="form-control" style="width:60%;"></input>
+                            </div>
+                            
+                            <div class="input-text-profile">
+                                <button class = "Modificar-perfil buttons-perfil" id="button-edit-perfil"></button>
+                                <button class = "Eliminar-perfil buttons-perfil" id="delete-profile"></button>
+                                <button class = "Modificar-perfil buttons-perfil hidden" id="button-save-perfil"></button>
+                                <button class = "Eliminar-perfil buttons-perfil hidden" id="button-delete-perfil" ></button>       
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-backdrop"  tabindex="-1" style="background-color: #201f1fde;" role="dialog" id="confirm-modal">
+            <div class="modal-dialog" style="opacity: 1;" role="document">
+              <div class="modal-content" id ="edit-profile"  style="background-color: #fff; opacity: 0.9;">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="confirm-button-user">Confirmar acción</h5>
+                  <button type="button" class="btn-close" id="exit-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="confirm-message"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"id="cancel-modal-button" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary" id="confirm-button">Aceptar</button>
+                </div>
+            </div>
+          </div>
+          </div>
+
+
+          <div class="modal"  tabindex="-1" style="background-color: #201f1fde;" role="dialog" id="confirm-modal-delete">
+            <div class="modal-dialog" style="opacity: 1;" role="document">
+              <div class="modal-content" id ="delete-profile-content"  style="background-color: #fff; opacity: 1;">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="confirm-button-user-delete">Confirmar acciósssssssssssn</h5>
+                
+                  <button type="button" class="btn-close-delete" style="background-color: gray; height:2rem; width:2rem;border-radius: 5px;" id="exit-close-delete" data-bs-dismiss="modal" aria-label="Close"><strong style="color: #fff;">X</strong></button>
+                </div>
+                <div class="modal-body">
+                  <p id="confirm-message-delete"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"id="cancel-modal-button-delete" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary" id="confirm-button-delete">Aceptar</button>
+                </div>
+            </div>
+          </div>
+          </div>
+
+
+
+        <!--Footer Dinamico -->
+        <footer><div id="footer"></div></footer>
+    </body>
+</html>

@@ -10,7 +10,7 @@ if (button){
     
 
 const accesoALaBD = () =>{    
-    const usuarioAlmacenado = localStorage.getItem('ParametrosUsuario');
+    const usuarioAlmacenado = localStorage.getItem('usuario');
     const creador = JSON.parse(usuarioAlmacenado).uid;
     const nombre = document.querySelector("#input-create-event-nombre").value;
     const lugar = document.querySelector("#input-create-event-lugar").value;
@@ -34,25 +34,21 @@ const accesoALaBD = () =>{
     var ficheros = []
     var leer = new FileReader();
     leer.readAsDataURL(urlEvent);
-    
-    
-    
+  
     const infoAdicional = document.querySelector("#input-create-event-info-adicional").value;
-
     const evento = {
-        Creador: creador,
-        aforo: aforo,
-        categoria: tipo,
-        lugar: lugar,
-        descripcion: descripcion,
-        fechaDeSubida: {day,month,year,hour},
-        imagenEvento: url,
-        infoAdicional: infoAdicional,
-        listaDeUsuarios: listaDeUsuarios,
-        nombre: nombre
-    };
-
-    addEvent(evento);
+      Creador: creador,
+      aforo: aforo,
+      categoria: tipo,
+      lugar: lugar,
+      descripcion: descripcion,
+      fechaDeSubida: { day, month, year, hour },
+      imagenEvento: imagenes[i],
+      infoAdicional: infoAdicional,
+      listaDeUsuarios: listaDeUsuarios,
+      nombre: "SUPERINCREIBLE"
+  }
+  addEvent(evento);
 }
 
 

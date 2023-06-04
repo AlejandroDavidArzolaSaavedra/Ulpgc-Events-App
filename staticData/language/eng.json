@@ -1,0 +1,154 @@
+{
+    "header" : {
+        "registro" : "Register",
+        "iniciarSesion" : "Login",
+        "buscar" : "Search",
+        "usuario": "User",
+        "perfil" : "Profile",
+        "gestionarEventos" : "Manage Events",
+        "crearEventos" : "Create Event",
+        "cerrarSesión" : "Logout",
+        "misEventos" : "My Events"
+    },
+    "modalHeader": {
+        "iniciarSesion": "Log in",
+        "correo": "Email",
+        "ejemploCorreo": "example@gmail.com",
+        "contraseña": "Password",
+        "registro": "Sign up",
+        "nombre": "Name",
+        "ejemploNombre": "John Doe",
+        "teléfono": "Phone",
+        "ejemploTeléfono": "123-456-7890",
+        "repetirContraseña": "Repeat password",
+        "condiciones": "I accept the terms of service and privacy policy of ULPGC EVENTS"
+    },
+    "footer" :{
+        "planificarEventos" : "ORGANIZE EVENTS",
+        "buscarEventos" : "Search events",
+        "eventosPropios" : "Own events",
+        "calendario" : "Calendar",
+        "sobreNosotros" : "ABOUT US",
+        "tiktok" : "Tiktok",
+        "twitter" : "Twitter",
+        "youtube" : "Youtube",
+        "desarrollo" : "DEVELOPMENT",
+        "github" : "Github",
+        "trello" : "Trello",
+        "figma" : "Figma",
+        "contáctanos" : "CONTACT US",
+        "correo" : "Email",
+        "whatsapp" : "Whatsapp",
+        "teléfono" : "Phone number"
+    },
+    "perfil" : {
+        "informacionUsuario" : "User Information",
+        "nombre" : "Name",
+        "correo" : "Email",
+        "contraseña" : "Password",
+        "teléfono" : "Phone number",
+        "modificarPerfil" : "Modify Profile",
+        "eliminarPerfil" : "Delete Profile",
+        "guardarCambios" : "Save changes",
+        "eliminarCambios" : "Delete changes"
+    },
+    "index" : {
+        "verFiltros" : " See filters"
+    },
+    "filtro" : {
+        "filtrarEventos" : "Filter Events",
+        "categoria" : "Category",
+        "asadero" : "Barbecue",
+        "charla" : "Discourse",
+        "reunionInformativa" : "Meeting",
+        "cursoFormativo" : "Course",
+        "otros" : "Other",
+        "aforo" : "Capacity",
+        "fecha" : "Date",
+        "desde" : "From",
+        "hasta" : "To",
+        "aplicarFiltros" : "Apply filters",
+        "borrarFiltros" : "Delete filters"
+    },
+    "listaEventos" : {
+        "listaDeEventos" : "Event list",
+        "nombre" : "Name",
+        "fecha" : "Date",
+        "tipoDeEvento" : "Event type",
+        "estado" : "Status",
+        "asadero" : "Barbecue",
+        "charla" : "Discourse",
+        "reunionInformativa" : "Meeting",
+        "cursoFormativo" : "Course",
+        "otros" : "Other",
+        "descargarListaEventos" : "Download Event List Excel",
+        "fueraDeFecha" : "Out of date",
+        "editar" : "Edit",
+        "eliminar" : "Delete",
+        "inscripciones" : "Inscriptions"
+    },
+    "modalListEvents" : {
+        "eliminarEvento" : "Delete event",
+        "cancelar" : "Cancel",
+        "eliminar" : "Delete",
+        "pregunta" : "Are you sure you want to delete the event?"
+    },
+    "listaUsuario" : {
+        "usuariosInscritos" : "Registered Users",
+        "nombre" : "Name",
+        "correo" : "Email",
+        "teléfono" : "Phone number",
+        "descargarListaUsuarios" : "Download User List Excel"
+    },
+    "crearEvento" : {
+        "crearEvento" : "Create event",
+        "nombre" : "Name",
+        "ejemploNombre" : "*Required field max(50 characters)",
+        "lugar" : "Location",
+        "ejemploLugar" : "*Required field max(50 characters)",
+        "tipo" : "Type",
+        "asadero" : "Barbecue",
+        "charla" : "Talk",
+        "reunionInformativa" : "Information Meeting",
+        "cursoFormativo" : "Training Course",
+        "otros" : "Others",
+        "descripcion" : "Description",
+        "aforo" : "Capacity",
+        "ejemploAforo" : "*Required field max(50 characters)",
+        "fecha" : "Date",
+        "hora" : "Start time",
+        "foto" : "Select event photo...",
+        "informacionAdicional" : "Additional information",
+        "seleccionarArchivo" : "Select file",
+        "crear": "create",
+        "modificar":"Edit event",
+        "modify": "modify"
+        
+    },
+    "modalCrearEvento": {
+        "tituloModal": "Confirm Event Creation",
+        "preguntaModal": "Are you sure you want to create this event?",
+        "crearEvento": "Create Event",
+        "cancelar": "Cancel"
+    },    
+    "infoEvento" : {
+        "inscripcion" : "Registration",
+        "entradasDisponibles" : "Available tickets ",
+        "personas": "people",
+        "disponibleHasta" : "Available until ",
+        "infoEvento" : "Event info",
+        "infoAdicionalEvento" : "More information"
+    },
+    "modalUsuario": {
+        "tituloModal": "Confirm Action",
+        "preguntaModal": "Are you sure you want to save the changes?",
+        "aceptar": "Accept",
+        "cancelar": "Cancel"
+        },
+        "modalEliminarEvento": {
+            "tituloModal": "Delete event",
+            "preguntaModal": "Are you sure you want to delete the event",
+            "eliminar": "Delete",
+            "cancelar": "Cancel"
+          }
+}

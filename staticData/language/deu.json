@@ -1,0 +1,154 @@
+{
+    "header" : {
+        "registro" : "Registrieren",
+        "iniciarSesion" : "Anmelden",
+        "buscar" : "Suchen",
+        "usuario": "Benutzer",
+        "perfil" : "Profil",
+        "gestionarEventos" : "Events verwalten",
+        "crearEventos" : "Event erstellen",
+        "cerrarSesión" : "Abmelden",
+        "misEventos" : "Meine Events"
+    },
+    "modalHeader": {
+        "iniciarSesion": "Anmelden",
+        "correo": "E-Mail",
+        "ejemploCorreo": "example@gmail.com",
+        "contraseña": "Passwort",
+        "registro": "Registrieren",
+        "nombre": "Name",
+        "ejemploNombre": "Max Mustermann",
+        "teléfono": "Telefon",
+        "ejemploTeléfono": "123-456-7890",
+        "repetirContraseña": "Passwort wiederholen",
+        "condiciones": "Ich akzeptiere die Nutzungsbedingungen und Datenschutzrichtlinien von ULPGC EVENTS"
+    },
+    "footer" :{
+        "planificarEventos" : "EVENTS PLANEN",
+        "buscarEventos" : "Events suchen",
+        "eventosPropios" : "Eigene Events",
+        "calendario" : "Kalender",
+        "sobreNosotros" : "ÜBER UNS",
+        "tiktok" : "Tiktok",
+        "twitter" : "Twitter",
+        "youtube" : "Youtube",
+        "desarrollo" : "ENTWICKLUNG",
+        "github" : "Github",
+        "trello" : "Trello",
+        "figma" : "Figma",
+        "contáctanos" : "KONTAKTIEREN SIE UNS",
+        "correo" : "E-Mail",
+        "whatsapp" : "Whatsapp",
+        "teléfono" : "Telefon"
+    },
+    "perfil" : {
+        "informacionUsuario" : "Benutzerinformationen",
+        "nombre" : "Name",
+        "correo" : "E-Mail",
+        "contraseña" : "Passwort",
+        "teléfono" : "Telefon",
+        "modificarPerfil" : "Profil bearbeiten",
+        "eliminarPerfil" : "Profil löschen",
+        "guardarCambios" : "Änderungen speichern",
+        "eliminarCambios" : "Änderungen verwerfen"
+    },
+    "index" : {
+        "verFiltros" : " Filter anzeigen"
+    },
+    "filtro" : {
+        "filtrarEventos" : "Events filtern",
+        "categoria" : "Kategorie",
+        "asadero" : "heißer Ort",
+        "charla" : "Vortrag",
+        "reunionInformativa" : "Informationsveranstaltung",
+        "cursoFormativo" : "Fortbildungskurs",
+        "otros" : "Andere",
+        "aforo" : "Kapazität",
+        "fecha" : "Datum",
+        "desde" : "Von",
+        "hasta" : "Bis",
+        "aplicarFiltros" : "Filter anwenden",
+        "borrarFiltros" : "Filter löschen"
+    },
+    "listaEventos": {
+            "listaDeEventos": "Liste von Ereignissen",
+            "nombre": "Name",
+            "fecha": "Datum",
+            "tipoDeEvento": "Art des Ereignisses",
+            "estado": "Zustand",
+            "asadero": "heißer Ort",
+            "charla": "Vortrag",
+            "reunionInformativa": "Informationsmeeting",
+            "cursoFormativo": "Schulungskurs",
+            "otros": "Andere",
+            "descargarListaEventos": "Liste der Ereignisse Excel herunterladen",
+            "fueraDeFecha": "Außerhalb des Datums",
+            "editar": "Bearbeiten",
+            "eliminar": "Löschen",
+            "inscripciones": "Anmeldungen"
+    },
+    "modalListEvents": {
+        "eliminarEvento": "Ereignis löschen",
+        "cancelar": "Stornieren",
+        "eliminar": "Löschen",
+        "pregunta": "Sind Sie sicher, dass Sie das Ereignis löschen möchten?"
+    },
+    "listaUsuario": {
+        "usuariosInscritos": "Registrierte Benutzer",
+        "nombre": "Name",
+        "correo": "Post",
+        "teléfono": "Telefon",
+        "descargarListaUsuarios": "Benutzerliste Excel herunterladen"
+    },
+    "crearEvento" : {
+        "crearEvento" : "Veranstaltung erstellen",
+        "nombre" : "Name",
+        "ejemploNombre" : "*Erforderliches Feld max(50 Zeichen)",
+        "lugar" : "Ort",
+        "ejemploLugar" : "*Erforderliches Feld max(50 Zeichen)",
+        "tipo" : "Art",
+        "asadero" : "Grillfest",
+        "charla" : "Vortrag",
+        "reunionInformativa" : "Informationsveranstaltung",
+        "cursoFormativo" : "Fortbildung",
+        "otros" : "Andere",
+        "descripcion" : "Beschreibung",
+        "aforo" : "Kapazität",
+        "ejemploAforo" : "*Erforderliches Feld max(50 Zeichen)",
+        "fecha" : "Datum",
+        "hora" : "Startzeit",
+        "foto" : "Wähle ein Event-Foto aus ...",
+        "informacionAdicional" : "Zusätzliche Informationen",
+        "seleccionarArchivo" : "Datei auswählen",
+        "crear": "Erstellen",
+        "modificar":"Veranstaltung bearbeiten",
+        "modify": "ändern"
+    },
+    "modalCrearEvento": {
+        "tituloModal": "Bestätigung der Ereigniserstellung",
+        "preguntaModal": "Sind Sie sicher, dass Sie dieses Ereignis erstellen möchten?",
+        "crearEvento": "Ereignis erstellen",
+        "cancelar": "Abbrechen"
+    },
+    "infoEvento": {
+        "inscripcion": "Anmeldung",
+        "entradasDisponibles": "Verfügbare Einträge",
+        "personas": "Menschen",
+        "disponibleHasta": "Verfügbare Einträge bis",
+        "infoEvento": "Eventinformationen",
+        "infoAdicionalEvento": "Zusätzliche Informationen zum Ereignis"
+    },
+    "modalUsuario": {
+        "tituloModal": "Aktion bestätigen",
+        "preguntaModal": "Möchten Sie die Änderungen speichern?",
+        "aceptar": "Akzeptieren",
+        "cancelar": "Abbrechen"
+        },
+        "modalEliminarEvento": {
+            "tituloModal": "Event löschen",
+            "preguntaModal": "Sind Sie sicher, dass Sie das Event löschen möchten",
+            "eliminar": "Löschen",
+            "cancelar": "Abbrechen"
+          }
+}
+

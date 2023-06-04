@@ -9,6 +9,26 @@
     margin: 0.5rem;
     color: white;
 }
+
+.categoryBarComponent {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .categoryBarComponent.oculto {
+    transform: translateX(-120%);
+  }
+
+#categoryBarComponent{
+    z-index: 100;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
 .options-category{
     font-weight: bold;
     margin: 0;

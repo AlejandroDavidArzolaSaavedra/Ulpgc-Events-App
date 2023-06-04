@@ -3,7 +3,7 @@
   <div id="First" >
   <div class="container-form">
       <div class="form-create-event" id="container-form-first-part-event">
-        <h2 class="crear-event-form-title mt-4"></h2>
+        <h2 class="modify-event-form-title mt-4"></h2>
         
         <div class="center" style="width: 75%; margin-left: 2rem;">
           <div class="progress">
@@ -40,7 +40,7 @@
     <div id="Second" class="displayoff">
       <div class="container-form" style="text-align: center;">
           <div class="form-create-event" style="width:23rem;height:30rem;" id="container-form-second-part-event">
-            <h2 class="crear-event-form-title center mt-4"></h2>
+            <h2 class="modify-event-form-title mt-4"></h2>           
             <div class="center" style="width: 75%; margin-left: 2rem;">
               <div class="progress">
                 <div class="bg-warning progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
@@ -63,7 +63,7 @@
   <div id="Third" class="displayoff">
     <div class="container-form" style="text-align: center;">
       <div class="form-create-event" style="width:23rem;height:30rem;" id="container-form-second-part-event">
-        <h2 class="crear-event-form-title center mt-4"></h2>
+        <h2 class="modify-event-form-title mt-4"></h2>
         <div class="center" style="width: 75%; margin-left: 2rem;">
           <div class="progress">
             <div class="bg-warning progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
@@ -90,36 +90,11 @@
       </div>
     </div>
   </div>
-
-  <div id="Fourth" class="displayoff" style="text-align: center;">
-    <div class="container-form">
-      <div class="form-create-event" style="width:23rem;height:30rem;" id="container-form-second-part-event">
-        <h2 class="crear-event-form-title center mt-4"></h2>
-        <div class="center" style="width: 75%; margin-left: 2rem;">
-          <div class="progress">
-            <div class="bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-          </div>
-        </div>
-          <div class="fields-form">
-            <div class="mt-3">
-              <label for="file-input-event" id="foto-evento-crear" style="border:  0.4px gray dotted" class="btn">Select Image</label>
-              <input id="file-input-event"class="form-control hidden" style="visibility:hidden;" type="file">
-            </div>
-            <img id="imagen-crear-evento" style="width:200px;height:150px; border: 0.4px gray dotted">
-            <label id = "upprogress"></label>
-            <div class="button-form center">
-              <button name="button"  type="button" onclick="valFormReturn(4)" style="margin-top:1rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: #F63131;font-size:1.8rem;color: white; font-weight: bold; margin-right:2rem;"><bold><i class="fa-solid fa-rotate-left"></i></bold></button>
-              <button name="button" class="mb-4" type="button" onclick="valForm(4)" href="createEventsecond.html" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px;background: #00A3FF;color: white; font-size: 1.9rem;"><i class='fas fa-forward'></i></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   
-    <div id="Fifth" class="displayoff"  style="text-align: center;">
+    <div id="Fourth" class="displayoff"  style="text-align: center;">
       <div class="container-form">
         <div class="form-create-event" style="width:23rem;height:30rem;" id="container-form-second-part-event">
-            <h2 class="crear-event-form-title center  mt-4"></h2>
+          <h2 class="modify-event-form-title mt-4"></h2>
             <div class="center" style="width: 75%; margin-left: 2rem;">
               <div class="progress">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
@@ -131,8 +106,8 @@
               <textarea type="text" class="form-control" id="input-create-event-info-adicional" style="display: block; width:15rem;height:13.3rem;"></textarea></div>
                 
               <div class="button-form center" style="display: inline-block;">
-                <button name="button"  type="button" onclick="valFormReturn(5)" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: #F63131;font-size:1.5rem;color: white; font-weight: bold; width:6rem; margin-right:2rem;"><bold><i class="fa-solid fa-rotate-left"></i></bold></button>
-                <button name="button" id="crear_evento_confirm_event-confirm" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: #00A3FF;font-size:1.5rem;color: white; font-weight: bold; width:7rem"><bold>Crear</bold></button>
+                <button name="button"  type="button" onclick="valFormReturn(4)" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: #F63131;font-size:1.5rem;color: white; font-weight: bold; width:6rem; margin-right:2rem;"><bold><i class="fa-solid fa-rotate-left"></i></bold></button>
+                <button name="button" id="modify_evento_confirm_event-confirm" style="margin-top:2rem; border: none; width:5rem;height: 3rem;border-radius:5px; display:inline-block;background: #00A3FF;font-size:1.5rem;color: white; font-weight: bold; width:8rem"><bold>Crear</bold></button>
             </div>
             </form>
           </div>
@@ -150,7 +125,7 @@
           <div class="modal-body" id="contenido-body-crear-evento"></div>
           <div class="modal-footer">
             <button type="button" id="deleteEventButton-Cancel" class="btn btn-secondary" data-bs-dismiss="modal"></button>
-            <button type="button" id="CreateEventButtonCreate"class="btn btn-primary" id="confirmar-creacion-btn">Crear evento</button>
+            <button type="button" id="CreateEventButtonCreate"class="btn btn-primary" id="confirmar-creacion-btn">Modificar</button>
           </div>
         </div>
       </div>

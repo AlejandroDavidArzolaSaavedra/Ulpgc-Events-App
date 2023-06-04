@@ -2,12 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Informacion del evento</title>
+        <title>ULPGC EVENTS</title>
+        <link rel="icon" href="../images/logoUlpgc.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
          <!--Dependencias de estilos -->
          <link rel="stylesheet" href="../css/header.css">
          <link rel="stylesheet" href="../css/footer.css">
-         <link rel="stylesheet" href="../../css/index.css">
-         <link rel="stylesheet" href="../../css/showEventList.css">
+         <link rel="stylesheet" href="../../css/eventList.css">
          
          <!-- Toast-->
          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -24,50 +26,50 @@
          <!-- Scripts de funcionalidad -->
          <script src = "../js/header.js" type="module"></script>
          <script src="../js/loadListEvents.js"  type="module"></script>
-         <script src = "../js/exportXls.js"></script>
+         <script src = "../js/changeLanguage.js"></script>
+         <script src = "../js/exportXls.js" type="module"></script>
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
          <!-- Dependencias de excel -->
          <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
          <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>        
         
-         <body>
+         <body  id="cuerpo-pagina">
          <header id="header"></header>         
-            <h1 id="header-lista-eventos-usuario">Lista de Eventos</h1>
-            <button class="btn btn-success" id="excel-button" onclick="exportCSVExcel()">
-                Descargar Lista de Eventos Excel
-            </button>    
+            <h1 id="header-lista-eventos-usuario"></h1>
+            <button class="btn btn-success" id="excel-button">
+            </button>
             <div id="page_element">
                     <table class="table table-striped table-hover table-responsive" id="table-event-list">
                         <thead class="bg-primary text-white">
                             <tr>
-                            <th scope="col" class="hidden">id</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Tipo de Evento</th>
-                            <th scope="col"> Estado</th>
+                            <th scope="col" class="hidden no-export">id</th>
+                            <th id="nombre-tabla-evento" scope="col"></th>
+                            <th id="fecha-tabla-evento" scope="col"  class="d-none d-sm-table-cell" ></th>
+                            <th id="tipo-evento-tabla-evento" scope="col" class="d-none d-sm-table-cell"></th>
+                            <th id="estado-tabla-evento" scope="col"></th>
                             <th scope="col" class="no-export"></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="cuerpo-tabla">
                         </tbody>
                     </table>
             </div>
-        <footer><div id="footer" style="background-color: #4D4C4C;"></div></footer> 
+        <footer><div id="footer"></div></footer> 
         </body>
-        <script src="../js/EventList.js"></script>
-
 </html>
 
 
 
+
+
+<!--Modal borrar evento-->
 <div class="modal fade" id="deleteEventModal" tabindex="-1" role="dialog" aria-labelledby="deleteEventModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" id="modal-delete_list-evento">
         <div class="modal-header">
           <h5 class="modal-title" id="deleteEventModalLabel">Eliminar evento</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <button type="button" class="btn-close" id="exit-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           ¿Está seguro que desea eliminar este evento?
@@ -80,7 +82,7 @@
     </div>
   </div>
 
-
+<!--Modal borrar evento-->
   <div class="modal fade" id="deleteEventModal" tabindex="-1" role="dialog" aria-labelledby="deleteEventModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

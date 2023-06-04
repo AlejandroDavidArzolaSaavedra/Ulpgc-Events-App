@@ -7,3 +7,29 @@
     display: inline-block;
     border-radius: 10px;
 }
+
+
+.form-create-event{
+    background-color: lightgray;
+    color: black;
+}
+
+.fields-form {
+    display: flex;
+    flex-direction: column;
+    }
+.imagen-create-event{
+    width:15rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.labelContainer {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.displayoff{
+  display: none;
+}

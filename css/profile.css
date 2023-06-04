@@ -1,0 +1,72 @@
+.label{
+    display: inline-block;
+    font-size: 1.0rem;
+}
+
+.buttons-perfil{
+    display: block;  
+    margin-top: 1rem;
+}
+.label-info-user{
+    text-align: -webkit-left;
+    display: block;
+    margin-left: 4.5rem;
+}
+.FotoDePerfil{
+    display: block;
+    text-align: center;
+    width: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+}
+
+.datosUsuario{
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-user-information {
+    display: inline-block;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px #ccc solid;
+    width: 20rem;
+    border-radius: 10%;
+  }
+
+  .Modificar-perfil, .Eliminar-perfil{
+    font-weight: bold;
+    color: white;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+.hidden{
+    display: none;
+}
+.buttons-perfil:hover {
+    transform: scale(1.04);
+}
+
+.Modificar-perfil{
+    background-color: #00A3FF;
+}
+
+.Eliminar-perfil{
+    background-color: #F63131;
+}
+
+.InformacionUsuario{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.input-text-profile, .image-info-user{
+    text-align: -webkit-center;
+}
+
+#nombre-profile, #correo-profile, #contra-profile, #tele-profile{
+    color: black;
+}

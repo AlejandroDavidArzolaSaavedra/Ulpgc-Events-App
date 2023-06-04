@@ -25,4 +25,19 @@ html{
 }
 
 
+/*Movil*/
+@media only screen and (max-width: 800px) {
+    p{
+        color: blueviolet;
+    }
+    #fecha-tabla-evento{
+        display: hidden;
+    }
+    #tipo-evento-tabla-evento{
+        display: hidden;
+    }
+}
+
+
+
   

@@ -101,7 +101,7 @@ const filterCards =() => {
      eventosFiltrado.forEach(element => {
        const template = `
        <a class="redirect-to-show">
-       <div class="col" style="height:30rem;">
+       <div class="col">
           <div class="card h-100 card-show-event ${getCategoryClass(element.categoria)}">
              <img src="${element.imagenEvento}" class="card-img-top" alt="...">
              <div class="card-body">
@@ -173,13 +173,13 @@ function selectFilters(){
             const toDateInput = filtersForm.querySelectorAll('input[type="date"]')[1]; 
             const filterBtn = document.getElementById('filter-btn');
             const categoryBar = document.getElementById('category-bar');
-            const cards = document.getElementById('cards');
-
+              const cards = document.getElementById('cards');
+            if(filterBtn){
             filterBtn.addEventListener('click', function() {
                 categoryBar.classList.toggle('hidden');
                 cards.classList.toggle('col-md-9');
                 cards.classList.toggle('col-md-12');
-            });
+            });}
 
             // Añadir un listener al botón de aplicar filtros
             applyFiltersButton.addEventListener('click', () => {

@@ -1,0 +1,153 @@
+{
+    "header" : {
+        "registro" : "Registrar",
+        "iniciarSesion" : "Iniciar sessão",
+        "buscar" : "Buscar",
+        "usuario": "Usuário",
+        "perfil" : "Perfil",
+        "gestionarEventos" : "Gerenciar Eventos",
+        "crearEventos" : "Criar evento",
+        "cerrarSesión" : "Encerrar sessão",
+        "misEventos" : "Meus Eventos"
+    },
+    "modalHeader": {
+        "iniciarSesion": "Iniciar sessão",
+        "correo": "E-mail",
+        "ejemploCorreo": "example@gmail.com",
+        "contraseña": "Senha",
+        "registro": "Registrar-se",
+        "nombre": "Nome",
+        "ejemploNombre": "João Silva",
+        "teléfono": "Telefone",
+        "ejemploTeléfono": "123-456-7890",
+        "repetirContraseña": "Repetir senha",
+        "condiciones": "Eu aceito os termos de serviço e a política de privacidade da ULPGC EVENTS"
+    },
+    "footer" :{
+        "planificarEventos" : "PLANIFICAR EVENTOS",
+        "buscarEventos" : "Buscar Eventos",
+        "eventosPropios" : "Eventos Próprios",
+        "calendario" : "Calendário",
+        "sobreNosotros" : "SOBRE NÓS",
+        "tiktok" : "Tiktok",
+        "twitter" : "Twitter",
+        "youtube" : "Youtube",
+        "desarrollo" : "DESENVOLVIMENTO",
+        "github" : "Github",
+        "trello" : "Trello",
+        "figma" : "Figma",
+        "contáctanos" : "CONTATE-NOS",
+        "correo" : "E-mail",
+        "whatsapp" : "Whatsapp",
+        "teléfono" : "Telefone"
+    },
+    "perfil" : {
+        "informacionUsuario" : "Informação do usuário",
+        "nombre" : "Nome",
+        "correo" : "E-mail",
+        "contraseña" : "Senha",
+        "teléfono" : "Telefone",
+        "modificarPerfil" : "Modificar perfil",
+        "eliminarPerfil" : "Excluir perfil",
+        "guardarCambios" : "Salvar mudanças",
+        "eliminarCambios" : "Excluir mudanças"
+    },
+    "index" : {
+        "verFiltros" : " Ver filtros"
+    },
+    "filtro" : {
+        "filtrarEventos" : "Filtrar eventos",
+        "categoria" : "Categoria",
+        "asadero" : "Churrasco",
+        "charla" : "Palestra",
+        "reunionInformativa" : "Reunião informativa",
+        "cursoFormativo" : "Curso formativo",
+        "otros" : "Outros",
+        "aforo" : "Lotação",
+        "fecha" : "Data",
+        "desde" : "Desde",
+        "hasta" : "Até",
+        "aplicarFiltros" : "Aplicar filtros",
+        "borrarFiltros" : "Limpar filtros"
+    },
+    "listaEventos": {
+        "listaDeEventos": "Lista de eventos",
+        "nombre": "Nome",
+        "fecha": "Data",
+        "tipoDeEvento": "Tipo de evento",
+        "estado": "Estado",
+        "asadero": "Churrasco",
+        "charla": "Palestra",
+        "reunionInformativa": "Reunião informativa",
+        "cursoFormativo": "Curso formativo",
+        "otros": "Outros",
+        "descargarListaEventos": "Baixar lista de eventos Excel",
+        "fueraDeFecha": "Fora de data",
+        "editar": "Editar",
+        "eliminar": "Excluir",
+        "inscripciones": "Inscrições"
+    },
+    "modalListEvents": {
+        "eliminarEvento": "Excluir evento",
+        "cancelar": "Cancelar",
+        "eliminar": "Excluir",
+        "pregunta": "Tem certeza que deseja excluir o evento?"
+    },
+    "listaUsuario": {
+        "usuariosInscritos": "Usuários inscritos",
+        "nombre": "Nome",
+        "correo": "Email",
+        "teléfono": "Telefone",
+        "descargarListaUsuarios": "Baixar lista de usuários Excel"
+    },
+    "crearEvento" : {
+        "crearEvento" : "Criar evento",
+        "nombre" : "Nome",
+        "ejemploNombre" : "*Campo obrigatório máx. (50 caracteres)",
+        "lugar" : "Local",
+        "ejemploLugar" : "*Campo obrigatório máx. (50 caracteres)",
+        "tipo" : "Tipo",
+        "asadero" : "Churrasco",
+        "charla" : "Palestra",
+        "reunionInformativa" : "Reunião informativa",
+        "cursoFormativo" : "Curso formativo",
+        "otros" : "Outros",
+        "descripcion" : "Descrição",
+        "aforo" : "Capacidade",
+        "ejemploAforo" : "*Campo obrigatório máx. (50 caracteres)",
+        "fecha" : "Data",
+        "hora" : "Horário de início",
+        "foto" : "Selecione a foto do evento...",
+        "informacionAdicional" : "Informação adicional",
+        "seleccionarArchivo" : "Selecionar arquivo",
+        "crear": "criar",
+        "modificar":"Modificar evento",
+        "modify": "modificar"
+    },    
+    "modalCrearEvento": {
+        "tituloModal": "Confirmar criação de evento",
+        "preguntaModal": "Tem certeza de que deseja criar este evento?",
+        "crearEvento": "Criar evento",
+        "cancelar": "Cancelar"
+    },
+    "infoEvento": {
+        "inscripcion": "Inscrição",
+        "entradasDisponibles": "Ingressos disponíveis",
+        "personas": "pessoas",
+        "disponibleHasta": "Disponível até",
+        "infoEvento": "Informações do evento",
+        "infoAdicionalEvento": "Informações adicionais do evento"
+    },
+    "modalUsuario": {
+        "tituloModal": "Confirmar ação",
+        "preguntaModal": "Tem certeza de que deseja salvar as alterações?",
+        "aceptar": "Aceitar",
+        "cancelar": "Cancelar"
+        },
+        "modalEliminarEvento": {
+            "tituloModal": "Excluir evento",
+            "preguntaModal": "Tem certeza de que deseja excluir o evento",
+            "eliminar": "Excluir",
+            "cancelar": "Cancelar"
+          }
+}
