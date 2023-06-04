@@ -8,6 +8,8 @@
     min-width: 17rem;
     margin: 0.5rem;
     color: white;
+
+    position: absolute;
 }
 
 .categoryBarComponent {

@@ -1,4 +1,5 @@
 function getCategoryClass(categoria) {
+   console.log('fdlfk')
    let casteo = categoria.toString();
    if(casteo.toLowerCase()  === "Reunion informativa".toLowerCase()){
       return "card text-white bg-primary mb-3";}

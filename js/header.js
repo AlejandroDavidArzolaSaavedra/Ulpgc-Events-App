@@ -10,6 +10,9 @@ import { changeInfoUserSave,changeInfoUser } from "./modificarPerfil.js";
 import { loadInformationEvents } from "./showInformationEvent.js";
 document.addEventListener('DOMContentLoaded', init);
 
+
+
+
 function loadTemplate(fileName, id, callback) {
 
     fetch(fileName).then((res) => {
@@ -530,8 +533,178 @@ if (jQuery(ocultarBtn).length) {
                 button.setAttribute("disabled", true);
               }
             });  
+            
+            //Botón modo oscuro
+            const botonModoNoche = document.getElementById('botonModoNoche');
+            let modoOscuro = true;
+            if(botonModoNoche){
+            botonModoNoche.addEventListener("click", async () =>  {
+                if(modoOscuro) {
+                console.log("holaaa");
+                const cuerpo = document.querySelector("#cuerpo-pagina");
+                const header = document.querySelector("#header");
+                if(header){
+                    console.log(header);
+                }
+                header.style.backgroundColor = "#2C2C2C"
+                cuerpo.style.backgroundColor = "black";
+                const encabezado = document.querySelector(".encabezado-tabla");
+                //Lista eventos modo oscuro
+                if(encabezado){
+                    const listaEventosTitulo = document.querySelector("#header-lista-eventos-usuario");
+                    const nombreEvento = document.querySelector("#nombreEvento");
+                    const fechaEvento = document.querySelector("#fechaEvento");
+                    const tipoEvento = document.querySelector("#tipoEvento");
+                    nombreEvento.style.color = "White";
+                    fechaEvento.style.color = "White";
+                    tipoEvento.style.color = "White";
+                    encabezado.style.color = "White";
+                    listaEventosTitulo.style.color = "white";
+                }
+                //Crear evento modo oscuro
+                const evento = document.querySelector("#container-form-first-part-event");
+                if(evento){
+                    const crearEventoSecond = document.querySelector("#container-form-second-part-event");
+                    const crearEventoThird = document.querySelector("#container-form-third-part-event");
+                    const crearEventoFourth = document.querySelector("#container-form-fourth-part-event");
+                    const crearEventoFifth = document.querySelector("#container-form-fifth-part-event");
+                    const letrasUno = document.querySelector("#crearEventoLetrasUno");
+                    const letrasDos = document.querySelector("#crearEventoLetrasDos");
+                    const letrasTres = document.querySelector("#crearEventoLetrasTres");
+                    const letrasCuatro = document.querySelector("#crearEventoLetrasCuatro");
+                    const letrasCinco = document.querySelector("#crearEventoLetrasCinco");
+                    const infoEventoUno = document.querySelector("#infoEventoUno");
+                    const infoEventoDos = document.querySelector("#infoEventoDos");
+                    const infoEventoTres = document.querySelector("#infoEventoTres");
+                    const infoEventoCuatro = document.querySelector("#infoEventoCuatro");
+                    const infoEventoCinco = document.querySelector("#infoEventoCinco");
+                    infoEventoUno.style.color = "white";
+                    infoEventoDos.style.color = "white";
+                    infoEventoTres.style.color = "white";
+                    infoEventoCuatro.style.color = "white";
+                    infoEventoCinco.style.color = "white";
+                    letrasUno.style.color = "white";
+                    letrasDos.style.color = "white";
+                    letrasTres.style.color = "white";
+                    letrasCuatro.style.color = "white";
+                    letrasCinco.style.color = "white";
+                    evento.style.backgroundColor = "#2C2C2C";
+                    crearEventoSecond.style.backgroundColor = "#2C2C2C";
+                    crearEventoThird.style.backgroundColor = "#2C2C2C";
+                    crearEventoFourth.style.backgroundColor = "#2C2C2C";
+                    crearEventoFifth.style.backgroundColor = "#2C2C2C";
+                    evento.style.border = "2px solid white";
+                    crearEventoSecond.style.border = "2px solid white";
+                    crearEventoThird.style.border = "2px solid white";
+                    crearEventoFourth.style.border = "2px solid white";
+                    crearEventoFifth.style.border = "2px solid white";
+                }
 
+                const informacionPerfil = document.querySelector(".InformacionPerfil");
+                if(informacionPerfil){
+                    const botonesPerfil = document.querySelector(".BotonesPerfil");
+                    const informacionUsuario = document.querySelector(".InformacionUsuario");
+                    const datosUsuario= document.querySelector(".datosUsuario");
+                    informacionPerfil.style.backgroundColor = "#2C2C2C";
+                    botonesPerfil.style.backgroundColor = "#2C2C2C";
+                    informacionUsuario.style.color = "white";
+                    datosUsuario.style.color = "white";
+                }
+                //informacion evento modo oscuro
+                const informacionEvento = document.querySelector("#content-show-information");
+                if(informacionEvento){
+                    informacionEvento.style.backgroundColor = "black";
+                    const letrasTitulo = document.querySelector("#title_header");
+                    const letrasInformacion = document.querySelector(".paragraph");
+                    const informacionInscripciones = document.querySelector(".paragraph-show-information");
+                    const inscripcion = document.querySelector(".lil_header");
+                    inscripcion.style.color = "white";
+                    informacionInscripciones.style.color = "white";
+                    letrasInformacion.style.color = "white";
+                    letrasTitulo.style.color = "white";
+                }
+                modoOscuro = false;
 
+                //volver a modo dia
+            } else {
+                const cuerpo = document.querySelector("#cuerpo-pagina");
+                const header = document.querySelector(".container");
+                if(header){
+                    console.log(header);
+                }
+                header.style.backgroundColor = "white"
+                cuerpo.style.backgroundColor = "white";
+                const encabezado = document.querySelector(".encabezado-tabla");
+                //Lista eventos modo oscuro
+                if(encabezado){
+                    const listaEventosTitulo = document.querySelector("#header-lista-eventos-usuario");
+                    const nombreEvento = document.querySelector("#nombreEvento");
+                    const fechaEvento = document.querySelector("#fechaEvento");
+                    const tipoEvento = document.querySelector("#tipoEvento");
+                    nombreEvento.style.color = "Black";
+                    fechaEvento.style.color = "Black";
+                    tipoEvento.style.color = "Black";
+                    encabezado.style.color = "Black";
+                    listaEventosTitulo.style.color = "Black";
+                }
+                //Crear evento modo oscuro
+                const evento = document.querySelector("#container-form-first-part-event");
+                if(evento){
+                    const crearEventoSecond = document.querySelector("#container-form-second-part-event");
+                    const crearEventoThird = document.querySelector("#container-form-third-part-event");
+                    const crearEventoFourth = document.querySelector("#container-form-fourth-part-event");
+                    const crearEventoFifth = document.querySelector("#container-form-fifth-part-event");
+                    const letrasUno = document.querySelector("#crearEventoLetrasUno");
+                    const letrasDos = document.querySelector("#crearEventoLetrasDos");
+                    const letrasTres = document.querySelector("#crearEventoLetrasTres");
+                    const letrasCuatro = document.querySelector("#crearEventoLetrasCuatro");
+                    const letrasCinco = document.querySelector("#crearEventoLetrasCinco");
+                    const infoEventoUno = document.querySelector("#infoEventoUno");
+                    const infoEventoDos = document.querySelector("#infoEventoDos");
+                    const infoEventoTres = document.querySelector("#infoEventoTres");
+                    const infoEventoCuatro = document.querySelector("#infoEventoCuatro");
+                    const infoEventoCinco = document.querySelector("#infoEventoCinco");
+                    infoEventoUno.style.color = "Black";
+                    infoEventoDos.style.color = "Black";
+                    infoEventoTres.style.color = "Black";
+                    infoEventoCuatro.style.color = "Black";
+                    infoEventoCinco.style.color = "Black";
+                    letrasUno.style.color = "Black";
+                    letrasDos.style.color = "Black";
+                    letrasTres.style.color = "Black";
+                    letrasCuatro.style.color = "Black";
+                    letrasCinco.style.color = "Black";
+                    evento.style.backgroundColor = "white";
+                    crearEventoSecond.style.backgroundColor = "white";
+                    crearEventoThird.style.backgroundColor = "white";
+                    crearEventoFourth.style.backgroundColor = "white";
+                    crearEventoFifth.style.backgroundColor = "white";
+                    evento.style.border = "2px solid black";
+                    crearEventoSecond.style.border = "2px solid black";
+                    crearEventoThird.style.border = "2px solid black";
+                    crearEventoFourth.style.border = "2px solid black";
+                    crearEventoFifth.style.border = "2px solid black";
+                }
+
+                const informacionPerfil = document.querySelector(".InformacionPerfil");
+                if(informacionPerfil){
+                    const botonesPerfil = document.querySelector(".BotonesPerfil");
+                    const informacionUsuario = document.querySelector(".InformacionUsuario");
+                    const datosUsuario= document.querySelector(".datosUsuario");
+                    informacionPerfil.style.backgroundColor = "white";
+                    botonesPerfil.style.backgroundColor = "white";
+                    informacionUsuario.style.color = "black";
+                    datosUsuario.style.color = "black";
+                }
+                //informacion evento modo dia
+                const informacionEvento = document.querySelector("#content-show-information");
+                if(informacionEvento){
+                    informacionEvento.style.backgroundColor = "white";
+                }
+                modoOscuro = true;
+            }
+            });
+            }
             const lockIndex4 = document.getElementById("content-show-information");
             if (lockIndex4 != undefined){
                 loadInformationEvents(querySnapShot.docs);
