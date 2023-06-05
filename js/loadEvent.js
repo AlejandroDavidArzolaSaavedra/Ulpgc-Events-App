@@ -5,11 +5,7 @@ function loadTemplate() {
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            // código para mostrar los detalles del evento
             const titulo = card.querySelector('.card-title').value;
-
-
-            // Obtener los datos del Local Storage
             const eventos = JSON.parse(localStorage.getItem('eventos'));
 
             const evento = eventos.find(e => e.nombre === titulo);

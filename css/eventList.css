@@ -24,8 +24,6 @@ html{
     font-weight: 500;
 }
 
-
-/*Movil*/
 @media only screen and (max-width: 800px) {
     p{
         color: blueviolet;

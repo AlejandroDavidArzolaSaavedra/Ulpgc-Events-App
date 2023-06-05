@@ -46,12 +46,12 @@ button{
     margin-left: 1rem;
     margin-right:1rem; 
     margin-top:0.4rem;
-    opacity: 1; /* opacidad inicial */
-    transition: opacity 0.3s; /* transición suave */
+    opacity: 1; 
+    transition: opacity 0.3s; 
   }
 #modo-noche:hover {
-    cursor: pointer; /* cambiar el ratón */
-    opacity: 0.7; /* reducir la opacidad */
+    cursor: pointer; 
+    opacity: 0.7;
   }
 
 .header-color-options {
@@ -83,7 +83,7 @@ button{
 .col1{
     width: 200px;
 }
-/*Movil*/
+
 @media only screen and (max-width: 990px) {
     #modo-noche, .fa-user, .fa-searchengin, .fa-comment, #bell-header, #comment, #calendar{
         margin-top: 1rem;

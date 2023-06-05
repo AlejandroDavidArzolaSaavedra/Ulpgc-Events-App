@@ -1,4 +1,4 @@
-import { getDocs, getDoc, updateDoc, collection, query, deleteDoc, where, doc} from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js";
+import { getDocs, updateDoc, collection, query, deleteDoc, where, doc} from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js";
 import { exportCSVExcel } from "./exportXls.js"
 import { db } from "./firebase.js";
 
@@ -112,9 +112,6 @@ export const loadListEvents = (ListaEventos) => {
         window.location.href = `../html/editEvent.html?eventoId=${encodeURIComponent(eventoId)}`;
       });});}}
 
-
- 
-  // Usa este código para abrir el modal de confirmación y esperar la respuesta del usuario:
  const deleteButtons = document.querySelectorAll('.delete-event-button');
  deleteButtons.forEach((button) => {
    button.addEventListener('click', () => {
@@ -127,7 +124,6 @@ export const loadListEvents = (ListaEventos) => {
      
      if(cancelDeleteButton){
        cancelDeleteButton.addEventListener('click', () => {
-       // Cerrar el modal sin eliminar el evento
        $(modal).modal('hide');
        });
    }
@@ -139,9 +135,7 @@ export const loadListEvents = (ListaEventos) => {
        
        });}
 
-     deleteEventButton.addEventListener('click', async () => {
-       // Eliminar el evento si el usuario confirma
-       
+     deleteEventButton.addEventListener('click', async () => {     
        if (row && row.parentNode) {
          row.parentNode.removeChild(row);
 
@@ -215,7 +209,6 @@ button.addEventListener("click", async function() {
         console.log("Hubo un error",error)
     }
 }
-  console.log(userId)
   var user = await getInfoUser(userId)
   var username = user.nombre;
   exportCSVExcel(username)
@@ -226,8 +219,6 @@ function compareDate(day,month,year){
 
     var actualDate = new Date();
     var reservedDate = new Date(year, month-1,day)
-    console.log(reservedDate)
-    console.log(day,month,year)
     return reservedDate.getTime() > actualDate.getTime()
     
 }
@@ -235,7 +226,6 @@ function compareDate(day,month,year){
 function getMonthString(index) {
   var lang = localStorage.getItem("fullLang");
   var monthNames;
-  console.log(lang)
   switch (lang) {
       case "Español":
           monthNames =  ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dic"];
@@ -264,30 +254,3 @@ function getMonthString(index) {
   return monthNames[index - 1];
 }
 }
-
-
-/**
- * 
- * BOTON DE MODIFICAR PARA EL SPRINT 2
- * 
- *                <button class="btn btn-primary  user-event-modificate" type="button">
-                  <span class="btn-label"></span>
-                  <i class="far fa-edit"></i>Editar
-                </button> 
-
-                const eventCards = document.querySelectorAll(".redirect-to-show");
-    eventCards.forEach((card) => {
-      card.addEventListener("click", () => {
-        const eventName = card.getAttribute("data-event-name");
-        window.location.href = `../html/showEventInformation.html?title=${encodeURIComponent(eventName)}`;
-      });
-      const eventCards2 = document.querySelectorAll(".user-event-inscrite");
-      eventCards2.forEach((card) => {
-        card.addEventListener("click", () => {
-  
-          window.location.href = `../html/userList.html?title=${encodeURIComponent(eventName)}`;
-      });**/
-      
-
-
-

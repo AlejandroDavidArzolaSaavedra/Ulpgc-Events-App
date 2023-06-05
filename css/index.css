@@ -25,27 +25,22 @@
   background-color: transparent;
 }
 
-
-/*Movil*/
 @media only screen and (max-width: 770px) {
   .card {
-    width: 100%; /* Hacer que la tarjeta ocupe todo el ancho */
+    width: 100%; 
   }
 
   .card-cards.row-cols-1 {
-    column-count: 1; /* Mostrar solo una tarjeta por fila */
+    column-count: 1; 
   }
   .category-bar {
     position: absolute;
-    z-index: 1; /* Asegura que el category bar esté por encima de las tarjetas */
+    z-index: 1;
   }
   
   .card-cards {
     position: relative;
-    z-index: 0; /* Coloca las tarjetas debajo del category bar */
+    z-index: 0;
   }
   
 }
-
-
-

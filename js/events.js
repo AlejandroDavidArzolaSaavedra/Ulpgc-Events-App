@@ -15,15 +15,12 @@ function getCategoryClass(categoria) {
    }
  }
 
-
 export const setupEvents = (data) => {
   if (data.length){
 
      const eventList = document.querySelector(".card-cards");
      const searchIcon = document.querySelector(".fa-searchengin");
      const searchInput = document.querySelector("#input-search-head");
-
-
      let content = "";
      data.forEach(element => {
        const event= element.data();
@@ -43,21 +40,12 @@ export const setupEvents = (data) => {
        content += template;
      });
      eventList.innerHTML = content;
-
-     // Obtener todos los elementos con la clase "card-show-event"
       const eventCards = document.querySelectorAll(".card-show-event");
-
-      // Recorrer cada elemento y agregar un evento de clic
       eventCards.forEach((card) => 
       {
       card.addEventListener("click", () => {
-      // Obtener el elemento "card-title" dentro del elemento actual
       const cardTitle = card.querySelector(".card-title");
-
-      // Obtener el título del evento
       const eventTitle = cardTitle.textContent;
-
-      // Redirigir a la página de detalles del evento, pasando el título como parámetro
       window.location.href = `../html/eventView.html?title=${encodeURIComponent(eventTitle)}`;
       });
       });
@@ -89,20 +77,12 @@ export const setupEvents = (data) => {
          }
       });      
       eventList.innerHTML = content;
-      // Obtener todos los elementos con la clase "card-show-event"
       const eventCards = document.querySelectorAll(".card-show-event");
-
-      // Recorrer cada elemento y agregar un evento de clic
       eventCards.forEach((card) => 
       {
       card.addEventListener("click", () => {
-      // Obtener el elemento "card-title" dentro del elemento actual
       const cardTitle = card.querySelector(".card-title");
-
-      // Obtener el título del evento
       const eventTitle = cardTitle.textContent;
-
-      // Redirigir a la página de detalles del evento, pasando el título como parámetro
       window.location.href = `../html/eventView.html?title=${encodeURIComponent(eventTitle)}`;
       });
       });       
@@ -141,31 +121,15 @@ export const setupEvents = (data) => {
                   `
             }      
             eventList.innerHTML = content;
-               // Obtener todos los elementos con la clase "card-show-event"
             const eventCards = document.querySelectorAll(".card-show-event");
-
-            // Recorrer cada elemento y agregar un evento de clic
             eventCards.forEach((card) => 
             {
             card.addEventListener("click", () => {
-            // Obtener el elemento "card-title" dentro del elemento actual
             const cardTitle = card.querySelector(".card-title");
-
-            // Obtener el título del evento
             const eventTitle = cardTitle.textContent;
-
-            // Redirigir a la página de detalles del evento, pasando el título como parámetro
             window.location.href = `../html/eventView.html?title=${encodeURIComponent(eventTitle)}`;
             });
             });
-               });
-   }else{
-      console.log("hecho")
+      });
    }
-
-
-
-
-
-
 }

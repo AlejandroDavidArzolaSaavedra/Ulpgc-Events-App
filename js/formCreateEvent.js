@@ -1,7 +1,6 @@
-import { setDoc } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js";
 const button = document.querySelector("#crear-evento-confirm-event");
 if (button){
-    setTimeout(() => { console.log("World!"); }, 50000);
+    setTimeout(() => { console.log("Esperando..."); }, 50000);
     asdas
     button.addEventListener("submit", async(e)=>{
         e.preventDefault();
@@ -54,8 +53,6 @@ const accesoALaBD = () =>{
 
 async function insertEvent(event) {
     try {
-      //const response = await setDoc(doc(db, "evento","0"), event);
-      //return response;
     } catch (error) {
       console.log("Ocurrio un error", error);
     }
@@ -85,7 +82,6 @@ const accesoclick = ()  =>{
         });}
  
       deleteEventButton.addEventListener('click', async () => {
-        // Cerrar el modal
         $(modal).modal('hide');
       });
     if(crearEvento){
@@ -101,19 +97,15 @@ const accesoclick = ()  =>{
         
         function enviarDatosADb() {
             return new Promise(function(resolve, reject) {
-              // Simulación de acceso a la base de datos
               setTimeout(function() {
                 resolve();
               }, 2000);
             }).then(function() {
-              // Si la promesa se resuelve correctamente
               $("#create-event-button").text("Evento creado correctamente");
               setTimeout(function() {
                 accesoALaBD();
-                //window.location.href = "http://127.0.0.1:5501/html/showEventList.html";
               }, 1000);
             }).catch(function() {
-              // Si la promesa es rechazada
               $(modal).modal('hide');
             });
           }

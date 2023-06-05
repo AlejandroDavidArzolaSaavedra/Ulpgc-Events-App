@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', init);
 
 function loadTemplate(fileName, id, callback) {
@@ -22,7 +21,6 @@ function compareDate(dateFrom, dateWhile){
 }
 
 const filterEvents = (category, capacityRange, dateStamp, dateStampWhile, events) => {
-    // Objeto que asocia los rangos de capacidad con los valores mínimos y máximos
     const capacityRanges = {
       "0-50": [0, 50],
       "50-100": [50, 100],
@@ -40,7 +38,6 @@ const filterEvents = (category, capacityRange, dateStamp, dateStampWhile, events
         const dateToTransform = new Date(dateStampWhile);
         dateToStop = dateToTransform;
     }
-    // Filtra los eventos por categoría, rango de capacidad y fecha
     const filteredEvents = events.filter((event) => {
       let match = true;
       if(category){
@@ -123,17 +120,11 @@ const filterCards =() => {
      eventList.innerHTML = content;
      const eventCards = document.querySelectorAll(".card-show-event");
 
-      // Recorrer cada elemento y agregar un evento de clic
       eventCards.forEach((card) => 
       {
       card.addEventListener("click", () => {
-      // Obtener el elemento "card-title" dentro del elemento actual
       const cardTitle = card.querySelector(".card-title");
-
-      // Obtener el título del evento
       const eventTitle = cardTitle.textContent;
-
-      // Redirigir a la página de detalles del evento, pasando el título como parámetro
       window.location.href = `../html/showEventInformation.html?title=${encodeURIComponent(eventTitle)}`;
       });
       });
@@ -164,7 +155,6 @@ function selectFilters(){
             return res.text();
         })
         .then(async (text) => {
-            // Obtener los elementos del DOM
             const filtersForm = document.querySelector('.categoryBarComponent');
             const applyFiltersButton = filtersForm.querySelector('button');
             const categoryCheckboxes = filtersForm.querySelectorAll(".filtro-bar");
@@ -181,20 +171,15 @@ function selectFilters(){
                 cards.classList.toggle('col-md-12');
             });}
 
-            // Añadir un listener al botón de aplicar filtros
             applyFiltersButton.addEventListener('click', () => {
-                // Obtener los valores de las categorías seleccionadas
                 const selectedCategories = Array.from(categoryCheckboxes)
                     .filter((checkbox) => checkbox.checked)
                     .map((checkbox) => checkbox.nextElementSibling.textContent.trim());
 
-
-                // Obtener los valores de aforo seleccionados
                 const selectedAforos = Array.from(aforoCheckboxes)
                     .filter((checkbox) => checkbox.checked)
                     .map((checkbox) => checkbox.nextElementSibling.textContent.trim());
 
-                // Obtener las fechas seleccionadas
                 const fromDate = fromDateInput.value;
                 const toDate = toDateInput.value;
                 category = selectedCategories;

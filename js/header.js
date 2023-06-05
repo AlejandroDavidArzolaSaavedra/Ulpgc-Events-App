@@ -5,7 +5,7 @@ import { showMessage } from "./showMessage.js";
 import { setupEvents } from "./events.js";
 import { getDocs, collection,updateDoc, query,deleteDoc, orderBy, doc, setDoc, where } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js"
 import { loadListEvents } from "./loadListEvents.js";
-import { getUUID } from "./utils.js"; // GENERADOR RANDOM DE UUID
+import { getUUID } from "./utils.js";
 import { changeInfoUserSave,changeInfoUser } from "./modificarPerfil.js";
 import { loadInformationEvents } from "./showInformationEvent.js";
 document.addEventListener('DOMContentLoaded', init);
@@ -63,14 +63,10 @@ async function deleteUserOfEvent(userUID) {
   
     for (const doc of querySnapshot.docs) {
       const listaDeUsuarios = doc.data().listaDeUsuarios || [];
-      
-      // Verificar si el usuario está presente en el array
       if (listaDeUsuarios.includes(userUID)) {
-        // Eliminar el usuario del array
         const updatedListaDeUsuarios = listaDeUsuarios.filter((uid) => uid !== userUID);
   
         try {
-          // Actualizar el campo listaDeUsuarios en el documento
           await updateDoc(doc.ref, { listaDeUsuarios: updatedListaDeUsuarios });
           console.log("Usuario eliminado del array en el documento:", doc.id);
         } catch (error) {
@@ -93,7 +89,6 @@ function registerUser() {
             return res.text();
         })
         .then(async (text) => {
-            console.log("sssssssssssssssss")
 
             // Obtener la referencia al botón "Ocultar filtros"
             const ocultarFiltrosBtn = document.getElementById('ocultar-filtros-category');
@@ -123,40 +118,16 @@ function registerUser() {
             }
             }
 
-            // Manejador de clic para el botón "Ocultar filtros"
             if(ocultarFiltrosBtn){
             ocultarFiltrosBtn.addEventListener('click', function() {
             categoryBarComponent.classList.toggle('oculto');
             cambiarColumnas();
             });
         }
-
-
-            var lang = localStorage.getItem('lang') || 'es'; // Obtener el idioma guardado en el localStorage o por defecto, español
-            var fullLang = localStorage.getItem('fullLang') || 'Español'; // Obtener el nombre del idioma guardado en el localStorage o por defecto, español
+            var lang = localStorage.getItem('lang') || 'es'; 
+            var fullLang = localStorage.getItem('fullLang') || 'Español';
             $('.selectpicker').val('#' + lang);
             $('.selectpicker option:selected').text(fullLang);
-/*
-            const categoryBar = document.querySelector(".categoryBarComponent");
-const ocultarBtn = document.querySelector("#ocultar-filtros-category");
-console.log(ocultarBtn)
-if (jQuery(ocultarBtn).length) {
-    jQuery(ocultarBtn).on('click', () => {
-        console.log("wwwwwwwwwwwwwwww")
-        console.log("xxx ",jQuery(categoryBar).css('width'))
-      if (jQuery(categoryBar).css('width') == '272px') {
-        console.log("entroooo")
-        jQuery(categoryBar).animate({width: '59%'}, 5000000);
-        jQuery(ocultarBtn).html('Mostrar filtros');
-        console.log("llego al final")
-      } else {
-        // si los filtros están ocultos, mostrarlos
-        jQuery(categoryBar).animate({width: '100%'}, 272);
-        jQuery(ocultarBtn).html('Ocultar filtros');
-      }
-    });
-  }
-*/
             const iconoModo = document.querySelector('.fa-moon');
             const fondoHeader = document.querySelector('#contenedor-navbar-header');
             const fondoCuerpo = document.querySelector('#cuerpo-pagina');
@@ -171,26 +142,7 @@ if (jQuery(ocultarBtn).length) {
             const modalCrearEvento = document.querySelector('#modal-crear-evento');
             const modalEditProfile = document.querySelector('#edit-profile');
             const modaldelProfile = document.querySelector('#delete-profile-content');            
-            if (localStorage.getItem('modo') == 'day') {
-                console.log("uuuuu")
-            }
-  /*
-            let variable = 0;
-            if(variable==0){
-                for (let i = 0; i < 50; i++) {
-                const usuario = {
-                    nombre: "usuario"+i,
-                    correo: "usuario"+i+"@gmail.com",
-                    contra: "123123123",
-                    telefono: "6"+i+i+"1122",
-                    uid: getUUID(),
-                };
-                usuarioTemporal = usuario;
-                addUser(usuario);
-            }
-            variable+=1
-            }
-*/
+
             if (localStorage.getItem('modo') == 'night') {
                 fetch('../html/profile.html')
                 .then((res) => {
@@ -224,13 +176,11 @@ if (jQuery(ocultarBtn).length) {
                     }
                     const modalCreateEvento = document.querySelector('#modal-crear-evento');
                     if(modalCreateEvento){
-                        console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                         modalCreateEvento.style.backgroundColor = "#4D4C4C";
                     }
 
                     const modalDeleteEvento = document.querySelector('#modal-delete_list-evento');
                     if(modalDeleteEvento){
-                        console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                         modalDeleteEvento.style.backgroundColor = "#4D4C4C";
                     }
                     
@@ -263,18 +213,15 @@ if (jQuery(ocultarBtn).length) {
                     const secondConfirm = document.getElementById("confirmar-creacion-titulo");
                     
                     if(botonCrearEvento){
-                        console.log("xdddd")
                         botonCrearEvento.addEventListener("click", function() {
                             modalCreateEvento.style.backgroundColor = "#4D4C4C";
                             if(modalTextEvento){
                                 modalTextEvento.style.color="white";
-                                console.log("cambio")
                             }
                             if(confirmMessage){
                                 confirmMessage.style.color="white";
                                 secondConfirm.style.color = "white";
                             }
-                            console.log("cambio2")
                         });
                     }});
 
@@ -294,7 +241,6 @@ if (jQuery(ocultarBtn).length) {
                     
 
                 } else {
-                    console.log("rrrrrrrrrrrrrrrrrrrrrrrr")
                     iconoModo.classList.remove('fa-sun');
                     iconoModo.classList.add('fa-moon');
                     localStorage.setItem('modo', 'day');
@@ -315,12 +261,10 @@ if (jQuery(ocultarBtn).length) {
                     const modalCreateEvento = document.querySelector('#modal-crear-evento');
                     if(modalCreateEvento){
                         modalCreateEvento.style.backgroundColor = "white";
-                        console.log("esta jodido")
                     }
                     
                     const modalDeleteEvento = document.querySelector('#modal-delete_list-evento');
                     if(modalDeleteEvento){
-                        console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                         modalDeleteEvento.style.backgroundColor = "white";
                     }
                     
@@ -333,9 +277,7 @@ if (jQuery(ocultarBtn).length) {
                     const modalCreateEvento = document.querySelector('#modal-crear-evento');
                     var botonCrearEvento = document.getElementById("crear_evento_confirm_event-confirm");
                     const modalTextEvento = document.querySelector('#confirm-message');
-                    console.log("cambiazoooo")
                     if(botonCrearEvento){
-                        console.log("xdddd")
                         botonCrearEvento.addEventListener("click", function() {
                             modalCreateEvento.style.backgroundColor = "white";
                             modalTextEvento.style.color="black";
@@ -401,7 +343,6 @@ if (jQuery(ocultarBtn).length) {
                 
                 const modalDeleteEvento = document.querySelector('#modal-delete_list-evento');
                 if(modalDeleteEvento){
-                    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                     modalDeleteEvento.style.backgroundColor = "#4D4C4C";
                 }
 
@@ -450,7 +391,6 @@ if (jQuery(ocultarBtn).length) {
 
                 const modalDeleEvento = document.querySelector('#modal-delete_list-evento');
                 if(modalDeleEvento){
-                    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                     modalDeleEvento.style.backgroundColor = "#222272e";
                 }
 
@@ -471,12 +411,10 @@ if (jQuery(ocultarBtn).length) {
 
                 if(modalCrearEvento){
                     modalCrearEvento.style.backgroundColor ="white";
-                    console.log("eeeeeeeeeeeeeeeeeeeeeeeeeee")
                 }
 
                 const modalDeleEvento = document.querySelector('#modal-delete_list-evento');
                 if(modalDeleEvento){
-                    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                     modalDeleEvento.style.backgroundColor = "white";
                 }
                 cerrarModal.forEach(element => {
@@ -562,7 +500,6 @@ if (jQuery(ocultarBtn).length) {
                     };
                     usuarioRegistradoTemporal=usuario;
                     usuarioTemporal = usuario;
-                    console.log("apsdkasopkdaspodksad",usuario)
                     contraUser = contra;
                     localStorage.setItem('usuario', JSON.stringify(usuario));
     
@@ -628,7 +565,6 @@ if (jQuery(ocultarBtn).length) {
             onAuthStateChanged(auth, async(user) =>{
                 if(user) {            
                     if (localStorage.getItem('modo') == 'night') {
-                        console.log("de noche");
                         const modalIniciar = document.querySelector("#inscripcion-info-event");
                         const modales = document.querySelector("#entradas-disponibles-event");
                         const modal = document.querySelector("#disponible-hasta-texto");
@@ -639,7 +575,6 @@ if (jQuery(ocultarBtn).length) {
                         
                         
                         if(modalIniciar){
-                            console.log("existe")
                             modalIniciar.style.color = "white";
                             modales.style.color = "white";
                             modal.style.color = "white";
@@ -653,15 +588,12 @@ if (jQuery(ocultarBtn).length) {
                         }        
            
                     }else{
-                        console.log("dicha");
-
                         const modaldelProfile = document.querySelector('#delete-profile-content');
                         if(modaldelProfile){
                             modaldelProfile.style.backgroundColor ="#222272e";
                         }
         
                     }
-                    console.log(user,"el sasdasdasd")
                     usuarioTemporal = user;              
                     const patronCorreo = /@ulpgc\.[^.]+$/;
                     localStorage.setItem('ParametrosUsuario', JSON.stringify(usuarioTemporal));
@@ -683,8 +615,6 @@ if (jQuery(ocultarBtn).length) {
                         option_no_Institucional.forEach(option => option.style.display="none");}
                     }
                 }
-                    
-                //////////////////////////////////////////////
                     const querySnapShotUser = await getDocs(collection(db, "users"));
                     const lockPerfil = document.getElementById("CorreoInformacionUsuario");
                     const lockChangePerfil = document.getElementById("cambiarCorreoUsuario");
@@ -711,7 +641,6 @@ async function getEvent(){
   
   async function getInfoEvent(userId){
     try {
-        console.log("bbbbbbbbbbbbbbbbbbbbbb",userId)
         const q = query(collection(db, "evento"), where("Creador", "==", userId));
         let usuarioDeLaAplicacion = [];
         const querySnapshot = await getDocs(q);
@@ -779,8 +708,6 @@ async function getEvent(){
     }
 
                     if (lockPerfil != undefined){
-                        console.log("denaaaaaaa"+ usuarioTemporal.uid)
-                        console.log(JSON.stringify(usuarioTemporal))
                         const resultado = await getUser(usuarioTemporal.uid);
 
                         let lockUserPerfil = resultado;
@@ -789,8 +716,7 @@ async function getEvent(){
 
                     if (lockChangePerfil != undefined){
                         changeInfoUserSave(querySnapShotUser.docs,contraUser);
-                    }
-                    //////////////////////////////////////////////                    
+                    }                 
                 }else{
                     linksRegistrado.forEach(links => links.style.display="none");
                     linksNoRegistrado.forEach(links => links.style.display="block");
@@ -798,12 +724,6 @@ async function getEvent(){
             })
         })
 }
-
-///////////////////////////////////////////////////
-///////////////////////////////////////////////////
-///////////////////////////////////////////////////
-
-
 
 async function insertUser(user){
     try {
@@ -825,8 +745,6 @@ async function addUser(user){
 
 async function getUser(user){
     try {
-        
-        console.log("asdasdasd",user)
         const response = await getInfoUser(user); 
         return response;       
     } catch (error) {
@@ -847,10 +765,6 @@ async function getInfoUser(userId){
         console.log("Hubo un error",error)
     }
 }
-///////////////////////////////////////////////////
-///////////////////////////////////////////////////
-///////////////////////////////////////////////////
-
 const buttonSave = document.querySelector("#button-save-perfil");
 const buttonDelete = document.querySelector("#delete-profile");
 
@@ -920,15 +834,11 @@ if(buttonDeleteProfile){
                         if(modalCreateEvento){
                             modalCreateEvento.style.background="#4D4C4C";
                         }
-            
-                        console.log("es de noche")
-                        
                     }else{
                         confirmMessage.style.color="black";
                         if(modalCreateEvento){
                             modalCreateEvento.style.background="white";
                         }
-                        console.log("es de dia")
                     }
                     
                     $('#confirm-modal-delete').modal('show');
@@ -936,35 +846,26 @@ if(buttonDeleteProfile){
 
                     const fourthConfirm = document.getElementById("confirm-button-delete");
                     if(fourthConfirm){
-                        console.log("exit")
                         fourthConfirm.onclick = async function(){
-                            // Aquí iría el código para guardar los cambios
-                            console.log("jugarsela")
                             $('#confirm-modal-delete').modal('hide')
 
                             const usuarioAlmacenado = localStorage.getItem('usuario');
                             const correoComprobar = JSON.parse(usuarioAlmacenado).uid;
-                            console.log("te escuchamos ",correoComprobar)
                             await deleteUserOfEvent(correoComprobar);
                             await borrarUsuarioDeLaBaseDeDatosFirebase(usuarioTemporal);
                             localStorage.removeItem('usuario');
                             localStorage.removeItem('ParametrosUsuario');
-                            //window.location.href = "http://127.0.0.1:5501/html/index.html";
                         } }
                     
 
                     if(exitdelete){
-                        console.log("exit")
                         exitdelete.onclick = function(){
-                            // Aquí iría el código para guardar los cambios
                             $('#confirm-modal-delete').modal('hide')
                         } }
                     
                     const extdelete = document.querySelector("#cancel-modal-button-delete");
                     if(extdelete){
-                        console.log("asad")
                         extdelete.onclick = function(){
-                            // Aquí iría el código para guardar los cambios
                             $('#confirm-modal-delete').modal('hide')
                         }
                         }
@@ -975,36 +876,27 @@ if(buttonDeleteProfile){
 async function borrarUsuarioDeLaBaseDeDatosFirebase(userUid) {
     try {
       let comprobacion;
-      console.log(userUid.uid)
       const q = query(collection(db, "users"), where("userUID", "==", userUid.uid));
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
         comprobacion = doc.data();
       });
       var user = auth.currentUser;
-      console.log(comprobacion, "ejemplo final")
-
-    console.log(comprobacion.uid,"AQUI ESTOY")
     const eventosQuery = query(collection(db, "evento"), where("Creador", "==", comprobacion.uid));
     const eventosSnapshot = await getDocs(eventosQuery);
     let eventoDelUsuario = [];
-    // Eliminar cada evento asociado al usuario
     eventosSnapshot.forEach(async (eventoDoc) => {
         eventoDelUsuario.push(eventoDoc.data());
         const evento = eventoDoc.data();
         await deleteDoc(doc(db, "evento", evento.eventoId));
     });
-    console.log(eventoDelUsuario)
-    console.log("wwwwwwwwwwwwwwwwwwwwwwwwwwww")
 
       await deleteDoc(doc(db, "users", comprobacion.uid));
       user.delete()
                 .then(function() {
-                    // El usuario ha sido eliminado exitosamente
                     console.log('Usuario eliminado');
                 })
                 .catch(function(error) {
-                    // Ocurrió un error al intentar eliminar el usuario
                     console.error('Error al eliminar el usuario:', error);
                 });
       console.log("Usuario eliminado correctamente");
@@ -1026,7 +918,6 @@ if(buttonDeleteChange){
         document.getElementById('CorreoInformacionUsuario').value = resultado.correo;
         document.getElementById('ContraseñaInformacionUsuario').value = resultado.telefono;
         document.getElementById('TelefonoInformacionUsuario').value = resultado.contra;
-        console.log("2este es un ejemplo",resultado)
         buttonEdit.style.display = "block"
         buttonDelete.style.display = "block"
         buttonSave.style.display ="none";
@@ -1041,10 +932,7 @@ if(buttonDeleteChange){
 if(buttonSave){
 buttonSave.addEventListener('click', async e  =>{
     e.preventDefault();
-    console.log("wwwwwwwwwwwwwwww")
-    console.log("fffffffffffffffffffffffffffffffff")
     if(confirmMessage){
-        console.log("he llegado")
         var lang = localStorage.getItem('lang') || 'es';
         var headerFile;
         var headerData; 
@@ -1090,7 +978,6 @@ buttonSave.addEventListener('click', async e  =>{
             if(modalCrearEvento){
                 modalCrearEvento.style.background="#4D4C4C";
             }
-            console.log("es de noche")
             
         }else{
             confirmMessage.style.color="black";
@@ -1100,12 +987,9 @@ buttonSave.addEventListener('click', async e  =>{
             if(modalCrearEvento){
                 modalCrearEvento.style.background="white";
             }
-            console.log("es de dia")
         }
     
     confirmButton.onclick = async function() {
-        console.log("iiiiiii")
-        console.log(usuarioTemporal)
         const resultado = await getUser(usuarioTemporal.uid);
         let editarPerfil = resultado;
         let contraAux;
@@ -1119,13 +1003,8 @@ buttonSave.addEventListener('click', async e  =>{
 
         
         editarPerfil.contra = document.getElementById("ContraseñaInformacionUsuario").value;
-        //const resultado2 = await getUser(usuarioTemporal.uid);   
-        console.log(usuarioTemporal.uid)
 
         editarPerfil.correo = temp;
-        //const resultado3 = await getUser(usuarioTemporal.uid);   
-
-        // Actualizar firebase authentication
         let incremento = 0;
         let nopassnoemail = 1
         if(contraAux != document.getElementById("ContraseñaInformacionUsuario").value){
@@ -1138,34 +1017,27 @@ buttonSave.addEventListener('click', async e  =>{
             if(mailAux != document.getElementById("CorreoInformacionUsuario").value){
                 addUser(editarPerfil)
                 actualizarFirebaseAuthentication(editarPerfil.correo);
-                console.log("pase por incremento")
                 nopassnoemail-=1
             }
         }
         incremento = 0;
         if(nopassnoemail){
             addUser(editarPerfil)
-            console.log("pase por nopassemail")
         }
-        // Aquí iría el código para guardar los cambios
         confirmModal.style.display = 'none';
         
-        // Oculta los botones de edición
         const buttonEd = document.querySelectorAll(".hidden");
         buttonEd.forEach(button => button.style.display = "none");
 
-        // Muestra el botón de editar
         buttonEdit.style.display = "inline-block";
     }
 
     cancelModalButton.onclick = function(){
-        // Aquí iría el código para guardar los cambios
         confirmModal.style.display = 'none';
         
     } 
     if(exitModalButton){
     exitModalButton.onclick = function(){
-        // Aquí iría el código para guardar los cambios
         confirmModal.style.display = 'none';
         
     } }
@@ -1197,7 +1069,6 @@ function actualizarFirebaseAuthentication( newEmail) {
     window.onscroll = function(){
         var header = document.getElementById("header");
         if(window.pageYOffset > 0){
-            console.log("moviendose")
             header.classList.add("sticky");
         } else {
             header.classList.remove("sticky")

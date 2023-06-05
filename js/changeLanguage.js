@@ -36,7 +36,6 @@ fetch('../html/components/header.html')
                 $.getJSON(headerFile, function(data) {
                     headerData = data;
             
-                    // Cambio de idioma del header
                     $('#perfil-header').text(headerData.header.perfil);
                     $('#nombre-header').text(headerData.header.usuario);
                     $('#login-header').text(headerData.header.iniciarSesion);
@@ -47,17 +46,14 @@ fetch('../html/components/header.html')
                     $('#input-search-head').attr('placeholder', headerData.header.buscar);
                     $('#gestionar-eventos-header').text(headerData.header.gestionarEventos);                   
 
-                    // Elementos del filtro de eventos
                     let titulofecha = headerData.filtro.fecha;
                     let tituloaforo = headerData.filtro.aforo;
                     let textadd = headerData.filtro.aplicarFiltros;
                     let titulofiltros = headerData.filtro.categoria;
                     let textdelete = headerData.filtro.borrarFiltros;
 
-                    // Actualizar el boton del filtro
                     $('#title-filter').text(headerData.index.verFiltros);
 
-                    // Actualizar el filtro por categorias
                     $('#otros-category').text(headerData.filtro.otros);
                     $('#charla-category').text(headerData.filtro.charla);
                     $('#asadero-category').text(headerData.filtro.asadero);
@@ -71,7 +67,6 @@ fetch('../html/components/header.html')
                     $('#aplicar-filtros').html('<i class="fa-solid fa-magnifying-glass"></i>'+" <b>"+ textadd+"</b>");
                     $('#borrar-filtros').html('<i class="fa-solid fa-eraser"></i>'+" <b>"+ textdelete+"</b>");
 
-                    // Elementos del footer
                     let userFooter = headerData.footer.eventosPropios;
                     let calendarFooter = headerData.footer.calendario;
                     let searchFooter = headerData.footer.buscarEventos;
@@ -85,7 +80,6 @@ fetch('../html/components/header.html')
                     let whatsappFooter = headerData.footer.whatsapp;
                     let telefonoFooter = headerData.footer.teléfono;
 
-                    // Actualizar el Footer
                     $('#develop-footer').text(headerData.footer.desarrollo);
                     $('#contact-footer').text(headerData.footer.contáctanos);
                     $('#about-us-footer').text(headerData.footer.sobreNosotros);
@@ -103,13 +97,11 @@ fetch('../html/components/header.html')
                     $('#whatsapp-footer').html('<i class="fa-brands fa-whatsapp links-footer"></i>'+ whatsappFooter);
                     $('#telefono-footer').html('<i class="fa-solid fa-phone links-footer"></i> '+telefonoFooter);
                     
-                    // Elementos del footer
+
                     let modificarPerfil = headerData.perfil.modificarPerfil;
                     let eliminarPerfil = headerData.perfil.eliminarPerfil;
                     let saveChanges = headerData.perfil.guardarCambios;
                     let deleteChanges = headerData.perfil.eliminarCambios;
-
-                    // Actualizar el Perfil
                     $('#information-profile').text(headerData.perfil.informacionUsuario);
                     $('#nombre-profile').text(headerData.perfil.nombre);
                     $('#correo-profile').text(headerData.perfil.correo);
@@ -119,8 +111,7 @@ fetch('../html/components/header.html')
                     $('#delete-profile').html('<i class="fa-solid fa-trash"></i> '+eliminarPerfil);
                     $('#button-save-perfil').html('<i class="fa-solid fa-floppy-disk"></i> '+ saveChanges);
                     $('#button-delete-perfil').html('<i class="fa-solid fa-trash"></i> '+deleteChanges);
-                    
-                    // Modales header registrar y logearse 
+
                     $('#nombre-registrarse-label').text(headerData.modalHeader.nombre);
                     $('#telefono-registrarse-label').text(headerData.modalHeader.teléfono);
                     $('#correo-registrarse-label').text(headerData.modalHeader.correo);
@@ -137,13 +128,7 @@ fetch('../html/components/header.html')
                     $('#registrar-nombre').attr('placeholder', headerData.modalHeader.ejemploNombre);
                     $('#registrar-telefono').attr('placeholder', headerData.modalHeader.ejemploTeléfono);
                     $('#login-correo').attr('placeholder', headerData.modalHeader.ejemploCorreo);
-                    // Modal modificarPerfil FALTA IMPLEMENTAR
-                    // Modal eliminarPerfil FALTA IMPLEMENTAR
-                    // Modal guardarCambios  FALTA IMPLEMENTAR
-                    // Mmodal eliminarCambios  FALTA IMPLEMENTAR
-                    
-                    
-                    // Actualizar el Crear evento
+
                     $('.crear-event-form-title').text(headerData.crearEvento.crearEvento);
                     $('.modify-event-form-title').text(headerData.crearEvento.modificar);
                     $('#nombre-evento-crear').text(headerData.crearEvento.nombre);
@@ -174,19 +159,12 @@ fetch('../html/components/header.html')
                     $('#deleteEventButton-Cancel').text(headerData.modalCrearEvento.cancelar); 
                     $('#CreateEventButtonCreate').text(headerData.modalCrearEvento.crearEvento);
 
-                    // Actualizar el Lista de eventos
                     $('#nombre-tabla-evento').text(headerData.listaEventos.nombre);
                     $('#fecha-tabla-evento').text(headerData.listaEventos.fecha);
                     $('#tipo-evento-tabla-evento').text(headerData.listaEventos.tipoDeEvento);
                     $('#estado-tabla-evento').text(headerData.listaEventos.estado);
                     $('#header-lista-eventos-usuario').text(headerData.listaEventos.listaDeEventos);
                     $('#excel-button').text(headerData.listaEventos.descargarListaEventos);
-                    // PENDIENTE ACTUALIZAR LOS BOTONES
-
-                    
-                    // Actualizar el Gestionar evento
-                    // Actualizar el Mirar info evento
-                    let variableInscripcion;
                     fetch('../html/eventView.html')
                         .then((res) => {
                             return res.text();
@@ -218,28 +196,6 @@ fetch('../html/components/header.html')
                                     variable5.textContent = headerData.infoEvento.inscripcion;}
                             }, 2000);
                         });
-                      /*
-                      inscripcion
-
-
-
-                        const variable2 = document.querySelector("#personas-text");
-                        variable2.textContent = headerData.infoEvento.personas;
-
-                      */
-
-                   // disponible-hasta-texto
-                    /*
-                            "entradasDisponibles" : "Entradas disponibles ",
-                            "disponibleHasta" : "Disponible hasta: ",
-                            "personas": "personas",
-                            "infoEvento" : "Info del evento",
-                            "infoAdicionalEvento" : "Info adicional del evento"
-                    */
-
-                    //$('#header-lista-eventos-usuario').text(headerData.listaEventos.eliminar);
-                    //$('#excel-button').text(headerData.listaEventos.inscripciones);
-                    // Actualizar el Lista de usuarios
                 });
                 }
             
@@ -254,11 +210,7 @@ fetch('../html/components/header.html')
                 function checkLanguage() {
             
                 var newLang = $('.selectpicker').val().substring(1);     
-                //console.log(estado)  
-                //const comprobacion = getElementById("#login-header");
                 var registrarseValue = $('#registrarse-header').text();
-                //console.log(registrarseValue.length);
-                //console.log(comprobacion)
                 if (newLang !== lang || registrarseValue.length == 0) { 
                     localStorage.setItem('lang', newLang);
                     localStorage.setItem('fullLang', $('.selectpicker option:selected').text());
@@ -266,7 +218,6 @@ fetch('../html/components/header.html')
                     loadHeaderData(lang); 
                 }
                 }
-
                 setInterval(checkLanguage, 500);
             });
         }

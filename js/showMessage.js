@@ -4,13 +4,13 @@ export function showMessage(message, type = "success"){
         duration: 3000,
         newWindow: true,
         close: true,
-        gravity: "bottom", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
+        gravity: "bottom",
+        position: "right",
+        stopOnFocus: true, 
         style: {
           background: type === "success"? "orange":"red",
           fontWeight: "bold"
         },
-        onClick: function(){} // Callback after click
+        onClick: function(){}
       }).showToast();      
 }

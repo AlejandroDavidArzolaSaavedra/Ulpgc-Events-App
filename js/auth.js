@@ -1,5 +1,3 @@
-
-// Configura el SDK de Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyAv3QoKKOW_050RiN7aXHRzUpOwLxoqbP0",
     authDomain: "ulpgc-events-a59f5.firebaseapp.com",
@@ -8,10 +6,8 @@ const firebaseConfig = {
     messagingSenderId: "1074689670789",
     appId: "1:1074689670789:web:b23976f4f3a2cf61dcf3ec",
     measurementId: "G-36W8TWRWWQ"
-  };
-  
+  };  
   firebase.initializeApp(firebaseConfig);
-
 
 firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
@@ -23,8 +19,6 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
     const errorMessage = error.message;
     console.error("Error durante el registro:", errorCode, errorMessage);
   });
-
-  
 
 firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userCredential) => {

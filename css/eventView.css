@@ -137,11 +137,11 @@ img{
 
 
 #button-inscription:hover {
-    background-color: orange; /* estilo adicional cuando el mouse está sobre el botón */
+    background-color: orange; 
   }
   
  #button-inscription:active {
-    background-color: darkblue; /* estilo adicional cuando se pulsa el botón */
+    background-color: darkblue;
   }
   
 
