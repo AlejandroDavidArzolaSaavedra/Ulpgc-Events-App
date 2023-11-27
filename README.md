@@ -3,7 +3,9 @@
 # Introduction 📚
 
 This project uses the SCRUM methodology to develop an app that allows organizing events at the ULPGC. With this app, students and university staff can create and attend events and receive notifications about upcoming activities.
-
+<p align="center">
+  <img width="800px" src="https://github.com/AlejandroDavidArzolaSaavedra/Ulpgc-Events-App/assets/90756437/dfae831e-adb0-4d6a-bfe8-1bdb798b3609">
+</p>
 
 # 👥 Development Team (Ctrl + Click to view profiles)
 
@@ -20,7 +22,17 @@ This project uses the SCRUM methodology to develop an app that allows organizing
 Aquí tienes los enlaces con iconos para los lenguajes:
 
 [![HTML](https://img.shields.io/badge/HTML-Markup-orange?style=flat-square&logo=html5)](https://www.w3.org/html/) [![CSS](https://img.shields.io/badge/CSS-Styling-blue?style=flat-square&logo=css3)](https://www.w3.org/Style/CSS/) [![JavaScript](https://img.shields.io/badge/JavaScript-Programming-yellow?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![Bootstrap](https://img.shields.io/badge/Bootstrap-Framework-purple?style=flat-square&logo=bootstrap)](https://getbootstrap.com/) [![Firebase](https://img.shields.io/badge/Firebase-Development-yellow?style=flat-square&logo=firebase)](https://firebase.google.com/)
-  
+
+## External Libraries and Dependencies 📦
+
+[![Toastify](https://img.shields.io/badge/Toastify-JavaScript%20Library-yellow?style=flat-square)](https://github.com/apvarun/toastify-js) A simple, responsive, vanilla JavaScript library to show toast messages.
+
+[![Font Awesome](https://img.shields.io/badge/Font%20Awesome-Icon%20Library-lightgrey?style=flat-square&logo=font-awesome)](https://fontawesome.com/) Icon library for various icons used in the application.
+
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-CSS%20Framework-purple?style=flat-square&logo=bootstrap)](https://getbootstrap.com/) CSS framework for responsive and mobile-first web development.
+
+[![jQuery](https://img.shields.io/badge/jQuery-JavaScript%20Library-blue?style=flat-square&logo=jquery)](https://jquery.com/) JavaScript library used for DOM manipulation.
+
 # Contributions 🤝
 
 If you would like to contribute to this project, please create a fork and submit a pull request with your changes. We'd be happy to review your contributions!
