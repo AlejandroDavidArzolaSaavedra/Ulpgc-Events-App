@@ -19,9 +19,7 @@ This project uses the SCRUM methodology to develop an app that allows organizing
 
 # Technologies Used 🛠️
 
-Aquí tienes los enlaces con iconos para los lenguajes:
-
-[![HTML](https://img.shields.io/badge/HTML-Markup-orange?style=flat-square&logo=html5)](https://www.w3.org/html/) [![CSS](https://img.shields.io/badge/CSS-Styling-blue?style=flat-square&logo=css3)](https://www.w3.org/Style/CSS/) [![JavaScript](https://img.shields.io/badge/JavaScript-Programming-yellow?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![Firebase](https://img.shields.io/badge/Firebase-database-yellow?style=flat-square&logo=firebase)](https://firebase.google.com/)
+[![HTML](https://img.shields.io/badge/HTML-Markup-orange?style=flat-square&logo=html5)](https://www.w3.org/html/) [![CSS](https://img.shields.io/badge/CSS-Styling-blue?style=flat-square&logo=css3)](https://www.w3.org/Style/CSS/) [![JavaScript](https://img.shields.io/badge/JavaScript-Programming-yellow?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![Firebase](https://img.shields.io/badge/Firebase-database-red?style=flat-square&logo=firebase)](https://firebase.google.com/)
 
 ## External Libraries and Dependencies 📦
 
