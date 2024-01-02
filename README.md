@@ -25,13 +25,7 @@ Aquí tienes los enlaces con iconos para los lenguajes:
 
 ## External Libraries and Dependencies 📦
 
-[![Toastify](https://img.shields.io/badge/Toastify-JavaScript%20Library-yellow?style=flat-square)](https://github.com/apvarun/toastify-js) A simple, responsive, vanilla JavaScript library to show toast messages.
-
-[![Font Awesome](https://img.shields.io/badge/Font%20Awesome-Icon%20Library-lightgrey?style=flat-square&logo=font-awesome)](https://fontawesome.com/) Icon library for various icons used in the application.
-
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-CSS%20Framework-purple?style=flat-square&logo=bootstrap)](https://getbootstrap.com/) CSS framework for responsive and mobile-first web development.
-
-[![jQuery](https://img.shields.io/badge/jQuery-JavaScript%20Library-blue?style=flat-square&logo=jquery)](https://jquery.com/) JavaScript library used for DOM manipulation.
+[![Toastify](https://img.shields.io/badge/Toastify-JavaScript%20Library-yellow?style=flat-square)](https://github.com/apvarun/toastify-js)[![Font Awesome](https://img.shields.io/badge/Font%20Awesome-Icon%20Library-lightgrey?style=flat-square&logo=font-awesome)](https://fontawesome.com/) [![Bootstrap](https://img.shields.io/badge/Bootstrap-CSS%20Framework-purple?style=flat-square&logo=bootstrap)](https://getbootstrap.com/) [![jQuery](https://img.shields.io/badge/jQuery-JavaScript%20Library-blue?style=flat-square&logo=jquery)](https://jquery.com/)
 
 # Contributions 🤝
 
