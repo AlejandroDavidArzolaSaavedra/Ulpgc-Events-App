@@ -4,7 +4,7 @@
 
 This project uses the SCRUM methodology to develop an app that allows organizing events at the ULPGC. With this app, students and university staff can create and attend events and receive notifications about upcoming activities.
 <p align="center">
-  <img width="700px" src="https://github.com/AlejandroDavidArzolaSaavedra/Ulpgc-Events-App/assets/90756437/0bfbc04a-abbc-41d3-8013-18481258f4ac">
+  <img width="700px" src="https://github.com/AlejandroDavidArzolaSaavedra/Ulpgc-Events-App/assets/90756437/40ebe63f-f49a-467d-a2e7-ac61e56e8c59">
 </p>
 
 
