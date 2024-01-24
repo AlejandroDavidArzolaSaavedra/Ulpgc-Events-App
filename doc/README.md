@@ -1,5 +1,5 @@
 
-# Readme - Revisiones de Sprints de ULPGC Events 🔄
+# Revisiones de Sprints de ULPGC Events 🔄
 
 Este documento proporciona un resumen de las revisiones realizadas durante los tres sprints del desarrollo de la aplicación ULPGC Events.
 
