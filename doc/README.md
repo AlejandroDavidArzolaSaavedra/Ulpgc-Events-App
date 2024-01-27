@@ -1,6 +1,6 @@
 # ULPGC Events Sprint Reviews 🔄
 
-This document provides a summary of the reviews conducted during the three sprints of the ULPGC Events application development.
+This document provides a summary in Spanish of the reviews conducted during the three sprints of the ULPGC Events application development.
 
 ## Sprint 1 🚀
 
