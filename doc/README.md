@@ -1,18 +1,17 @@
+# ULPGC Events Sprint Reviews 🔄
 
-# Revisiones de Sprints de ULPGC Events 🔄
-
-Este documento proporciona un resumen de las revisiones realizadas durante los tres sprints del desarrollo de la aplicación ULPGC Events.
+This document provides a summary of the reviews conducted during the three sprints of the ULPGC Events application development.
 
 ## Sprint 1 🚀
 
-Durante el primer sprint, se centró en la definición de requisitos y la planificación del proyecto. Se llevaron a cabo revisiones exhaustivas para garantizar una comprensión clara de los objetivos y establecer una base sólida para el desarrollo. Se recopilaron y analizaron los comentarios del equipo, lo que ayudó a refinar y ajustar el enfoque para los sprints siguientes.
+The focus of the first sprint was on defining requirements and project planning. Thorough reviews were conducted to ensure a clear understanding of objectives and establish a solid foundation for development. Team feedback was collected and analyzed, helping refine and adjust the approach for subsequent sprints.
 
 ## Sprint 2 🔄
 
-El segundo sprint se centró en la implementación de las funcionalidades principales de la aplicación. Se realizaron revisiones continuas para evaluar el progreso y abordar posibles desafíos. Las retroalimentaciones obtenidas se utilizaron para realizar mejoras y ajustes en tiempo real, asegurando la alineación continua con los requisitos del cliente y las expectativas del equipo.
+The second sprint concentrated on implementing the core functionalities of the application. Continuous reviews were conducted to assess progress and address potential challenges. Feedback obtained was utilized to make real-time improvements and adjustments, ensuring continuous alignment with client requirements and team expectations.
 
 ## Sprint 3 🏁
 
-En el tercer sprint, se completó la implementación principal. Las revisiones se enfocaron en la calidad del código, la usabilidad y la detección de posibles problemas antes del lanzamiento. Se prestaron especial atención a las sugerencias y comentarios finales para garantizar una versión final de alta calidad.
+During the third sprint, the primary implementation was completed. Reviews emphasized code quality, usability, and identification of potential issues before the launch. Special attention was given to final suggestions and feedback to ensure a high-quality final version.
 
-Este documento sirve como resumen de las revisiones realizadas en cada sprint de ULPGC Events, destacando la evolución del proyecto a lo largo del tiempo y resaltando las mejoras continuas implementadas.
+This document serves as a summary of the reviews conducted in each sprint of ULPGC Events, highlighting the project's evolution over time and showcasing the continuous improvements implemented.
